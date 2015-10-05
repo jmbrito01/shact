@@ -1,0 +1,23 @@
+<template name="geoBusca">	
+	<div class="input-field">
+		<i class="material-icons prefix">search</i>
+		<input id="texto-busca" type="text" class="validate">
+		<label for="texto-busca">First Name</label>
+	</div>
+
+    <p class="range-field">
+      <input type="range" id="slider-raio" min="0" max="100" />
+    </p>
+
+
+    <ul class="collection">
+		{{#each resultados}}
+			<li class="collection-item avatar">
+				<i class="material-icons circle">folder</i>
+				<span class="title">{{{name}}}</span>
+				<p>{{distance}}m
+				</p>
+			</li>		
+		{{/each}}
+	</ul>
+</template>
