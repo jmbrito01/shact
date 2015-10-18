@@ -1,4 +1,11 @@
 <template name="defaultLayout">
-	{{> navbar}}
-	{{> Template.dynamic template=main}}
+{{#ionBody}}
+  {{> ionNavBar}}
+
+  {{#ionNavView}}
+  	{{> yield}}
+  {{/ionNavView}}
+
+  {{> yield "tabs"}}
+{{/ionBody}}	
 </template>

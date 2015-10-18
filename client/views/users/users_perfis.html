@@ -1,0 +1,56 @@
+<template name="usersPerfis">
+
+	{{#contentFor "headerButtonLeft"}}
+	  	<a class="buttons button button-clear pull-left active back-button-especial" href={{pathFor 'users.view' userId=_id}}>
+    	<i class="icon ion-ios-arrow-back"></i>
+  		</a>
+  	
+  		
+	{{/contentFor}}
+
+	{{#contentFor "headerButtonRight"}}
+
+	{{/contentFor}}
+
+	{{#contentFor "headerTitle"}}
+	  <h1 class="title">Compartilháveis</h1>
+	{{/contentFor}}
+
+	{{#contentFor "tabs"}}
+	    
+	{{/contentFor}}
+
+	
+	{{#ionView}}
+	  {{#ionContent}}
+		<div class="list">
+			{{#each compartilhaveis}}
+				<div class="item item-icon-left {{#if meuPerfil}}compartilhaveis-acoes{{else}}adicionar-perfil{{/if}}" style="min-height:74px;">
+					<i class="icon {{icone}} {{#unless meuPerfil}}sem-perfil{{/unless}}" style="background-color:{{cor}};color:white;"></i>
+					{{nome}}
+
+					{{#if meuPerfil}}
+						{{#with meuPerfil}}
+							<p>{{valor}}</p>
+							<!--
+						    <button class="button button-balanced adicionar-perfil">
+						      <i class="icon ion-ios-plus"></i>
+						    </button>							
+						    -->
+						    
+						{{/with}}
+					{{else}}
+
+						<!--
+					     <button class="button button-positive">{{> ionIcon icon="ios-telephone"}}</button>				
+					     -->
+					{{/if}}
+			
+				</div>				
+			{{/each}}
+		</div>
+	  {{/ionContent}}
+	{{/ionView}}
+
+		
+</template>

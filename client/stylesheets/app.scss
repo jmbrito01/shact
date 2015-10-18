@@ -1,0 +1,13 @@
+
+
+// Import your custom variables
+@import 'app_variables';
+
+// Then import ionic after. Ionic will use your variables instead of it's own.
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+
+
+*{
+	font-family: 'Roboto', sans-serif;
+}

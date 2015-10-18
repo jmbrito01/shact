@@ -1,0 +1,27 @@
+<template name="usersFotos">
+	{{#contentFor "headerButtonLeft"}}
+  		{{>ionNavBackButton}}
+	{{/contentFor}}
+
+	{{#contentFor "headerButtonRight"}}
+
+	{{/contentFor}}
+
+	{{#contentFor "headerTitle"}}
+	  <h1 class="title">Fotos</h1>
+	{{/contentFor}}
+
+	{{#contentFor "tabs"}}
+	    
+	{{/contentFor}}
+
+	
+	{{#ionView}}
+	  {{#ionContent}}	  		
+		{{> album}}
+		{{> _usersCadastrarFotos}}
+	  {{/ionContent}}
+	{{/ionView}}
+
+
+</template>

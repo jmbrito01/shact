@@ -22,6 +22,7 @@ ElasticSearch.prototype.registrarUsuario = function(id, nome){
     name: nome,
   }
 
+  console.log(esDoc);
   
   return this.EsClient.index({
     index: this.index,
@@ -116,6 +117,19 @@ ElasticSearch.prototype.usuariosProximos = function(localizacao, raio, excluir, 
       var source = _.clone(resultado._source);
       source._score = resultado._score;
       source.distance = resultado.sort[0];
+
+      var user = Meteor.users.findOne({_id: source._id});
+      if (user){
+          console.log(user);
+
+          if (user.profile.avatar){
+            var fotoId = user.profile.avatar;
+            var foto = Fotos.findOne({_id: fotoId});
+            if (foto){
+              source.publicId = foto.imagem.publicId;
+            }
+          }
+      }
 
       return source;
     });

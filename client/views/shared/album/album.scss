@@ -1,0 +1,115 @@
+
+@mixin vertical-center{
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;    
+
+}
+
+.icone-canto{
+    position:absolute;
+    left:0;
+    top:0;
+}
+.vertical-center{
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;        
+}
+
+
+.avatar{
+    margin-top: 1em;
+    margin-right: 1em;
+    position: relative;
+    height:150px;
+    width:150px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);    
+}
+
+
+.album {
+    position:relative;
+
+    margin: 0;
+
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    //padding: 10px 0px 10px 0px;
+
+    .swiper-slide {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .fotos-grandes{
+        height:225px;
+        width: 100%;
+        position:relative;
+
+        .swiper-slide{
+            @include vertical-center;
+
+        }
+     
+
+    }
+
+    .fotos-thumbs{
+        height:75px;
+        width:100%;
+        box-sizing: border-box;
+        //padding: 10px 0;
+        position:relative;
+
+        .swiper-slide{
+            width: 75px;
+            height: 100%;
+            margin:0;
+
+            img{
+                width:75px;
+                height:75px;   
+                opacity: 0.4;
+
+            }
+        }    
+
+        .swiper-slide-active{
+            img{
+                width:75px;
+                height:75px;
+                opacity:1;
+            }
+        }    
+    }
+
+}

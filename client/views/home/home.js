@@ -15,13 +15,13 @@ Template.home.onRendered(function(){
 });
 
 Template.home.events({
-	'click #busca-selfie':function(){
-		FlowRouter.go('selfie.busca');
+	'click .busca-selfie':function(){
+		Router.go('selfie.busca');
 	},
-	'click #busca-geo':function(){
-		FlowRouter.go('geo.busca');
+	'click .busca-geo':function(){
+		Router.go('geo.busca');
 	},
-	'click #busca-telefone':function(){
-		FlowRouter.go('telefone.busca');
+	'click .busca-telefone':function(){
+		Router.go('telefone.busca');
 	}
 })

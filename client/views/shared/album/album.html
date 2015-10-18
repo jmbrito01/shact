@@ -1,0 +1,28 @@
+<template name="album">
+     <div class="album">
+     	<div class="fotos-grandes">
+            <div class="swiper-wrapper">
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            
+        </div>
+
+        <div class="fotos-thumbs">
+            <div class="swiper-wrapper">
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="albumItemGrande">
+    <img src="{{url}}" class="avatar acoes-album-item">
+</template>
+
+<template name="albumItemThumb">
+    <img src="{{url}}" class="foto">
+    {{#if isAvatar}}
+        {{> ionIcon icon='checkmark' class='balanced icone-canto'}}
+    {{/if}}
+</template>

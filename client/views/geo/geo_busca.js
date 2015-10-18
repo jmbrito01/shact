@@ -45,3 +45,10 @@ Template.geoBusca.onRendered(function(){
 
 	this.autorun(fazerBusca);
 })
+
+
+Template.ionNavBar.events({
+	'click #configurar-radar':function(){
+		Session.set('configurarRadar', !Session.get('configurarRadar'));
+	}
+})

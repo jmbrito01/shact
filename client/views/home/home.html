@@ -1,10 +1,35 @@
 <template name="home">
-    <div class="selecionar-modo">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><i class="material-icons" id='busca-selfie'>videocam</i></div>
-            <div class="swiper-slide"><i class="material-icons" id='busca-geo'>my_location</i></div>
-            <div class="swiper-slide"><i class="material-icons" id ='busca-telefone'>phone</i></div>
-        </div>
-    </div>
+	{{#contentFor "headerButtonLeft"}}
+		<a class="button button-clear" href="{{pathFor 'users.view' userId=currentUser._id}}">
+	  		{{> ionIcon icon='person'}}
+	 	</a>
+	{{/contentFor}}
 
+	{{#contentFor "headerButtonRight"}}
+		<a class="button button-clear" href="{{pathFor 'configuracoes.index'}}">
+	  		{{> ionIcon icon='gear-b'}}
+	 	</a>
+	{{/contentFor}}
+
+	{{#contentFor "headerTitle"}}
+	  <h1 class="title">Shact</h1>
+	{{/contentFor}}
+
+	{{#contentFor "tabs"}}
+	    {{>tabs}}
+	{{/contentFor}}
+
+	
+	{{#ionView}}
+	  {{#ionContent}}
+    	<div class="selecionar-modo">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide animated tada">{{> ionIcon icon="ios-location" class="busca-geo"}}</div>
+	            <div class="swiper-slide">{{> ionIcon icon="ios-telephone" class="busca-telefone"}}</div>
+	            <div class="swiper-slide">{{> ionIcon icon="camera" class="busca-selfie"}}</div>
+	        </div>
+	    </div>
+	  {{/ionContent}}
+	{{/ionView}}
 </template>
+

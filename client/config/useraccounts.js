@@ -98,20 +98,16 @@ preSignUpHook = function(password,info){
 }
 
 onLogoutHook = function(){
-    FlowRouter.go('signIn');
+    Router.go('signIn');
 }
 
 AccountsTemplates.configure({
     // Behaviour
     confirmPassword: true,
     enablePasswordChange: true,
-    forbidClientAccountCreation: false,
-    overrideLoginErrors: true,
-    sendVerificationEmail: false,
-    lowercaseUsername: false,
+    overrideLoginErrors: false,
 
     // Appearance
-    showAddRemoveServices: true,
     showForgotPasswordLink: true,
     showLabels: false,
     showPlaceholders: true,
@@ -173,3 +169,5 @@ AccountsTemplates.configure({
 });
 
 
+
+Template.myAtForm.replaces("atForm");

@@ -1,0 +1,33 @@
+<template name="configuracoes">
+
+	{{#contentFor "headerButtonLeft"}}
+	  {{>ionNavBackButton}}
+	{{/contentFor}}
+
+	{{#contentFor "headerButtonRight"}}
+
+	{{/contentFor}}
+
+	{{#contentFor "headerTitle"}}
+	  <h1 class="title">Configurações</h1>
+	{{/contentFor}}
+
+	{{#ionView}}
+	  {{#ionContent}}
+		<div class="list">
+
+		  <div class="item">
+		    Termos de uso
+		  </div>
+
+		  <div class="item">
+		    Política de privacidade
+		  </div>
+		</div>	  
+		<button id="logout" class="button button-full button-outline button-assertive">
+		  Logout
+		</button>
+	  {{/ionContent}}
+	{{/ionView}}
+
+</template>

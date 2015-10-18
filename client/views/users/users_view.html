@@ -1,0 +1,91 @@
+<template name="usersView">
+
+	{{#contentFor "headerButtonLeft"}}
+	  {{>ionNavBackButton}}
+	{{/contentFor}}
+
+
+	{{#contentFor "headerButtonRight"}}
+		<a class="button button-clear" id="editar-perfil">
+	  		{{> ionIcon icon='edit'}}
+	 	</a>
+	{{/contentFor}}
+
+	
+	{{#contentFor "headerTitle"}}
+	  <h1 class="title">Perfil</h1>
+	{{/contentFor}}
+
+	{{#contentFor "tabs"}}
+	    
+	{{/contentFor}}
+
+	{{#ionView}}
+	  {{#ionContent}}
+	  	<!--
+	  	{{#if temFotos}}
+	  		{{> album}}
+	  	{{else}}
+	  		{{> cadastrarFoto}}
+	  	{{/if}}
+	  	-->
+
+	  	<div class="row">
+	  		<div class="col" align="center">
+	  			{{> userAvatar publicId=avatarPublicId}}
+	  		</div>
+	  	</div>
+	  	<div class="row">
+	  		<div class="col col-50">
+				<a class="button button-positive button-block button-outline" href="{{pathFor 'users.perfis' userId=_id}}">
+					{{> ionIcon icon="ios-plus-empty"}} Perfis ({{countPerfis}})
+			    </a>	
+	  		</div>
+	  		<div class="col col-50">
+				<a class="button button-balanced button-block button-outline" href="{{pathFor 'users.fotos' userId=_id}}">
+					{{> ionIcon icon="ios-camera-outline"}} Fotos ({{countFotos}})
+			    </a>		
+	  		</div>
+	  	</div>	  	
+
+
+	  	{{#if $.Session.get 'editarPerfil'}}
+			{{#autoForm collection="Meteor.users" id="updateUsersForm" type="update" doc=currentUser}}
+				{{>afQuickField name="profile.nome"}}
+				{{>afQuickField name="profile.sobrenome"}}
+				{{>afQuickField name="profile.nascimento"}}
+				{{>afQuickField name="profile.genero"}}
+				{{>afQuickField name="profile.celular"}}
+				<button type="submit" class="button button-positive button-block">Salvar</button>
+			{{/autoForm}}	
+	  	{{else}}
+			<div class="list">
+			  <a class="item" href="#">
+			    Nome Completo
+			    <span class="item-note">
+			      {{profile.nomeCompleto}}
+			    </span>
+			  </a>
+			  <a class="item" href="#">
+			    Nascimento
+			    <span class="item-note">
+			      {{profile.nascimento}}
+			    </span>
+			  </a>
+			  <a class="item" href="#">
+			    Gênero
+			    <span class="item-note">
+			      {{profile.genero}}
+			    </span>
+			  </a>
+			  <a class="item" href="#">
+			    Celular
+			    <span class="item-note">
+			      {{profile.celular}}
+			    </span>
+			  </a>    
+			</div>
+	  	{{/if}}
+	  {{/ionContent}}
+	{{/ionView}}
+</template>
