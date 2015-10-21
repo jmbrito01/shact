@@ -6,7 +6,7 @@ Meteor.startup(function(){
 	var gpsHabilitado = function(state){
 		//if android
 	   if(state === 'Enabled') {
-	      console.log("GPS Is Enabled");	      
+	      //console.log("GPS Is Enabled");	      
 	   }
 	}
 	var gpsDesabilitado = function(){
@@ -19,7 +19,7 @@ Meteor.startup(function(){
 		Location.enableTimeFilter(GPS_FILTRO_TEMPO);		
 
 		if (Meteor.userId()){
-			console.log("SENDING POOSITION (WATCH)",localizacao);
+			//console.log("SENDING POOSITION (WATCH)",localizacao);
 			var localizacao = {
 				latitude: localizacao.latitude,
 				longitude: localizacao.longitude

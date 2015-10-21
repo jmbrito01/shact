@@ -58,10 +58,20 @@ ElasticSearch.prototype.setLocalizacao = function(id, localizacao){
 }
 
 ElasticSearch.prototype.usuariosProximos = function(localizacao, raio, excluir, textoBusca){
+    textoBusca = textoBusca.toLowerCase();
     var palavras = textoBusca.trim().split(" ");
     var ultimaPalavra = palavras[palavras.length -1];   
     var latitude = localizacao.latitude;
     var longitude = localizacao.longitude;
+
+    console.log(localizacao);
+    console.log(raio);
+    console.log(excluir);
+    console.log(textoBusca);
+    raio = 100000;
+
+  
+
 
     var query = {
       "filtered" : {
@@ -120,7 +130,7 @@ ElasticSearch.prototype.usuariosProximos = function(localizacao, raio, excluir, 
 
       var user = Meteor.users.findOne({_id: source._id});
       if (user){
-          console.log(user);
+          //console.log(user);
 
           if (user.profile.avatar){
             var fotoId = user.profile.avatar;
@@ -172,7 +182,7 @@ SearchSource.defineSource('shacters', function(textoBusca, opcoes) {
     tempo: busca.tempo
   };
 
-console.log(busca.resultados);
+//console.log(busca.resultados);
   
   return {
     data: busca.resultados,

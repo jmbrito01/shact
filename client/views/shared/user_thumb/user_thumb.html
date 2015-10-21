@@ -1,7 +1,20 @@
+<template name="userImage">
+	{{#if publicId}}
+		{{#if loadingImg}}
+			<img src="/images/loading.gif">
+		{{/if}}
+
+		<img src="{{c.url publicId width=width height=height crop="thumb" gravity="face"}}" class="user-image {{class}}" style="{{#if loadingImg}}visibility:hidden; display:none;{{/if}}">
+	{{else}}
+		<img src="{{notFoundImage}}" class="{{class}}">
+	{{/if}}
+</template>
+
+
 <template name="userThumb">
-	<img src="{{c.url publicId width=80 height=80 crop="thumb" gravity="face"}}">
+		{{> userImage publicId=publicId notFoundImage="/images/unknown.png" width="80" height="80" class="user-thumb"}}
 </template>
 
 <template name="userAvatar">
-	<img class="avatar" src="{{c.url publicId width=200 height=200 crop="thumb" gravity="face"}}">
+	{{> userImage publicId=publicId notFoundImage="/images/unknown.png" width="200" height="200" class="user-avatar"}}
 </template>

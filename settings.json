@@ -2,5 +2,7 @@
   "ES_URL" : "http://localhost:9200",
   "CloudinaryName": "shact",
   "CloudinaryAPIKey": "652647434859267",
-  "CloudinaryAPISecret": "j16qpah5cehMZu3TyT4G2zKDC4s"
+  "CloudinaryAPISecret": "j16qpah5cehMZu3TyT4G2zKDC4s",
+  "SkyBiometryAPIKey" : "7693d9aac68645dfb154309b11cad19c",
+  "SkyBiometryAPISecret": "9149e548ba6b4ed0a2b857c531e5ddc8"
 }

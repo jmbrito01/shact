@@ -84,3 +84,7 @@ useraccounts:iron-routing
 meteoric:ionic
 meteoric:autoform-ionic
 meteoric:camera
+http
+underscore
+juliancwirko:s-alert
+juliancwirko:s-alert-stackslide

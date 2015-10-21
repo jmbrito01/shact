@@ -1,0 +1,64 @@
+.content{
+	overflow-y:hidden !important;
+}
+
+.polaroid {
+  position: relative;
+  width: 100%;
+  margin: 10px;
+}
+ 
+.polaroid img {
+	width:100%;
+  border: 10px solid #fff;
+  border-bottom: 45px solid #fff;
+  -webkit-box-shadow: 3px 3px 3px #777;
+     -moz-box-shadow: 3px 3px 3px #777;
+          box-shadow: 3px 3px 3px #777;
+}
+ 
+.polaroid p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+  font: 400 18px/1 'Kaushan Script', cursive;
+  color: #888;
+}
+
+.foto-atual{
+	position:absolute;
+	width:100%;
+	height:400px;
+
+	background:black;
+
+	img{
+		width:100%;
+		height:auto;
+		max-height:400px;
+		opacity:0.5;
+		position:absolute;
+	}
+
+	.icone-status{
+		width:100px;
+		height:100px;
+		position:absolute;
+		margin-left:-50px;
+		margin-top:-50px;
+		left:50%;
+		top:50%;		
+		text-align:center;
+		vertical-align:middle;
+		line-height:100px;
+		i{
+			font-size:100px;
+
+		}		
+	}
+}
+
+.lista-status{
+	margin-top:400px;
+}

@@ -18,8 +18,9 @@
 
 .icone-canto{
     position:absolute;
-    left:0;
-    top:0;
+    left:5px;
+    top:5px;
+    z-index:999px;
 }
 .vertical-center{
     /* Center slide text vertically */
@@ -38,20 +39,6 @@
 }
 
 
-.avatar{
-    margin-top: 1em;
-    margin-right: 1em;
-    position: relative;
-    height:150px;
-    width:150px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-
-    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
-    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);    
-}
 
 
 .album {

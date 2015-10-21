@@ -17,12 +17,19 @@
 </template>
 
 <template name="albumItemGrande">
-    <img src="{{url}}" class="avatar acoes-album-item">
+    {{#with foto}}
+        <a class="acoes-album-item">
+            <i class="icon {{icon}} icone-canto" style="font-size:32px"></i>
+            {{> userAvatar publicId=imagem.publicId}}
+        </a>
+    {{/with}}
 </template>
 
 <template name="albumItemThumb">
-    <img src="{{url}}" class="foto">
-    {{#if isAvatar}}
-        {{> ionIcon icon='checkmark' class='balanced icone-canto'}}
-    {{/if}}
+    {{#with foto}}
+        {{> userThumb publicId=imagem.publicId}}
+        {{#if isAvatar}}
+            {{> ionIcon icon='checkmark' class='balanced icone-canto'}}
+        {{/if}}
+    {{/with}}
 </template>

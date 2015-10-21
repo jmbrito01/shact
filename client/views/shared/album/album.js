@@ -5,10 +5,24 @@ Template.albumItemGrande.events({
     'click .acoes-album-item':function(){
         console.log(this);
         var self = this;
+
+        var texto, acao;
+
+        if (Meteor.user().profile.avatar==self._id){
+            texto = 'Remover do perfil';
+            acao = function(){
+                Meteor.call('setAvatar','');
+            }
+        }else{
+            texto = 'Setar perfil';
+            acao = function(){
+                Meteor.call('setAvatar',self._id);
+            }            
+        }
         IonActionSheet.show({
           titleText: 'Foto',
           buttons: [
-            { text: 'Colocar de perfil' },
+            { text: texto},
           ],
 
           destructiveText: '<i class="icon ion-trash-outline"></i> Deletar',
@@ -17,12 +31,13 @@ Template.albumItemGrande.events({
             console.log('Cancelled!');
           },
           destructiveButtonClicked: function() {
+            console.log("AQUI!");
             Meteor.call('removerFoto',self._id);
             return true;
           },
           buttonClicked: function(index) {
             if (index === 0) {
-              Meteor.call('setAvatar',self._id);
+              acao();
             }
             return true;
           },          
@@ -34,6 +49,19 @@ Template.albumItemGrande.helpers({
     mostrarAcoes:function(){
         console.log(!Fotos.find({userId: Meteor.userId()}).count());    
         return Session.get('mostrarAcoes') || !Fotos.find({userId: Meteor.userId()}).count();
+    },
+    foto: function(){
+        return Fotos.findOne({_id: this.fotoId});
+    },
+    icon : function(){
+        if (this.reconhecimento.status==1){
+            return 'fa fa-cog fa-spin';
+        }else if(this.reconhecimento.status==2){
+            return 'fa fa-tag';
+        } else if (this.reconhecimento.status==3){
+            return 'fa fa-times';
+        }
+
     }
 })
 
@@ -41,7 +69,10 @@ Template.albumItemGrande.helpers({
 Template.albumItemThumb.helpers({
     isAvatar:function(){
         return (Meteor.user().profile.avatar==this._id);
-    }
+    },
+    foto: function(){
+        return Fotos.findOne({_id: this.fotoId});
+    },    
 })
 
 
@@ -74,16 +105,18 @@ Template.album.onRendered(function(){
             var foto = Fotos.findOne({_id:id});
             console.log("added!", id, fields);
 
+
             var albumItem = {
-                url: foto.imagem.url,
-                _id: foto._id
+                publicId: foto.imagem.publicId,
+                _id: foto._id,
+                status: foto.reconhecimento.status
             }
 
             fotosGrandes.appendSlide('<div class="swiper-slide" id="slide-foto-grande-'+foto._id+'"></div>');
-            Blaze.renderWithData(Template.albumItemGrande, albumItem, document.getElementById('slide-foto-grande-' + foto._id))
+            Blaze.renderWithData(Template.albumItemGrande, {fotoId: foto._id}, document.getElementById('slide-foto-grande-' + foto._id))
 
             fotosThumbs.appendSlide('<div class="swiper-slide" id="slide-foto-thumb-'+foto._id+'"></div>');
-            Blaze.renderWithData(Template.albumItemThumb, albumItem, document.getElementById('slide-foto-thumb-' + foto._id))
+            Blaze.renderWithData(Template.albumItemThumb, {fotoId: foto._id}, document.getElementById('slide-foto-thumb-' + foto._id))
 
             var slideObj = {
                 id: foto._id,
