@@ -1,0 +1,44 @@
+<template name="conexoesAceitar">
+  {{#ionModal title="Aceitar conexão" barClass="bar-positive"}}
+  	{{#with conexao}}
+  		{{#with userAdicionando}}  	
+  			{{>userHeader}}
+		{{/with}}
+
+		<div class="list">
+		  <div class="item item-divider">
+		  		{{>ionIcon icon="paper-airplane"}} Compartilhou com você
+		  </div>
+		  <div class="item" style="padding:0px">
+
+		    {{> perfisRecebidos}}
+		  </div>			  
+		  <div class="item item-divider">
+		   		{{>ionIcon icon="paper-airplane"}} Compartilhe também!
+		  </div>		  
+		  <div class="item" style="padding:0px">
+		    {{> selecionarPerfis}}
+		  </div>		  
+		  <div class="item item-divider">
+		    	{{>ionIcon icon="ios-chatbubble"}} Mensagem
+		  </div>		  
+		  <div class="item" style="min-height:150px">
+			  {{mensagem}}
+		  </div>		  
+		</div>	  	
+
+		<div class="row">
+			<div class="col">
+				<button class="button button-outline button-assertive button-block" data-dismiss="modal">
+				  {{> ionIcon icon="ion-close"}} Cancelar
+				</button>
+			</div>
+			<div class="col">
+				<button class="button button-outline button-balanced button-block" id="aceitar">
+				  {{> ionIcon icon="android-share-alt"}} Aceitar!
+				</button>			
+			</div>
+		</div>
+	{{/with}}
+  {{/ionModal}}
+</template>

@@ -14,9 +14,15 @@ Template.selfieBusca.onRendered(function(){
 	Session.setDefault('fotoAtual', '');
 })
 
-Template.selfieBusca.helpers({
+Template.selfieBusca.onRendered(function(){
+    //this.$('#pessoa1').css('background-color','red');
+
+})
+
+Template.selfieBusca.helpers({      
 	fotoAtual: function(){
 		return Session.get('fotoAtual');
+
 	},
 	statusItem: function(){
 		var icone, texto, cor
@@ -61,34 +67,21 @@ Template.selfieBusca.events({
             	status.set(STATUS_UPLOADING);
                 Cloudinary._upload_file (data, {}, function(error, res){
                     if (res && !error){
-                    	//Upload Ok
                     	status.set(STATUS_RECONHECIMENTO);
 
                     	Meteor.call('cadastrarFoto', res.public_id, res.secure_url, TIPO_PUBLICO,function(error,res){
                     		if (res && !error){
+                    			var fotoId = res;
+                    			console.log(fotoId);
                     			Meteor.call('reconhecerFaces', res, function(err,res){
-                    				status.set(STATUS_SUCESSO);
+                                    if (!err && res){
+                                        Router.go('fotos.view',{fotoId: fotoId});
+                                    }
                     			});
                     		}else{
                     			return sAlert.error(error.error);
                     		}
                     	})
-                    	/*
-                        Meteor.call('cadastrarFoto',res.public_id,res.secure_url, TIPO_PRIVADO, function(error,res){
-                            if (res && !error){
-                                sAlert.success("Upload da foto concluído!");
-                                Meteor.call('detectarFaces', res, function(error,res){
-                                    if (!error){
-                                        sAlert.success("Rosto identificado com sucesso!");
-                                    }else{
-                                        return sAlert.error(error.error);;
-                                    }
-                                });
-                            }else{
-                                return sAlert.error(error.error);;                                
-                            }
-                        });
-*/
                     }else{
                         return sAlert.error("Erro fazendo upload.");
                     }
@@ -99,3 +92,5 @@ Template.selfieBusca.events({
         });
     },    
 });
+
+

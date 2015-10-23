@@ -35,6 +35,7 @@ Template.geoBusca.events({
 	}, TEXTO_THROTTLE),
 	'input #slider-raio': _.throttle(function(e){
 		var raio = parseInt($(e.target).val());
+		console.log(raio);
 		Session.set('raio',raio);
 	}, SLIDER_THROTTLE),	
 })

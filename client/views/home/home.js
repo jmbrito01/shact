@@ -3,7 +3,6 @@ const MODO_GEO = 1;
 const MODO_TELEFONE = 2;
 
 Template.home.onRendered(function(){
-	console.log("aqui");
 	Session.setDefault('modoBusca',MODO_SELFIE);
 	
 	var swiper = new Swiper('.selecionar-modo',{

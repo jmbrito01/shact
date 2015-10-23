@@ -1,0 +1,44 @@
+<template name="fotosView">
+	{{#contentFor "headerButtonLeft"}}
+	  {{>ionNavBackButton}}
+	{{/contentFor}}
+
+
+	{{#contentFor "headerButtonRight"}}
+		<a class="button button-clear" id="editar-perfil">
+	  		{{> ionIcon icon='edit'}}
+	 	</a>
+	{{/contentFor}}
+
+	
+	{{#contentFor "headerTitle"}}
+	  <h1 class="title">Ver Foto</h1>
+	{{/contentFor}}
+
+	{{#contentFor "tabs"}}
+	    
+	{{/contentFor}}
+
+	{{#ionView}}
+	  {{#ionContent}}
+	  	<div class="wrapper" >
+			<div class="imagem-com-tags">
+				<img src="{{imagem.url}}">
+				{{#each tags}}
+					<div class="tag" style="
+					width:{{dimensoes.width}}%;
+					height:{{dimensoes.height}}%;
+					left:{{posicao.x}}%;
+					top:{{posicao.y}}%;
+					margin-left:-{{half dimensoes.width}}%;
+					margin-top:-{{half dimensoes.height}}%;">
+					</div>
+				{{/each}}
+			</div>
+		</div>
+		
+		{{> podium candidatos=candidatos}}
+
+	  {{/ionContent}}
+	{{/ionView}}
+</template>

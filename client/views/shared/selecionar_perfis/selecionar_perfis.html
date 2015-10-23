@@ -1,0 +1,17 @@
+<template name="selecionarPerfis">
+  <div class="selecionar-perfis">
+        <div class="swiper-wrapper">
+        </div>
+        <!-- Add Pagination -->
+        
+    </div>
+</template>
+
+<template name="perfilItem">
+    {{#with compartilhavel}}
+
+    	<div class="social-icon {{#unless selecionado}}preto-e-branco{{/unless}}" style="background-color:{{cor}};">
+    		<i class="{{icone}}"></i>
+    	</div>
+    {{/with}}
+</template>

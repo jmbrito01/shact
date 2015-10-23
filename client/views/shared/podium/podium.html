@@ -1,0 +1,15 @@
+<template name="podium">
+	<div class="row">
+		{{#each candidatos}}
+			<div class="col" align="center">
+				<div class="candidato animated fadeIn">
+					{{#with user}}
+						{{>userThumb publicId=avatarPublicId}}
+					{{/with}}
+					<progress value="{{certeza}}" max="100" style="color:green"></progress> {{certeza}} %
+				</div>
+			</div>
+		{{/each}}		
+	</div>
+</template>
+

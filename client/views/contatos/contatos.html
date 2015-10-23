@@ -1,0 +1,47 @@
+<template name="contatos">	
+
+	{{#contentFor "headerButtonLeft"}}
+		<a class="button button-clear" href="{{pathFor 'users.view' userId=currentUser._id}}">
+	  		{{> ionIcon icon='person'}}
+	 	</a>	
+	{{/contentFor}}
+
+	{{#contentFor "headerButtonRight"}}
+
+		<a class="button button-clear" href="{{pathFor 'configuracoes.index'}}">
+	  		{{> ionIcon icon='gear-b'}}
+	 	</a>
+	{{/contentFor}}
+
+
+	{{#contentFor "headerTitle"}}
+		<a class="button button-clear" id="configurar-radar">
+	  		{{> ionIcon icon='ios-settings-strong'}}
+	 	</a>
+	{{/contentFor}}
+
+	{{#contentFor "headerTitle"}}
+	  <h1 class="title">Contatos</h1>
+	{{/contentFor}}	
+
+	{{#contentFor "tabs"}}
+	    {{>tabs}}
+	{{/contentFor}}
+
+
+	{{#ionView}}
+	  {{#ionContent}}
+		<div class="list">
+			{{#each currentUser.conexoes}}
+			    <a class="item item-avatar" href={{pathFor 'conexoes.view' conexaoId=_id}}>
+			    {{#with outroUsuario}}
+			    	{{>userThumb publicId=avatarPublicId}}
+			    	<h2>{{profile.nomeCompleto}}</h2>
+			    	<p> {{> ionIcon icon="ios-location" class="geo-marker"}} Te adicionou por geolocalização </p>
+			    {{/with}}
+			    </a>			
+			{{/each}}
+		</div>
+	  {{/ionContent}}
+	{{/ionView}}
+</template>			 

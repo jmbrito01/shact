@@ -1,6 +1,6 @@
 <template name="album">
      <div class="album">
-     	<div class="fotos-grandes">
+     	<div class="album-portrait">
             <div class="swiper-wrapper">
             </div>
             <!-- Add Arrows -->
@@ -9,27 +9,10 @@
             
         </div>
 
-        <div class="fotos-thumbs">
+        <div class="album-thumbs">
             <div class="swiper-wrapper">
             </div>
         </div>
     </div>
 </template>
 
-<template name="albumItemGrande">
-    {{#with foto}}
-        <a class="acoes-album-item">
-            <i class="icon {{icon}} icone-canto" style="font-size:32px"></i>
-            {{> userAvatar publicId=imagem.publicId}}
-        </a>
-    {{/with}}
-</template>
-
-<template name="albumItemThumb">
-    {{#with foto}}
-        {{> userThumb publicId=imagem.publicId}}
-        {{#if isAvatar}}
-            {{> ionIcon icon='checkmark' class='balanced icone-canto'}}
-        {{/if}}
-    {{/with}}
-</template>

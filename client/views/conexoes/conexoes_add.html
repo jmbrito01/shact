@@ -1,0 +1,38 @@
+<template name="conexoesAdd">
+  {{#ionModal title="Fazer conexão"}}
+	{{#with user}}  	
+		{{> userHeader}}
+
+		<div class="list">
+		  <div class="item item-divider">
+		  		{{>ionIcon icon="paper-airplane"}} Compartilhe!
+		  </div>
+		  <div class="item" style="padding:0px">
+		    {{> selecionarPerfis}}
+		  </div>
+		  <div class="item item-divider">
+		    Deixe uma mensagem
+		  </div>		  
+		  <div class="item" style="min-height:150px;">
+			  <label class="item item-input">
+			    <textarea rows="5" placeholder="Olá pessoa!" id="mensagem"></textarea>
+			  </label>
+		  </div>		  
+		</div>	  	
+
+		<div class="row">
+			<div class="col">
+				<button class="button button-outline button-assertive button-block" data-dismiss="modal">
+				  {{> ionIcon icon="close"}} Cancelar
+				</button>
+			</div>
+			<div class="col">
+				<button class="button button-outline button-balanced button-block" id="conectar">
+				  {{> ionIcon icon="android-share-alt"}} Conectar-se!
+				</button>			
+			</div>
+		</div>
+
+    {{/with}}
+  {{/ionModal}}
+</template>

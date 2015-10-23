@@ -20,7 +20,7 @@
 		  	{{#if $.Session.get 'configurarRadar'}}
 				<div class="item range range-positive">
 				  {{> ionIcon icon="arrow-shrink"}}
-				  <input type="range" name="volume">
+				  <input type="range" id="slider-raio" name="volume" min="0" max="20000">
 				  {{> ionIcon icon="arrow-expand"}}
 				</div>		  	
 		  	{{/if}}		  
@@ -31,11 +31,11 @@
 
 
 			{{#each resultados}}
-			    <a class="item item-avatar" href="#">
-			    	{{>userThumb publicId=publicId}}
-			      
-			      <h2>{{{name}}}</h2>
-			      <p>{{> ionIcon icon="ios-location"}} {{distance}}m</p>
+			    <a class="item item-avatar animated fadeIn" href="#"  data-ion-modal="conexoesAdd" data-id="{{_id}}">
+			    		{{>userThumb publicId=publicId}}
+				      
+				      <h2 class="animated fadeIn">{{{name}}}</h2>
+				      <p>{{> ionIcon icon="ios-location"}} {{distance}}m</p>
 			    </a>			
 			{{/each}}
 

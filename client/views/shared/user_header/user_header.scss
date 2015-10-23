@@ -1,0 +1,59 @@
+.profile-header {
+  background: #27272B url("http://blog.theclymb.com/wp-content/uploads/2013/01/cover1.jpg") center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 24px;
+
+  .avatar {
+    margin: 0 auto;
+  }
+
+  h3 {
+    color: #fff;
+    margin-top:10px;
+    margin-bottom: 0px;
+  }
+
+  p{
+    color: #fff;
+    margin-top:0px;
+    margin-bottom: 0px;
+  }
+
+  a {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    text-decoration: none;
+
+    img {
+      vertical-align: middle;
+    }
+  }
+}
+
+.avatar {
+  .avatar-image {
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border: 2px solid #fff;
+  }
+
+  .avatar-initials {
+    border: 2px solid #fff;
+    color: #fff;
+  }
+}
+
+.profile-header::after {
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}

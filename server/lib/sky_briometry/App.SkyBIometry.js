@@ -164,3 +164,7 @@ SkyBiometry.prototype.checkParams = function(model, params){
 	//[a,b]  [a,b,c]
 	//-> []
 }
+
+SkyBiometry.prototype.pegaUserId = function(namespace){
+	return namespace.substr(0, namespace.indexOf('@')); 	
+}

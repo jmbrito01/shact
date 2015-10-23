@@ -68,7 +68,6 @@ ElasticSearch.prototype.usuariosProximos = function(localizacao, raio, excluir, 
     console.log(raio);
     console.log(excluir);
     console.log(textoBusca);
-    raio = 100000;
 
   
 
@@ -168,7 +167,6 @@ SearchSource.defineSource('shacters', function(textoBusca, opcoes) {
 
 
   var raio = parseFloat(opcoes.raio);
-
 
   var localizacao = Meteor.user().localizacao;
 

@@ -16,7 +16,7 @@ Meteor.startup(function(){
 	var pegouLocalizacao = function(localizacao){
 		Location.enableAccuracyFilter(GPS_FILTRO_ACURACIA);
 		Location.enableDistanceFilter(GPS_FILTRO_DISTANCIA);
-		Location.enableTimeFilter(GPS_FILTRO_TEMPO);		
+		//Location.enableTimeFilter(GPS_FILTRO_TEMPO);		
 
 		if (Meteor.userId()){
 			//console.log("SENDING POOSITION (WATCH)",localizacao);

@@ -1,7 +1,8 @@
 
 
 // Import your custom variables
-@import 'app_variables';
+@import 'app-variables';
+@import 'app-mixins';
 
 // Then import ionic after. Ionic will use your variables instead of it's own.
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
@@ -10,4 +11,30 @@
 
 *{
 	font-family: 'Roboto', sans-serif;
+}
+
+
+.user-portrait {
+    margin-top: 1em;
+    margin-right: 1em;
+    position: relative;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+       height:150px;
+        width:150px;    
+
+    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+}
+
+.geo-marker{
+    color: #f1756b;
+}
+
+.title{
+    margin-left:50px !important;
 }

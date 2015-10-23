@@ -1,18 +1,17 @@
 <template name="tabs">
   {{#if isAndroid}}
-    {{#ionTabs style="android" class="tabs-background-positive tabs-color-light"}}
-      {{> ionTab title="Home" path="home" icon="android-home"}}
-      {{> ionTab title="Star" path="star" icon="android-star"}}
-      {{> ionTab title="Heart" path="heart" icon="heart"}}
-      {{> ionTab title="Gear" path="gear" icon="gear-b"}}
+    {{#ionTabs style="android" class="tabs-icon-only tabs-background-positive tabs-color-light"}}
+      {{> ionTab path="contatos.index" iconOff="ios-list-outline" iconOn="ios-list"}}
+      {{> ionTab path="home" iconOff="ios-world-outline" iconOn="ios-world"}}
+      {{> ionTab path="pendentes.index" iconOff="ios-personadd-outline" iconOn="ios-personadd"}}
     {{/ionTabs}}
   {{else}}
     
     {{#ionTabs style="ios" class="tabs-background-positive tabs-color-light"}}
-      {{> ionTab title="Contatos" path="contatos" iconOff="ios-list-outline" iconOn="ios-list"}}
+      {{> ionTab title="Contatos" path="contatos.index" iconOff="ios-list-outline" iconOn="ios-list"}}
       {{> ionTab title="Favoritos" path="favoritos" iconOff="ios-star-outline" iconOn="ios-star"}}
       {{> ionTab title="Shact!" path="home" iconOff="ios-world-outline" iconOn="ios-world"}}
-      {{> ionTab title="Pendentes" path="pendentes" iconOff="ios-personadd-outline" iconOn="ios-personadd"}}
+      {{> ionTab title="Pendentes" path="pendentes.index" iconOff="ios-personadd-outline" iconOn="ios-personadd"}}
       {{> ionTab title="Notificações" path="notificacoes" iconOff="ios-chatbubble-outline" iconOn="ios-chatbubble"}}
     {{/ionTabs}}
     

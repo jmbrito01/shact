@@ -4,7 +4,7 @@ const FOTO_QUALITY = 100;
 
 Template._usersCadastrarFotos.events({
     'click #cadastrar-foto': function(){
-        MeteoricCamera.getPicture({width:FOTO_WIDTH,height:FOTO_HEIGHT,quality:FOTO_QUALITY}, function(error,data){
+        MeteoricCamera.getPicture({quality:FOTO_QUALITY}, function(error,data){
             if (data && !error){
                 Cloudinary._upload_file (data, {}, function(error, res){
                     if (res && !error){

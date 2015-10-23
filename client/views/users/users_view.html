@@ -22,19 +22,8 @@
 
 	{{#ionView}}
 	  {{#ionContent}}
-	  	<!--
-	  	{{#if temFotos}}
-	  		{{> album}}
-	  	{{else}}
-	  		{{> cadastrarFoto}}
-	  	{{/if}}
-	  	-->
+	  	{{>userHeader}}
 
-	  	<div class="row">
-	  		<div class="col" align="center">
-	  			{{> userAvatar publicId=avatarPublicId}}
-	  		</div>
-	  	</div>
 	  	<div class="row">
 	  		<div class="col col-50">
 				<a class="button button-positive button-block button-outline" href="{{pathFor 'users.perfis' userId=_id}}">

@@ -59,12 +59,28 @@ ShactRecognition.prototype.reconhecerFacesSync = function(userIds, url){
 
 	var res = this.sync.faces.recognize(uids, url, {});
 
-	_.each(res.photos[0].tags, function(tag){
-		console.log("tag1-----------------")
-		console.log(tag);
+	console.log(res.photos[0].tags);
+	
+	var tags = _.map(res.photos[0].tags,function(tag){
+		var candidatos = _.map(tag.uids, function(uid){
+			return {
+				userId: self.pegaUserId(uid.uid),
+				certeza: uid.confidence
+			}
+		});
+
+		return {
+			tempTagId: tag.tid,
+			posicao: tag.center,
+			dimensoes:{
+				width: tag.width,
+				height: tag.height
+			},
+			candidatos: candidatos
+		}
 	})
 
-	return res;
+	return tags;
 }
 
 ShactRecognition.prototype.salvarTagSync = function(userId,tagId){
@@ -84,11 +100,8 @@ ShactRecognition.prototype.treinarUserSync = function(userId){
 	var namespace = this.constroiNamespace(userId);
 	var res = this.sync.faces.train(namespace, {});
 	
-	console.log(res);
-	if (!res.updated.length)
-		throw new ErroReconhecimento(ERRO_TREINAMENTO, "Nenhum usuário foi treinado.");
-	
-	return res.updated[0].uid;
+
+	return (res.status=="success")?true:false;
 }
 ShactRecognition.prototype.removerTagSync = function(tagId){
 	var res = this.sync.tags.remove(tagId, {});
