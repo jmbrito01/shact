@@ -1,0 +1,32 @@
+<template name="cloudinaryImg">
+	{{#if publicId}}
+		{{#if loadingImg}}
+			<!--<img src="{{notFoundImage}}" style="width:{{width}}px;height:{{height}}px">-->
+			<div style="width:{{width}}px;height:{{height}}px;line-height:{{height}}px;" class="loading-block">
+				<i class="fa fa-spinner fa-spin"></i>
+			</div>
+		{{/if}}
+		
+		<img src="{{c.url publicId width=width height=height crop="thumb" gravity="face"}}" class="user-image {{class}}" style="{{#if loadingImg}}visibility:hidden; display:none;{{/if}}" onerror="this.style.display='none';">
+	
+	{{else}}
+		<img src="{{notFoundImage}}" class="{{class}}">
+	{{/if}}
+</template>
+
+
+<template name="userThumb">
+	{{> cloudinaryImg publicId=publicId notFoundImage="/images/unknown.png" width="80" height="80" class="user-thumb"}}
+</template>
+
+<template name="userAvatar">
+	<div class="avatar avatar-large avatar-circle">
+		{{> cloudinaryImg publicId=publicId notFoundImage="/images/unknown.png" width="120" height="120" class="avatar-image"}}
+	</div>
+</template>
+
+
+<template name="userPortrait">
+	{{> cloudinaryImg publicId=publicId notFoundImage="/images/unknown.png" width="150" height="150" class="user-portrait"}}
+</template>
+

@@ -18,14 +18,12 @@
     margin-top: 1em;
     margin-right: 1em;
     position: relative;
+    height:150px;
+    width:150px;   
 
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-
-       height:150px;
-        width:150px;    
-
     -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
     -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
     box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
@@ -35,6 +33,183 @@
     color: #f1756b;
 }
 
-.title{
-    margin-left:50px !important;
+.icone-canto{
+    position:absolute;
+    left:5px;
+    top:5px;
+    z-index:999px;
+}
+
+
+/*
+.album {
+    position:relative;
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .swiper-slide {
+        @include vertical-center;
+    }
+
+    .album-portrait{
+        height:225px;
+        width: 100%;
+        position:relative;
+    }
+
+    .album-thumbs{
+        height:75px;
+        width:100%;
+        box-sizing: border-box; 
+        position:relative;
+
+        .swiper-slide{
+            width: 75px;
+            height: 100%;
+            margin:0;
+
+            img{
+                width:75px;
+                height:75px;   
+                opacity: 0.4;
+            }
+        }    
+
+        .swiper-slide-active{
+            img{
+                width:75px;
+                height:75px;
+                opacity:1;
+            }
+        }    
+    }
+}
+*/
+
+
+/*                          */
+/*      SWIPER              */
+/*                          */
+.galeria{
+    position:relative;
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thumb-opacity{
+    .swiper-slide{  
+        img{
+            opacity: 0.4;
+        }
+    }        
+    .swiper-slide-active{
+        img{
+            opacity: 1;    
+        }
+        
+    }        
+}
+
+.swiper-normal{
+    height:225px;
+    width: 100%;
+    position:relative;
+
+    .swiper-slide{
+        text-align:center;
+        background: #fff;
+        width:100%;
+        @include vertical-center;
+    }       
+}
+
+.swiper-thumbs {
+    height:80px;
+    width:100%;
+    box-sizing: border-box; 
+    position:relative;
+    .swiper-slide {
+        text-align: center;
+        @include vertical-center;
+        background: #fff;
+        width:80px;
+        height: 100%;
+        margin:0;  
+    }        
+}
+
+
+
+/*                          */
+/*      SOCIAL ICON         */
+/*                          */
+.social-icon{
+    width:80px;;
+    height:80px;
+    font-size:35px;
+    line-height:80px;
+    text-align:center;
+    vertical-align:middle;
+    color:white;
+    -webkit-transition: background-color 1s;
+}
+
+.social-icon-big{
+    width:200px;
+    height:200px;
+    border-radius:10px;
+    font-size:150px;
+    line-height:200px;
+    text-align:center;
+    -webkit-transition: background-color 1s;
+    color:white
+}
+.preto-e-branco{
+    background-color:#d3d3d3 !important;
+    color:#202020 !important;
+}
+
+
+
+/*                          */
+/*      PROFILE HEADER      */
+/*                          */
+.profile-header {
+  background: #27272B url("http://blog.theclymb.com/wp-content/uploads/2013/01/cover1.jpg") center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 24px;
+
+  .avatar {
+    margin: 0 auto;
+  }
+
+  h3 {
+    color: #fff;
+    margin-top:10px;
+    margin-bottom: 0px;
+  }
+
+  p{
+    color: #fff;
+    margin-top:0px;
+    margin-bottom: 0px;
+  }
+
+  a {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    text-decoration: none;
+
+    img {
+      vertical-align: middle;
+    }
+  }
 }

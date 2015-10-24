@@ -1,4 +1,10 @@
 <template name="selecionarPerfis">
-    {{> swiperSimples params}}
+	{{#swiper options=options1 id="selecionar-perfis" class='swiper-thumbs'}}
+		{{#each perfis}}
+			{{#swiperSlide}}
+				{{> selecionarPerfilItem}}
+			{{/swiperSlide}}
+		{{/each}}
+	{{/swiper}}
 </template>
 

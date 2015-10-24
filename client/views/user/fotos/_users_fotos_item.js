@@ -1,5 +1,5 @@
-Template.albumPortrait.events({
-    'click .acoes-album-portrait':function(){
+Template.userFotosItem.events({
+    'click .acoes-user-fotos':function(){
         var self = this;
 
         var texto, acao;
@@ -36,12 +36,12 @@ Template.albumPortrait.events({
     }
 })
 
-Template.albumPortrait.helpers({
+Template.userFotosItem.helpers({
     icon : function(){
         if (this.reconhecimento.status==1){
             return 'fa fa-cog fa-spin';
         }else if(this.reconhecimento.status==2){
-            return 'fa fa-tag';
+            return '';
         } else if (this.reconhecimento.status==3){
             return 'fa fa-times';
         }

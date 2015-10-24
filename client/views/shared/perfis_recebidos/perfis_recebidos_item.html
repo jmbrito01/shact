@@ -1,8 +1,5 @@
 <template name="perfilRecebidoItem">
     {{#with compartilhavel}}
-
-    	<div class="social-icon" style="background-color:{{cor}}">
-    		<i class="{{icone}}"></i>
-    	</div>
+    	{{> compartilhavelIcone icone=icone cor=cor semCor=false grande=false}}
     {{/with}}
 </template>

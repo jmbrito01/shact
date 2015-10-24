@@ -1,11 +1,10 @@
-<template name="swiperSimples">
+<template name="swiper">
   <div class="{{class}}" id={{id}}>
         <div class="swiper-wrapper">
+            {{> UI.contentBlock}}
         </div>
-        <!-- Add Pagination -->
-
         {{#if paginate}}
-        	<div class="swiper-pagination"></div>
+            <div class="swiper-pagination"></div>
         {{/if}}
 
         {{#if buttons}}

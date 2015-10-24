@@ -1,0 +1,64 @@
+<template name="userPerfis">
+	{{#contentFor "headerButtonLeft"}}
+	  	<a class="buttons button button-clear pull-left active back-button-especial" href={{pathFor 'user.index' userId=_id}}>
+    		<i class="icon ion-ios-arrow-back"></i>
+  		</a>
+	{{/contentFor}}
+
+	{{#contentFor "headerButtonRight"}}
+
+	{{/contentFor}}
+
+	{{#contentFor "headerTitle"}}
+	  <h1 class="title">Compartilháveis</h1>
+	{{/contentFor}}
+
+	{{#contentFor "tabs"}}
+	    
+	{{/contentFor}}
+
+	
+	{{#ionView}}
+	  {{#ionContent}}
+		<div class="galera">
+			{{#swiper options=options1 id="cadastrar-perfis-item" class='swiper-normal'}}
+				{{#each compartilhaveis}}
+					{{#swiperSlide}}
+						{{> compartilhavelIcone icone=icone cor=cor semCor=semCor grande=true class='animated bounceIn'}}
+					{{/swiperSlide}}
+				{{/each}}
+			{{/swiper}}
+			{{#swiper options=options2 id="cadastrar-perfis-thumbs" class='swiper-thumbs'}}
+				{{#each compartilhaveis}}
+					{{#swiperSlide}}
+						{{> compartilhavelIcone icone=icone cor=cor semCor=semCor grande=false}}
+					{{/swiperSlide}}
+				{{/each}}
+			{{/swiper}}
+		</div>
+
+	    {{#with compartilhavelSelecionado}}
+	    	{{> perfisView}}
+
+	    	{{#with meuPerfil}}
+			  	<div class="row">
+			  		<div class="col col-50">
+			  			{{>perfisRemove}}
+			  		</div>
+			  		<div class="col col-50">
+						<a class="button button-balanced button-block button-outline">
+							{{> ionIcon icon="log-out"}} Visitar
+					    </a>		
+			  		</div>
+			  	</div>	 
+	    	{{else}}
+			  	<div class="row">
+			  		<div class="col">
+						{{> perfisAdd}}	
+			  		</div>
+			  	</div>	
+	    	{{/with}}
+	    {{/with}}
+	  {{/ionContent}}
+	{{/ionView}}
+</template>

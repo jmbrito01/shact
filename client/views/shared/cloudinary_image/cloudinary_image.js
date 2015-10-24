@@ -1,18 +1,18 @@
 
-Template.userImage.events({
+Template.cloudinaryImg.events({
 	'load .user-image':function(e,template){
 		template.loadingImg.set(false);
 		
 	}
 })
 
-Template.userImage.helpers({
+Template.cloudinaryImg.helpers({
 	loadingImg:function(){
 
 		return Template.instance().loadingImg.get();
 	}
 })
 
-Template.userImage.onCreated(function(){
+Template.cloudinaryImg.onCreated(function(){
 	this.loadingImg = new ReactiveVar(true);
 })

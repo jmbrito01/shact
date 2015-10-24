@@ -1,4 +1,4 @@
-Template.usersView.helpers({
+Template.user.helpers({
 	titulo:function(){
 		return (this._id==Meteor.userId()) ? 'Meu Perfil' : this.profile.nome;
 
@@ -8,7 +8,7 @@ Template.usersView.helpers({
 	}
 })
 
-Template.usersView.onRendered(function(){
+Template.user.onRendered(function(){
 	
 })
 

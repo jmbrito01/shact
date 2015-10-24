@@ -1,21 +1,15 @@
 Template.perfisRecebidos.helpers({
-    params:function(){
-        var perfis = Template.instance().data.perfis || [];
-        console.log(Template.instance().data);
-
+    options1:function(){
         return {
-            template: Template.perfilRecebidoItem,
-            options : {
-                slidesPerColumn: 1,
-                paginationClickable: true,
-                spaceBetween: 0,
-                slidesPerView: 'auto',                  
-            },
-            'class': 'perfis-recebidos',
-            id: 'perfis-recebidos',
-            collection: Perfis,
-            selector: {_id: {$in: perfis}, userId: {$ne:Meteor.userId()}}
+            observer:true,
+            slidesPerColumn: 1,
+            paginationClickable: true,
+            spaceBetween: 0,
+            slidesPerView: 'auto',          
         }
+    },  
+    perfis: function(){
+        return Perfis.find({_id: {$in: this.perfis}, userId: {$ne:Meteor.userId()}});
     }
 })
 

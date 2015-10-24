@@ -1,10 +1,12 @@
 <template name="perfisRecebidos">
-<!--
-  <div class="perfis-recebidos">
-        <div class="swiper-wrapper">
-        </div>
-    </div>
--->
-{{> swiperSimples params}}
+	{{#swiper options=options1 id="perfis-recebidos" class='swiper-thumbs'}}
+		{{#each perfis}}
+			{{#swiperSlide}}
+				{{#with compartilhavel}}
+					{{> compartilhavelIcone icone=icone cor=cor}}
+				{{/with}}
+			{{/swiperSlide}}
+		{{/each}}
+	{{/swiper}}
 </template>
 

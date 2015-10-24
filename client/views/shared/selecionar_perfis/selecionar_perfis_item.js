@@ -15,7 +15,7 @@ ReactiveDict.prototype.valoresVerdadeiros = function(){
 }
 
 Template.selecionarPerfilItem.events({
-    'click .social-icon':function(e,tmpl){
+    'click .selecionar-perfil':function(e,tmpl){
         var perfilId = tmpl.data._id;
 
         perfisSelecionados.set(perfilId, !perfisSelecionados.get(perfilId));
@@ -23,10 +23,9 @@ Template.selecionarPerfilItem.events({
 })
 
 Template.selecionarPerfilItem.helpers({
-    selecionado:function(){
+    semCor:function(){
         var perfilId = Template.instance().data._id;
-
-        return perfisSelecionados.equals(perfilId,true);
+        return !perfisSelecionados.equals(perfilId,true);
     }
 })
 

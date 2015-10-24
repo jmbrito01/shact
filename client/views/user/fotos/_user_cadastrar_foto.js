@@ -2,7 +2,7 @@ const FOTO_WIDTH = 500;
 const FOTO_HEIGHT = 500;
 const FOTO_QUALITY = 100;
 
-Template._usersCadastrarFotos.events({
+Template.usersCadastrarFotos.events({
     'click #cadastrar-foto': function(){
         MeteoricCamera.getPicture({quality:FOTO_QUALITY}, function(error,data){
             if (data && !error){

@@ -1,0 +1,34 @@
+<template name="perfisView">
+	<div class="list">
+		<a class="item item-icon-left" href="#">
+			<i class="icon {{icone}}"></i>
+			{{nome}}
+		</a>
+		<a class="item item-icon-left" href="#">
+			{{#if $eq categoria 0}}
+				{{> ionIcon icon='android-happy'}}
+				Social
+			{{else}}
+				{{> ionIcon icon='briefcase'}}
+				Profissional
+			{{/if}}
+		</a>		
+		{{#with meuPerfil}}
+		<a class="item item-icon-left" href="#">
+			{{> ionIcon icon='pricetag'}}
+			Perfil cadastrado
+			<span class="item-note">
+				{{valor}}
+			</span>
+		</a>
+		{{else}}    
+			<a class="item item-icon-left" href="#">
+				{{> ionIcon icon='close-round'}}
+				Nenhum perifl cadastrado
+				<span class="item-note">
+					Cadastre agora!
+				</span>
+			</a>
+		{{/with}}
+	</div>
+</template>

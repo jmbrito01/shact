@@ -1,4 +1,4 @@
-const GPS_FILTRO_TEMPO = 0.5;
+const GPS_FILTRO_TEMPO = 1;
 const GPS_FILTRO_ACURACIA = 50;
 const GPS_FILTRO_DISTANCIA = 5;
 
@@ -8,8 +8,8 @@ Meteor.startup(function(){
 	   if(state === 'Enabled') {
 	      console.log("GPS Is Enabled");	      
 			//Location.enableAccuracyFilter(GPS_FILTRO_ACURACIA);
-			//Location.enableDistanceFilter(GPS_FILTRO_DISTANCIA);
-			//Location.enableTimeFilter(GPS_FILTRO_TEMPO);			      
+			Location.enableDistanceFilter(GPS_FILTRO_DISTANCIA);
+			Location.enableTimeFilter(GPS_FILTRO_TEMPO);			      
 	   }
 	}
 	var gpsDesabilitado = function(){
