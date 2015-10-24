@@ -1,18 +1,26 @@
-perfisSelecionados = new ReactiveDict('PerfisSelecionados');
 
-ReactiveDict.prototype.valoresVerdadeiros = function(){
-    var perfis = [];
-    var keys = this.keys;
-    var self = this;
 
-    Object.keys(keys).forEach(function(key){
-      if (self.get(key)){
-        perfis.push(key);
-      }
-    }); 
+Template.selecionarPerfis.helpers({
+    params:function(){
+        return {
+            template: Template.selecionarPerfilItem,
+            options : {
+                slidesPerColumn: 1,
+                paginationClickable: true,
+                spaceBetween: 0,
+                slidesPerView: 'auto',                  
+            },
+            'class': 'selecionar-perfis',
+            id: 'selecionar-perfis',
+            collection: Perfis,
+            selector: {userId: Meteor.userId()}
+        }
+    }
+})
 
-    return perfis;
-}
+
+
+/*
 
 Template.selecionarPerfis.onRendered(function(){
 
@@ -52,22 +60,8 @@ Template.selecionarPerfis.onRendered(function(){
         }
     });
 })
-
-Template.perfilItem.events({
-    'click .social-icon':function(e,tmpl){
-        var perfilId = tmpl.data._id;
-
-        perfisSelecionados.set(perfilId, !perfisSelecionados.get(perfilId));
-    }
-})
-
-Template.perfilItem.helpers({
-    selecionado:function(){
-        var perfilId = Template.instance().data._id;
-
-        return perfisSelecionados.equals(perfilId,true);
-    }
-})
 Template.selecionarPerfis.onDestroyed(function(){
     this.perfilObserver.stop();
 })
+
+*/

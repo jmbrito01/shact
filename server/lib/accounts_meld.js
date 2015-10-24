@@ -27,5 +27,5 @@ console.log("YES!");
 
 AccountsMeld.configure({
     serviceAddedCallback: novoService,
-    askBeforeMeld:false
+    askBeforeMeld:true
 });

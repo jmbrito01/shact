@@ -1,74 +1,88 @@
 <template name="conexoesView">
 	{{#contentFor "headerButtonLeft"}}
-	{{>ionNavBackButton}}
+		{{>ionNavBackButton}}
 	{{/contentFor}}
 
 	{{#contentFor "headerButtonRight"}}
-	<a class="button button-clear" id="acoes-conexao">
-	{{> ionIcon icon='plus'}}
-	</a>
+		<a class="button button-clear" id="acoes-conexao">
+			{{> ionIcon icon='plus'}}
+		</a>
 	{{/contentFor}}
 
 	{{#contentFor "headerTitle"}}
-	<a class="button button-clear" id="configurar-radar">
-		{{> ionIcon icon='ios-settings-strong'}}
-	</a>
+		<a class="button button-clear" id="configurar-radar">
+			{{> ionIcon icon='ios-settings-strong'}}
+		</a>
 	{{/contentFor}}
 
 	{{#contentFor "headerTitle"}}
-	<h1 class="title">Contato</h1>
+		<h1 class="title">Contato</h1>
 	{{/contentFor}}
 
 	{{#ionView}}
-	{{#ionContent}}
+		{{#ionContent}}
+			{{#with outroUsuario}}  	  			
+				{{>userHeader}}
+				<!--{{>nossasFotos}}-->
 
-	{{#with outroUsuario}}  	  			
-	{{>userHeader}}
-	{{/with}}
+				<!--
+				<div class="row">
+					<div class="col">
+						<button class="button button-outline button-balanced button-block" data-dismiss="modal">
+						  {{> ionIcon icon="ios-chatbubble-outline"}} Chat
+						</button>
+					</div>
+					<div class="col">
+						<button class="button button-outline button-positive button-block" id="conectar">
+						  {{> ionIcon icon="android-share-alt"}} Compartilhar
+						</button>			
+					</div>
+				</div>
+			-->
 
-	{{>nossasFotos}}
+				<div class="row">
+					<div class="col col-50">
+						<a class="button button-positive button-block button-outline" href="{{pathFor 'users.perfis' userId=_id}}">
+							{{> ionIcon icon="android-share-alt"}} Compartilhar ({{countPerfis}})
+						</a>	
+					</div>
+					<div class="col col-50">
+						<a class="button button-balanced button-block button-outline" href="{{pathFor 'users.fotos' userId=_id}}">
+							{{> ionIcon icon="ios-camera-outline"}} Nossas Fotos ({{countFotos}})
+						</a>		
+					</div>
+				</div>	  	
 
-	<div class="row">
-		<div class="col">
-			<button class="button button-outline button-balanced button-block" data-dismiss="modal">
-			  {{> ionIcon icon="ios-chatbubble-outline"}} Chat
-			</button>
-		</div>
-		<div class="col">
-			<button class="button button-outline button-positive button-block" id="conectar">
-			  {{> ionIcon icon="android-share-alt"}} Compartilhar
-			</button>			
-		</div>
-	</div>
-
-	<div class="list">
-		<div class="item item-divider">
-			Perfis de <b>Marcelo</b>
-		</div>		  	  
-		<div class="item" style="padding:0px">
-			{{> perfisRecebidos}}
-		</div>		
-		<div class="item item-divider" style="text-align:left;">
-			Informações pessoais
-		</div>		
-	  <a class="item" href="#">
-	   Email
-	   	<span  class="item-note">marcelo@marcelo.com</span>
-	  </a>
-	  <a class="item" href="#">
-	    Celular
-	   	<span class="item-note"><i>(11)</i> 95210 - 9350</span>
-	  </a>	 
-	  <a class="item" href="#">
-	    Aniversário
-	   	<span class="item-note">13/06/1993</span>
-	  </a>		  
-	  <a class="item" href="#">
-	    Conexões
-	   	<span class="item-note"><b>67</b></span>
-	  </a>		   	  
-	  
-	</div>	  	
-	{{/ionContent}}
+				<div class="list">
+					<div class="item item-divider">
+						Perfis compartilhados com você
+					</div>		  	  
+					<div class="item" style="padding:0px">
+						{{#with ..}}
+						{{> perfisRecebidos}}
+						{{/with}}
+					</div>		
+					<div class="item item-divider" style="text-align:left;">
+						Informações pessoais
+					</div>		
+					<a class="item" href="#">
+						Email
+						<span  class="item-note">{{email}}</span>
+					</a>
+					<a class="item" href="#">
+						Celular
+						<span class="item-note">{{profile.celular}}</span>
+					</a>	 
+					<a class="item" href="#">
+						Aniversário
+						<span class="item-note">{{profile.nascimento}}</span>
+					</a>		  
+					<a class="item" href="#">
+						Conexões
+						<span class="item-note"><b>{{conexoes.count}}</b></span>
+					</a>		   	  
+				</div>
+			{{/with}}	  	
+		{{/ionContent}}
 	{{/ionView}}
 </template>

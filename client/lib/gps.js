@@ -6,7 +6,10 @@ Meteor.startup(function(){
 	var gpsHabilitado = function(state){
 		//if android
 	   if(state === 'Enabled') {
-	      //console.log("GPS Is Enabled");	      
+	      console.log("GPS Is Enabled");	      
+			//Location.enableAccuracyFilter(GPS_FILTRO_ACURACIA);
+			//Location.enableDistanceFilter(GPS_FILTRO_DISTANCIA);
+			//Location.enableTimeFilter(GPS_FILTRO_TEMPO);			      
 	   }
 	}
 	var gpsDesabilitado = function(){
@@ -14,9 +17,8 @@ Meteor.startup(function(){
 	}
 
 	var pegouLocalizacao = function(localizacao){
-		Location.enableAccuracyFilter(GPS_FILTRO_ACURACIA);
-		Location.enableDistanceFilter(GPS_FILTRO_DISTANCIA);
-		//Location.enableTimeFilter(GPS_FILTRO_TEMPO);		
+
+		console.log("Got watch position");
 
 		if (Meteor.userId()){
 			//console.log("SENDING POOSITION (WATCH)",localizacao);
@@ -36,3 +38,13 @@ Meteor.startup(function(){
 	Location.getGPSState(gpsHabilitado, gpsDesabilitado, {dialog:true});
 	Location.startWatching(pegouLocalizacao, erroPegandoLocalizacao);		
 });
+
+var geo_options = {
+  enableHighAccuracy: true, 
+};
+
+Location.setGetPositionOptions(geo_options);
+
+
+
+//https://maps.googleapis.com/maps/api/staticmap?center=-23.6332358,-46.7140593&zoom=17&size=600x300&sensor=false

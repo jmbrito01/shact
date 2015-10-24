@@ -1,0 +1,17 @@
+<template name="swiperSimples">
+  <div class="{{class}}" id={{id}}>
+        <div class="swiper-wrapper">
+        </div>
+        <!-- Add Pagination -->
+
+        {{#if paginate}}
+        	<div class="swiper-pagination"></div>
+        {{/if}}
+
+        {{#if buttons}}
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        {{/if}}
+    </div>
+</template>
+

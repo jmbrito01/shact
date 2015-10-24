@@ -5,8 +5,7 @@ Template.album.onRendered(function(){
     var albumPortrait = new Swiper('.album-portrait', {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-        spaceBetween: 0,
-        
+        spaceBetween: 0, 
     });
 
     var albumThumbs = new Swiper('.album-thumbs', {

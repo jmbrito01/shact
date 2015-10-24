@@ -1,9 +1,12 @@
 <template name="usersPerfis">
 
 	{{#contentFor "headerButtonLeft"}}
+	<!--
 	  	<a class="buttons button button-clear pull-left active back-button-especial" href={{pathFor 'users.view' userId=_id}}>
     	<i class="icon ion-ios-arrow-back"></i>
   		</a>
+  		-->
+  		{{>ionNavBackButton}}
   	
   		
 	{{/contentFor}}

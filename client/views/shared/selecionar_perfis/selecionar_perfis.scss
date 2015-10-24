@@ -26,16 +26,11 @@
         text-align: center;
         background: #fff;
         width:75px;
-
-
         @include vertical-center;
     }        
 }
 
-
 .social-icon{
-    //min-width:60px;
-    //min-height:60px;
     width:75px;;
     height:75px;
     font-size:35px;

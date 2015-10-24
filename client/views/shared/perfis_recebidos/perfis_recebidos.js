@@ -1,5 +1,26 @@
+Template.perfisRecebidos.helpers({
+    params:function(){
+        var perfis = Template.instance().data.perfis || [];
+        console.log(Template.instance().data);
+
+        return {
+            template: Template.perfilRecebidoItem,
+            options : {
+                slidesPerColumn: 1,
+                paginationClickable: true,
+                spaceBetween: 0,
+                slidesPerView: 'auto',                  
+            },
+            'class': 'perfis-recebidos',
+            id: 'perfis-recebidos',
+            collection: Perfis,
+            selector: {_id: {$in: perfis}, userId: {$ne:Meteor.userId()}}
+        }
+    }
+})
 
 
+/*
 Template.perfisRecebidos.onRendered(function(){
     var swpPerfisRecebidos = new Swiper('.perfis-recebidos', {
         slidesPerColumn: 1,
@@ -44,3 +65,4 @@ Template.perfisRecebidos.onRendered(function(){
 Template.perfisRecebidos.onDestroyed(function(){
     this.perfilObserver.stop();
 })
+*/
