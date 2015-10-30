@@ -11,7 +11,7 @@ Template.conexoesAdd.onCreated(function(){
 Template.conexoesAdd.events({
 	'click #conectar':function(e, tmpl){
 		var contatoId = tmpl.userId;
-		var perfis = perfisSelecionados.valoresVerdadeiros();
+		var perfis = perfisSelecionados.get();
 
 		var localizacao = Meteor.user().localizacao || {};
 		var mensagem = tmpl.$('#mensagem').val();

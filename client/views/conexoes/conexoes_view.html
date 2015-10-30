@@ -25,26 +25,12 @@
 				{{>userHeader}}
 				<!--{{>nossasFotos}}-->
 
-				<!--
-				<div class="row">
-					<div class="col">
-						<button class="button button-outline button-balanced button-block" data-dismiss="modal">
-						  {{> ionIcon icon="ios-chatbubble-outline"}} Chat
-						</button>
-					</div>
-					<div class="col">
-						<button class="button button-outline button-positive button-block" id="conectar">
-						  {{> ionIcon icon="android-share-alt"}} Compartilhar
-						</button>			
-					</div>
-				</div>
-			-->
 
 				<div class="row">
 					<div class="col col-50">
-						<a class="button button-positive button-block button-outline" href="{{pathFor 'users.perfis' userId=_id}}">
+						<button class="button button-positive button-block button-outline" id="compartilhar-mais">
 							{{> ionIcon icon="android-share-alt"}} Contato ({{countPerfis}})
-						</a>	
+						</button>	
 					</div>
 					<div class="col col-50">
 						<a class="button button-balanced button-block button-outline" href="{{pathFor 'users.fotos' userId=_id}}">
@@ -54,6 +40,14 @@
 				</div>	  	
 
 				<div class="list">
+					{{#if compartilharMais}}
+						<div class="item item-divider">
+							Compartilhar Perfis
+						</div>					
+						<div class="item" style="padding:0px">
+							{{> selecionarPerfis}}
+						</div>
+					{{/if}}
 					<div class="item item-divider">
 						Perfis compartilhados com você
 					</div>		  	  
