@@ -11,7 +11,7 @@ Template.conexoesAceitar.onCreated(function(){
 Template.conexoesAceitar.events({
 	'click #aceitar':function(e, tmpl){
 		var conexaoId = tmpl.conexaoId;
-		var perfis = perfisSelecionados.valoresVerdadeiros();
+		var perfis = perfisSelecionados.get();
 		console.log(conexaoId);
 		Conexoes.update({_id:conexaoId},{$set:{status:CONEXAO_ACEITA}, $addToSet:{perfis:{$each:perfis}}})
 		IonModal.close();

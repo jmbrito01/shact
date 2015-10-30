@@ -1,6 +1,7 @@
-//perfisSelecionados = new ReactiveDict('PerfisSelecionados');
+
 
 perfisSelecionados = new ReactiveVar([]);
+ultimaAcao = new ReactiveVar({});
 
 Array.prototype.remove = function(value) {
     if (this.indexOf(value)!==-1) {
@@ -29,17 +30,20 @@ Template.selecionarPerfilItem.events({
     'click .selecionar-perfil':function(e,tmpl){
         var perfilId = tmpl.data._id;
 
-        //perfisSelecionados.set(perfilId, !perfisSelecionados.get(perfilId));
-
         var p = perfisSelecionados.get();
-        console.log(p);
         if (_.contains(p, perfilId)){
             p.remove(perfilId);
+            ultimaAcao.set({
+              _id: perfilId,
+              action: 'remove'
+            })
         }else{
             p.push(perfilId);
+            ultimaAcao.set({
+              _id: perfilId,
+              action: 'push'
+            })            
         }
-
-        console.log(p);
         
         perfisSelecionados.set(p);
     }
@@ -48,7 +52,6 @@ Template.selecionarPerfilItem.events({
 Template.selecionarPerfilItem.helpers({
     semCor:function(){
         var perfilId = Template.instance().data._id;
-        //return !perfisSelecionados.equals(perfilId,true);
         var p = perfisSelecionados.get();
         return !(_.contains(p,perfilId));
     }
