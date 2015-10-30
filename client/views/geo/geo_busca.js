@@ -9,7 +9,7 @@ var fields = ['name'];
 
 ShactSearch = new SearchSource('shacters', fields, options);
 
-var fazerBusca = function(){
+fazerBusca = function(){
 	var textoBusca = Session.get('textoBusca');
 	var raio = Session.get('raio');
 	ShactSearch.search(textoBusca,{raio: raio});
@@ -24,7 +24,10 @@ Template.geoBusca.helpers({
     	},
     	sort: {_score: -1}
     });
-  }	
+  },
+  jaConectou:function(){
+  	return Conexoes.findOne({userIds: {$all :[Meteor.userId(), this._id]}});
+  }
 });
 
 

@@ -27,6 +27,8 @@ Template.conexoesAdd.events({
 			mensagem:mensagem
 		})
 
+
 		IonModal.close();
+
 	}
 })

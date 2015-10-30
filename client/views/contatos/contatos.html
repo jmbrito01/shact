@@ -1,8 +1,8 @@
 <template name="contatos">	
 	{{#contentFor "headerButtonLeft"}}
-		<a class="button button-clear" href="{{pathFor 'users.view' userId=currentUser._id}}">
+		<a class="button pull-left button-clear" href="{{pathFor 'user.index'}}">
 	  		{{> ionIcon icon='person'}}
-	 	</a>	
+	 	</a>
 	{{/contentFor}}
 
 	{{#contentFor "headerButtonRight"}}

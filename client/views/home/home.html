@@ -1,19 +1,21 @@
 <template name="home">
 	{{#contentFor "headerButtonLeft"}}
-		<a class="button button-clear" href="{{pathFor 'user.index'}}">
-	  		{{> ionIcon icon='person'}}
+		<a class="button pull-left button-clear" href="{{pathFor 'user.index'}}">
+			
+	  			{{> ionIcon icon='person'}}
+			
 	 	</a>	
 	{{/contentFor}}
 
 	{{#contentFor "headerButtonRight"}}
 
-		<a class="button button-clear" href="{{pathFor 'configuracoes.index'}}">
+		<a class="button pull-right button-clear" href="{{pathFor 'configuracoes.index'}}">
 	  		{{> ionIcon icon='gear-b'}}
 	 	</a>
 	{{/contentFor}}
 
 	{{#contentFor "headerTitle"}}
-	  <h1 class="title ">Shact</h1>
+	  <h1 class="title title-center">Shact</h1>
 	{{/contentFor}}
 
 	{{#contentFor "tabs"}}

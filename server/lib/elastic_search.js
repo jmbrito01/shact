@@ -167,12 +167,21 @@ SearchSource.defineSource('shacters', function(textoBusca, opcoes) {
 
 
   var raio = parseFloat(opcoes.raio);
-
   var localizacao = Meteor.user().localizacao;
 
-  var excluir = [Meteor.userId()] //+contatos do usuario
 
-  var busca = elasticSearch.usuariosProximos(localizacao,raio, excluir,textoBusca);
+  var conexoes = Conexoes.find({userIds: Meteor.userId()}).fetch();
+
+  conexoesIds =_.map(conexoes,function(conexao){
+    return conexao.outroUsuario()._id;
+  })
+
+  console.log(conexoesIds);
+
+
+  var excluirIds = _.union([Meteor.userId()], conexoesIds);
+
+  var busca = elasticSearch.usuariosProximos(localizacao,raio, excluirIds,textoBusca);
 
   // getting the metadata
   var metadata = {

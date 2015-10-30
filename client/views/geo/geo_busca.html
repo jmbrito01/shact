@@ -1,29 +1,29 @@
 <template name="geoBusca">	
 	{{#contentFor "headerButtonLeft"}}
-	  {{>ionNavBackButton}}
+	{{>ionNavBackButton}}
 	{{/contentFor}}
 
 	{{#contentFor "headerTitle"}}
-		<a class="button button-clear" id="configurar-radar">
-	  		{{> ionIcon icon='ios-settings-strong'}}
-	 	</a>
+	<a class="button button-clear" id="configurar-radar">
+		{{> ionIcon icon='ios-settings-strong'}}
+	</a>
 	{{/contentFor}}
 
 	{{#ionView}}
-	  {{#ionContent}}
+		{{#ionContent}}
 
 		<div class="list list-inset">
-		  <label class="item item-input ">
-		    <i class="icon ion-search placeholder-icon"></i>
-		    <input id="texto-busca" type="text" placeholder="Search">
-		  </label>
-		  	{{#if $.Session.get 'configurarRadar'}}
-				<div class="item range range-positive">
-				  {{> ionIcon icon="arrow-shrink"}}
-				  <input type="range" id="slider-raio" name="volume" min="0" max="20000">
-				  {{> ionIcon icon="arrow-expand"}}
-				</div>		  	
-		  	{{/if}}		  
+			<label class="item item-input ">
+				<i class="icon ion-search placeholder-icon"></i>
+				<input id="texto-busca" type="text" placeholder="Search">
+			</label>
+			{{#if $.Session.get 'configurarRadar'}}
+			<div class="item range range-positive">
+				{{> ionIcon icon="arrow-shrink"}}
+				<input type="range" id="slider-raio" name="volume" min="0" max="20000">
+				{{> ionIcon icon="arrow-expand"}}
+			</div>		  	
+			{{/if}}		  
 		</div>
 
 
@@ -31,16 +31,19 @@
 
 
 			{{#each resultados}}
-			    <a class="item item-avatar animated fadeIn" href="#"  data-ion-modal="conexoesAdd" data-id="{{_id}}">
-			    		{{>userThumb publicId=publicId}}
-				      
-				      <h2 class="animated fadeIn">{{{name}}}</h2>
-				      <p>{{> ionIcon icon="ios-location"}} {{distance}}m</p>
-			    </a>			
+				{{#unless jaConectou}}
+				<a class="item item-avatar animated fadeIn" href="#"  data-ion-modal="conexoesAdd" data-id="{{_id}}">
+
+					{{>userThumb publicId=publicId}}
+
+					<h2 class="animated fadeIn">{{{name}}}</h2>
+					<p>{{> ionIcon icon="ios-location" class="geo-marker"}} {{arredondar distance 1}}m</p>
+				</a>
+				{{/unless}}			
 			{{/each}}
 
 		</div>
-	  {{/ionContent}}
+		{{/ionContent}}
 	{{/ionView}}
 
 
