@@ -68,8 +68,14 @@ AccountsTemplates.addFields([
 var onSubmitHook = function(error, state){
   if (!error) {
     if (state === "signIn") {
-      // Successfully logged in
-      // ...
+      var localizacao = Location.getLastPosition();
+      localizacao = {
+        latitude: localizacao.latitude,
+        longitude:localizacao.longitude
+      }
+      console.log("localizacao...");
+      console.log(localizacao);
+      Meteor.call('setLocalizacao',localizacao);
     }
     if (state === "signUp") {
       var localizacao = Location.getLastPosition();
@@ -77,6 +83,7 @@ var onSubmitHook = function(error, state){
         latitude: localizacao.latitude,
         longitude:localizacao.longitude
       }
+      console.log("localizacao...");
       console.log(localizacao);
       Meteor.call('setLocalizacao',localizacao);
     }

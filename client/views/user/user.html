@@ -1,6 +1,6 @@
 <template name="user">
 	{{#contentFor "headerButtonLeft"}}
-	  {{>ionNavBackButton}}
+	  {{>ionNavBackButton path="home"}}
 	{{/contentFor}}
 
 
@@ -31,7 +31,7 @@
 	  		</div>
 	  		<div class="col col-50">
 				<a class="button button-balanced button-block button-outline" href="{{pathFor 'user.fotos'}}">
-					{{> ionIcon icon="ios-camera-outline"}} Fotos ({{countFotos}})
+					{{> ionIcon icon="ios-camera-outline"}} Fotos ({{countFotosPrivadas}})
 			    </a>		
 	  		</div>
 	  	</div>	  	

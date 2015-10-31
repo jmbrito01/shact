@@ -1,6 +1,25 @@
+.button-camera{
+	width:80px;
+	height:80px;
+	background-color: #cd201f;
+	//position:absolute;
+	//left:50%;
+	//margin-left: -40px;
+	//bottom:60px;
+	border:5px solid black;
+	padding:5px;
+	border-radius:50%
+}
 
-
-
+.big-icon{
+	font-size:80px;
+	padding:5px;
+}
+.camera-footer{
+	position:absolute;
+	bottom:0px;
+	width:100%;
+}
 .podium{
 	position:absolute;
 	width:180px;
@@ -43,18 +62,8 @@
 }
 
 .foto-atual{
-	position:absolute;
-	width:100%;
 	height:400px;
-
-	background:black;
-
-	img{
-		width:100%;
-		height:auto;
-		max-height:400px;
-		position:absolute;
-	}
+	width:100%;
 
 	.icone-status{
 		width:100px;
@@ -72,8 +81,4 @@
 
 		}		
 	}
-}
-
-.lista-status{
-	margin-top:400px;
 }

@@ -1,12 +1,10 @@
 <template name="userPerfis">
 	{{#contentFor "headerButtonLeft"}}
-	  	<a class="buttons button button-clear pull-left active back-button-especial" href={{pathFor 'user.index' userId=_id}}>
-    		<i class="icon ion-ios-arrow-back"></i>
-  		</a>
+		{{>ionNavBackButton path="user.index"}}
 	{{/contentFor}}
 
 	{{#contentFor "headerButtonRight"}}
-
+		
 	{{/contentFor}}
 
 	{{#contentFor "headerTitle"}}

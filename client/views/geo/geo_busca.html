@@ -31,8 +31,8 @@
 
 
 			{{#each resultados}}
-				{{#unless jaConectou}}
-				<a class="item item-avatar animated fadeIn" href="#"  data-ion-modal="conexoesAdd" data-id="{{_id}}">
+				{{#unless currentUser.existeConexao _id}}
+				<a class="item item-avatar animated fadeIn user-add" href="#">
 
 					{{>userThumb publicId=publicId}}
 

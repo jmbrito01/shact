@@ -24,6 +24,7 @@ ShactRecognition.prototype = new SkyBiometry(Meteor.settings.SkyBiometryAPIKey, 
 
 
 ShactRecognition.prototype.detectarFaceSync = function(url){
+	console.log("detectando face...");
 	var res = this.sync.faces.detect(url, {detector:'aggressive',attributes:'none'});
 
 	if (!res.photos.length)
@@ -36,7 +37,6 @@ ShactRecognition.prototype.detectarFaceSync = function(url){
 
 	var tag = photo.tags[0];
 
-	console.log(tag);
 
 	return {
 		tempTagId: tag.tid,
@@ -55,11 +55,11 @@ ShactRecognition.prototype.reconhecerFacesSync = function(userIds, url){
 	var uids = _.map(userIds,function(uid){
 		return self.constroiNamespace(uid);
 	}).join(',');
-	console.log("uids--->" , uids);
+
+	console.log("reconhecendo faces... uids->", uids);
 
 	var res = this.sync.faces.recognize(uids, url, {});
 
-	console.log(res.photos[0].tags);
 	
 	var tags = _.map(res.photos[0].tags,function(tag){
 		var candidatos = _.map(tag.uids, function(uid){
@@ -84,19 +84,20 @@ ShactRecognition.prototype.reconhecerFacesSync = function(userIds, url){
 }
 
 ShactRecognition.prototype.salvarTagSync = function(userId,tagId){
+	console.log("salvando tag...");
 	var namespace = this.constroiNamespace(userId);
 
 	var res = this.sync.tags.save(namespace, tagId, {});
 	
 	if (!res.saved_tags.length)
 		throw new ErroReconhecimento(ERRO_NENHUMA_TAG_SALVA, "Nenhuma tag foi salva no processo.");
-
+	
 
 	return res.saved_tags[0].tid;
 }
 
 ShactRecognition.prototype.treinarUserSync = function(userId){
-	console.log("treinando");
+	console.log("treinando user...");
 	var namespace = this.constroiNamespace(userId);
 	var res = this.sync.faces.train(namespace, {});
 	
@@ -104,6 +105,7 @@ ShactRecognition.prototype.treinarUserSync = function(userId){
 	return (res.status=="success")?true:false;
 }
 ShactRecognition.prototype.removerTagSync = function(tagId){
+	console.log("removendo tag...");
 	var res = this.sync.tags.remove(tagId, {});
 
 	if (!res.removed_tags.length)
@@ -159,7 +161,6 @@ ShactRecognition.prototype.removerTag = function(tagId, callback){
 	var res = this.sync.tags.remove(tagId, {});
 	this.tags.remove(tagId,{}, function (err,res){
 		if (!err){
-			console.log(res);
 			if (!res.removed_tag){
 				err = new ErroReconhecimento(ERRO_NENHUMA_TAG_REMOVIDA, "Nenhuma tag foi removida no processo.");
 			}else{

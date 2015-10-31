@@ -2,6 +2,7 @@ Template.userFotosItem.events({
     'click .acoes-user-fotos':function(){
         var self = this;
 
+
         var texto, acao;
         if (Meteor.user().profile.avatar==self._id){
             texto = 'Remover do perfil';
@@ -23,6 +24,7 @@ Template.userFotosItem.events({
           destructiveText: '<i class="icon ion-trash-outline"></i> Deletar',
           cancelText: 'Cancel',
           destructiveButtonClicked: function() {
+            console.log(self._id);
             Meteor.call('removerFoto',self._id);
             return true;
           },

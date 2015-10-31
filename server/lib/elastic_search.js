@@ -41,12 +41,19 @@ ElasticSearch.prototype.removerUsuario = function(id){
 }
 
 ElasticSearch.prototype.setLocalizacao = function(id, localizacao){
+  console.log("Setting location for ",id);
+
+  console.log(localizacao);
+  
   var esDoc = {
     location: {
       lat: parseFloat(localizacao.latitude),
       lon: parseFloat(localizacao.longitude)
     }
   }
+
+  console.log(esDoc);
+
   return this.EsClient.update({
     index:this.index,
     type:this.type,

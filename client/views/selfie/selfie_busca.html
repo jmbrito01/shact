@@ -21,18 +21,29 @@
 	  	</div>
 	  	
 
-	  	<div class="list lista-status">
-	  		<div class="item item-icon-left">
-	  			{{#with statusItem}}
-	  			<i class="icon {{icone}}"></i>
-	  				{{texto}}
-	  			{{/with}}
-	  		</div>  		
+	  	<div class="camera-footer">
+		  	<div class="list lista-status" style="bottom:0px;">
+		  		<div class="item" align="center">
+		  			{{#with statusItem}}
+		  			<!--<i class="icon {{icone}}"></i>-->
+		  				<span class="animated jello">{{texto}}</span>
+		  			{{/with}}
+		  		</div>  		
+
+		  		<div class="item" style="height:120px;text-align:center">
+			  		{{#if $eq status 0 }}
+						<button id="tirar-foto" class="button-camera animated rubberBand">
+						</button>
+			  		{{else}}
+			  			{{#with statusItem}}
+			  				<i class="icon {{icone}} big-icon"></i>
+			  			{{/with}}
+			  		{{/if}}
+		  		</div>
+
+		  	</div>
 	  	</div>
 
-		<button id="tirar-foto" class="button button-full button-outline button-assertive">
-		  Selfie!
-		</button>
 
 	  {{/ionContent}}
 	{{/ionView}}

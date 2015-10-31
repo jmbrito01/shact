@@ -1,12 +1,20 @@
 <template name="podium">
 	<div class="row">
 		{{#each candidatos}}
-			<div class="col" align="center">
-				<div class="candidato animated fadeIn">
+			<div class="col col-33" align="center">
+				<div class="candidato {{#if $eq @index 0}}animated tada{{/if}}">
 					{{#with user}}
-						{{>userThumb publicId=avatarPublicId}}
+						{{>userAvatarAdd}}
 					{{/with}}
-					<progress value="{{certeza}}" max="100" style="color:green"></progress> {{certeza}} %
+
+					<div id="progressbar" style="width:82px">
+					  <div style="width:{{certeza}}%"></div>
+					</div>					
+
+					<p>{{certeza}} %</p>
+					<button class="button button-positive button-block button-outline" id="marcar">Marcar</button>
+					
+					<!--<progress value="{{certeza}}" max="100" style="color:green"></progress> {{certeza}} %-->
 				</div>
 			</div>
 		{{/each}}		

@@ -1,12 +1,10 @@
-<template name="userFotos">
+<template name="fotosPublicas">
 	{{#contentFor "headerButtonLeft"}}
   		{{>ionNavBackButton}}
 	{{/contentFor}}
 
 	{{#contentFor "headerButtonRight"}}
-		<a class="button pull-right button-clear" href="{{pathFor 'fotos.publicas'}}">
-	  		{{> ionIcon icon='ios-albums'}}
-	 	</a>
+	
 	{{/contentFor}}
 
 
@@ -21,27 +19,26 @@
 	
 	{{#ionView}}
 	  {{#ionContent}}	  		
-		{{#swiper options=options1 id="user-fotos-item" class='swiper-normal'}}
+		{{#swiper options=options1 id="fotos-publicas-item" class='swiper-normal'}}
 			{{#each fotos}}
 				{{#swiperSlide}}
-					{{> userFotosItem }}
+					{{> fotosPublicasItem }}
 				{{/swiperSlide}}
 			{{/each}}
 		{{/swiper}}
-		{{#swiper options=options2 id="user-fotos-thumbs" class='swiper-thumbs thumb-opacity'}}
+		{{#swiper options=options2 id="fotos-publicas-thumbs" class='swiper-thumbs thumb-opacity'}}
 			{{#each fotos}}
 				{{#swiperSlide}}
-					{{> userFotosThumb }}
+					{{> fotosPublicasThumb }}
 				{{/swiperSlide}}
 			{{/each}}
 		{{/swiper}}
 
 
-		{{> usersCadastrarFotos}}
-
-		{{#with fotoSelecionada}}
-			{{> userFotosDetails}}
+		{{#with fotoPublicaSelecionada}}
+			{{> fotoPublicaDetails}}
 		{{/with}}
+		
 	  {{/ionContent}}
 	{{/ionView}}
 </template>

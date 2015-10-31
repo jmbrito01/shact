@@ -26,6 +26,8 @@
 				<img src="{{imagem.url}}">
 				{{#each tags}}
 					<div class="tag" style="
+					border-color: {{borderColor}};
+					border-style: {{borderStyle}};
 					width:{{dimensoes.width}}%;
 					height:{{dimensoes.height}}%;
 					left:{{posicao.x}}%;
@@ -37,7 +39,17 @@
 			</div>
 		</div>
 		
-		{{> podium candidatos=candidatos}}
+		{{#with tagSelecionada}}
+			{{#with user}}
+				<div class="row">
+					<div class="col" align="center">
+						{{> userAvatarAdd}}
+					</div>
+				</div>
+			{{else}}
+				{{> podium candidatos=candidatos}}
+			{{/with}}		
+		{{/with}}
 
 	  {{/ionContent}}
 	{{/ionView}}

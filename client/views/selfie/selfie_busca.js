@@ -16,7 +16,8 @@ Template.selfieBusca.onRendered(function(){
 
 Template.selfieBusca.onRendered(function(){
     //this.$('#pessoa1').css('background-color','red');
-
+    Session.set('fotoAtual', '');
+    status.set(STATUS_IDLE);
 })
 
 Template.selfieBusca.helpers({      
@@ -24,12 +25,15 @@ Template.selfieBusca.helpers({
 		return Session.get('fotoAtual');
 
 	},
+	status: function(){
+		return status.get();
+	},
 	statusItem: function(){
 		var icone, texto, cor
 		switch (status.get()){
 			case STATUS_IDLE:
 				icone = "fa fa-camera";
-				texto = "Tire uma foto com seu novo amigo!";
+				texto = "Tire uma foto com a galera!";
 			break;
 			case STATUS_UPLOADING:
 				icone = "fa fa-spinner fa-spin";

@@ -2,6 +2,9 @@
 {{#ionBody}}
   {{> ionNavBar class="bar-positive"}}
 
+
+  {{> yield 'subheader'}}
+
   {{#ionNavView}}
   	{{> sAlert}}
   	{{> yield}}

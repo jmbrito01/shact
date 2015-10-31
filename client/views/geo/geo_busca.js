@@ -25,9 +25,7 @@ Template.geoBusca.helpers({
     	sort: {_score: -1}
     });
   },
-  jaConectou:function(){
-  	return Conexoes.findOne({userIds: {$all :[Meteor.userId(), this._id]}});
-  }
+
 });
 
 
@@ -41,6 +39,9 @@ Template.geoBusca.events({
 		console.log(raio);
 		Session.set('raio',raio);
 	}, SLIDER_THROTTLE),	
+	'click .user-add':function(){
+		tentarConexao(this._id, METODO_GEO);
+	}
 })
 
 Template.geoBusca.onRendered(function(){

@@ -1,0 +1,55 @@
+<template name="fotoPublicaDetails">
+	<div class="list">
+	  <div class="item item-divider">
+	  		Fotógrafo
+	  </div>		
+	  {{#with fotografo}}
+		<a class="item item-avatar user-add item-icon-right" href="#">
+			{{>userThumb publicId=avatarPublicId}}
+			<h2>{{profile.nomeCompleto}}</h2>
+			{{> ionIcon icon='camera'}}
+			
+		</a>
+	{{/with}}	
+
+	{{#each tags}}
+		{{#if $eq @index 0}}
+			<div class="item item-divider">
+				Usuários tagados
+			</div>
+		{{/if}}			
+		{{#with user}}
+			{{#if $eq currentUser._id _id}}
+				<a class="item item-avatar item-button-right" href="#">
+					{{>userThumb publicId=avatarPublicId}}
+					<h2>{{{profile.nomeCompleto}}}</h2>
+					{{#with ..}}
+					    <button class="button button-assertive remover-tag" data-tagid={{../_id}}>
+					      {{> ionIcon icon='trash-b'}}
+					    </button>	
+				   	{{/with}}					
+				</a>
+			{{else}}
+				<a class="item item-avatar user-add" href="#">
+					{{>userThumb publicId=avatarPublicId}}
+					<h2 class="animated fadeIn">{{{profile.nomeCompleto}}}</h2>
+				</a>
+			{{/if}}
+		{{/with}}			
+	{{else}}
+	
+	{{/each}}
+
+	<div class="item item-divider">
+			Informações
+	</div>		
+	<a class="item item-icon-left" href="#">
+		{{> ionIcon icon='ios-location'}}
+		{{arredondar localizacao.latitude 4}}, {{arredondar localizacao.longitude 4}}
+	</a>			  
+	<a class="item item-icon-left" href="#">
+		{{> ionIcon icon='ios-calendar-outline'}}
+		{{moFormat createdAt 'HH:mm:ss DD/MM/YYYY'}}
+	</a>						
+	</div>	
+</template>
