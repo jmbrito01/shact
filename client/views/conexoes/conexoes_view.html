@@ -33,8 +33,9 @@
 						</button>	
 					</div>
 					<div class="col col-50">
-						<a class="button button-balanced button-block button-outline" href="{{pathFor 'users.fotos' userId=_id}}">
-							{{> ionIcon icon="ios-camera-outline"}} Fotos ({{countFotos}})
+						<a class="button button-balanced button-block button-outline" 
+						href="{{pathFor 'fotos.publicas'}}?com={{_id}}">
+							{{> ionIcon icon="ios-camera-outline"}} Nossas Fotos
 						</a>		
 					</div>
 				</div>	  	

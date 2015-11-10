@@ -34,13 +34,13 @@ Template.fotosPublicas.helpers({
         }
     },
     fotos:function(){
-        return Fotos.find({
-            $or:[
-                {userId: Meteor.userId()},
-                {'participantes.userId': Meteor.userId()}
-            ], 
-            tipo:1
-        });
+        var query = Router.current().params.query;
+
+        var participantes = [Meteor.userId()];
+        if (query.com != null) participantes.push(query.com);
+        return Fotos.find({tipo: TIPO_PUBLICO, 'participantes.userId':{$all: participantes}});
+
+
     },
     fotoPublicaSelecionada:function(){
         return Fotos.findOne({_id: Session.get('fotoPublicaSelecionada')});

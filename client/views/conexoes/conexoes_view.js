@@ -1,6 +1,11 @@
+
 Template.conexoesView.helpers({
 	compartilharMais:function(){
 		return Session.get('compartilharMais');
+	},
+	queryHelper: function(){
+		console.log('com=' + this._id)
+		return 'com=' + this._id;
 	}
 })
 

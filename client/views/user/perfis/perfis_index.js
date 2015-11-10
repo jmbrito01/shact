@@ -14,7 +14,7 @@ Template.userPerfis.helpers({
 	        nextButton: '.swiper-button-next',
 	        prevButton: '.swiper-button-prev',
 	        spaceBetween: 0, 
-            onSlideChangeStart:function(swiper){
+            onSlideChangeEnd:function(swiper){
                 Session.set('compartilhavelSelecionado', $(swiper.slides[swiper.activeIndex]).data('_id'));
             },
             onInit: ultimoPerfil

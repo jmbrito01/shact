@@ -40,7 +40,6 @@ accounts-password
 service-configuration
 meteorhacks:npm
 matb33:collection-hooks
-meteortoys:allthings
 aldeed:delete-button
 tap:i18n
 sewdn:masked-input
@@ -90,4 +89,4 @@ juliancwirko:s-alert
 juliancwirko:s-alert-stackslide
 valedaemon:circular-progress
 lbee:moment-helpers
-force-ssl
+meteortoys:allthings

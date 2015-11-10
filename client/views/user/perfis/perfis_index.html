@@ -18,7 +18,8 @@
 	
 	{{#ionView}}
 	  {{#ionContent}}
-		<div class="galera">
+	  	<div class="wrapper">
+		<div class="galeria">
 			{{#swiper options=options1 id="cadastrar-perfis-item" class='swiper-normal'}}
 				{{#each compartilhaveis}}
 					{{#swiperSlide}}
@@ -34,7 +35,9 @@
 				{{/each}}
 			{{/swiper}}
 		</div>
+		</div>
 
+		
 	    {{#with compartilhavelSelecionado}}
 	    	{{> perfisView}}
 
@@ -57,6 +60,7 @@
 			  	</div>	
 	    	{{/with}}
 	    {{/with}}
+	    
 	  {{/ionContent}}
 	{{/ionView}}
 </template>

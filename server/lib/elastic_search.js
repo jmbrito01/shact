@@ -161,6 +161,8 @@ ElasticSearch.prototype.usuariosProximos = function(localizacao, raio, excluir, 
 elasticSearch = new ElasticSearch('shact','shacters');
 
 SearchSource.defineSource('shacters', function(textoBusca, opcoes) {
+  Meteor._sleepForMs(1000);
+  
   if (!Meteor.user()){
     throw new Meteor.Error('Não está logado');
     return;
@@ -177,17 +179,21 @@ SearchSource.defineSource('shacters', function(textoBusca, opcoes) {
   var localizacao = Meteor.user().localizacao;
 
 
+  /*
   var conexoes = Conexoes.find({userIds: Meteor.userId()}).fetch();
-
   conexoesIds =_.map(conexoes,function(conexao){
     return conexao.outroUsuario()._id;
   })
-
-  console.log(conexoesIds);
-
-
   var excluirIds = _.union([Meteor.userId()], conexoesIds);
+  */
 
+  var user = Meteor.user();
+
+  var contatos = user.contatos || [];
+  var pendings = user.pendings || [];
+  var recentes = user.recentes || [];
+
+  var excluirIds = _.union(Meteor.userId(), contatos, pendings, recentes);
   var busca = elasticSearch.usuariosProximos(localizacao,raio, excluirIds,textoBusca);
 
   // getting the metadata

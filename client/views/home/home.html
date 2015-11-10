@@ -27,10 +27,12 @@
 	  {{#ionContent}}
     	<div class="selecionar-modo">
 	        <div class="swiper-wrapper">
-	            <div class="swiper-slide animated tada">{{> ionIcon icon="ios-location" class="busca-geo"}}</div>
-	            <div class="swiper-slide">{{> ionIcon icon="ios-telephone" class="busca-telefone"}}</div>
-	            <div class="swiper-slide">{{> ionIcon icon="camera" class="busca-selfie"}}</div>
+	        	<div class="swiper-slide animated tada">{{> ionIcon icon="camera" class="busca-selfie"}}</div>
+				<div class="swiper-slide">{{> ionIcon icon="ios-location" class="busca-geo"}}</div>
+	            <!--<div class="swiper-slide">{{> ionIcon icon="ios-telephone" class="busca-telefone"}}</div>-->
 	        </div>
+
+	         <div class="swiper-pagination"></div>
 	    </div>
 	  {{/ionContent}}
 	{{/ionView}}

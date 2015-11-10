@@ -100,12 +100,18 @@
 }
 */
 
-
+body{
+    overflow:hidden;
+}
 /*                          */
 /*      SWIPER              */
 /*                          */
+.wrapper{
+    height:300px;
+}
 .galeria{
-    position:relative;
+    position:fixed;
+    overflow:hidden;
     width: 100%;
     height: 300px;
     margin-left: auto;
