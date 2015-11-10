@@ -1,4 +1,4 @@
-<template name="pendentes">	
+<template name="pendentesBackup">	
 	{{#contentFor "headerButtonLeft"}}
 		<a class="button pull-left button-clear" href="{{pathFor 'user.index'}}">
 	  		{{> ionIcon icon='person'}}
@@ -18,10 +18,12 @@
 	    {{>tabs}}
 	{{/contentFor}}
 
-
 	{{#ionView}}
+	
+	  
 	  {{#ionContent}}
 		<div class="list">
+			<!--
 			{{#each currentUser.pendentes}}
 			    <a class="item item-avatar" href="#" data-ion-modal="conexoesAceitar" data-id="{{_id}}">
 			    {{#with userAdicionando}}
@@ -31,7 +33,29 @@
 			    {{/with}}
 			    </a>			
 			{{/each}}
+			-->
+
+			{{#each pendentes}}
+			    <a class="item item-avatar" href="#" data-ion-modal="conexoesAceitar" data-id="{{getConexao _id}}">
+			    	{{>userThumb publicId=avatarPublicId}}
+			    	<h2>{{profile.nomeCompleto}}</h2>
+			    	<p> {{> ionIcon icon="ios-location" class="geo-marker"}} Te adicionou por geolocalização </p>
+			    </a>
+			{{/each}}			
 		</div>
 	  {{/ionContent}}
 	{{/ionView}}
 </template>			 
+
+
+<template name="pendentes">
+	<div class="list">
+		{{#each pendentes}}
+		    <a class="item item-avatar" href="#" data-ion-modal="conexoesAceitar" data-id="{{getConexao _id}}">
+		    	{{>userThumb publicId=avatarPublicId}}
+		    	<h2>{{profile.nomeCompleto}}</h2>
+		    	<p> {{> ionIcon icon="ios-location" class="geo-marker"}} Te adicionou por geolocalização </p>
+		    </a>
+		{{/each}}			
+	</div>
+</template>

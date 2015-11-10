@@ -35,23 +35,11 @@
 				<i class="icon ion-search placeholder-icon"></i>
 				<input id="texto-busca-contatos" type="text" placeholder="Search">		
 			</label>		
-			<!--
-			{{#each currentUser.conexoes}}
-			    <a class="item item-avatar" href={{pathFor 'conexoes.view' conexaoId=_id}}>
-			    {{#with outroUsuario}}
-			    	{{>userThumb publicId=avatarPublicId}}
-			    	<h2>{{profile.nomeCompleto}}</h2>
-			    	<p> {{> ionIcon icon="ios-location" class="geo-marker"}} Te adicionou por geolocalização </p>
-			    {{/with}}
-			    </a>			
-			{{/each}}
-			-->
-
 			{{#each contatos}}
-			    <a class="item item-avatar" href={{pathFor 'conexoes.view' conexaoId=_id}}>
+			    <a class="item item-avatar" href={{pathFor 'conexoes.view' conexaoId=(getConexao _id)}}>
 			    	{{>userThumb publicId=avatarPublicId}}
 			    	<h2>{{profile.nomeCompleto}}</h2>
-			    	<p> {{> ionIcon icon="ios-location" class="geo-marker"}} Te adicionou por geolocalização </p>
+			    	<p> {{> ionIcon icon="record" class="online-status"}} Online </p>
 			    </a>
 			{{/each}}
 		</div>

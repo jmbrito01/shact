@@ -187,13 +187,7 @@ SearchSource.defineSource('shacters', function(textoBusca, opcoes) {
   var excluirIds = _.union([Meteor.userId()], conexoesIds);
   */
 
-  var user = Meteor.user();
-
-  var contatos = user.contatos || [];
-  var pendings = user.pendings || [];
-  var recentes = user.recentes || [];
-
-  var excluirIds = _.union(Meteor.userId(), contatos, pendings, recentes);
+  var excluirIds = Meteor.user().prc();
   var busca = elasticSearch.usuariosProximos(localizacao,raio, excluirIds,textoBusca);
 
   // getting the metadata

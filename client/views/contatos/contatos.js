@@ -8,11 +8,24 @@ Template.contatos.helpers({
 	contatos: function(){
 		var textoBusca = Session.get('textoBuscaContatos');
 
+		if (!Meteor.user().contatos) return [];
+
 		return Meteor.users.find({
 			_id: {$in: Meteor.user().contatos}, 
 			'profile.nomeCompleto': {$regex: buildRegex(textoBusca)}
 		})
-	}
+	},
+	getConexao: function(){
+		var conexao = Conexoes.findOne({
+			userIds:{$all:[this._id, Meteor.userId()]},
+			status: CONEXAO_ACEITA
+		},{fields:{
+			_id: 1
+		}});
+
+
+		return conexao && conexao._id;
+	}	
 })
 
 Template.contatos.onRendered(function(){

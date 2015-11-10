@@ -1,0 +1,40 @@
+<template name="notificacoes">
+	{{#contentFor "headerButtonLeft"}}
+		<a class="button pull-left button-clear" href="{{pathFor 'user.index'}}">
+	  		{{> ionIcon icon='person'}}
+	 	</a>	
+	{{/contentFor}}
+
+	{{#contentFor "headerButtonRight"}}
+		<a class="button button-clear" href="{{pathFor 'configuracoes.index'}}">
+	  		{{> ionIcon icon='gear-b'}}
+	 	</a>
+	{{/contentFor}}
+	{{#contentFor "headerTitle"}}
+	  <h1 class="title">Notificações</h1>
+	{{/contentFor}}	
+
+	{{#contentFor "tabs"}}
+	    {{>tabs}}
+	{{/contentFor}}
+
+
+	{{#ionView}}
+	  {{#ionSubheaderBar class="no-border"}}
+	    <div class="button-bar bar-stable bar-notificacoes">
+	      <button class="button icon ion-ios-personadd-outline mudar-tab {{#if $eq template 'pendentes'}}button-positive ativo{{/if}}" data-tab='pendentes'>
+	      </button>
+	      <button class="button icon ion-ios-clock-outline mudar-tab {{#if $eq template 'recentes'}}button-positive ativo{{/if}}" data-tab='recentes'>
+	      	<!--{{> ionIcon icon="ios-clock-outline"}} Recentes-->
+	      </button>
+	    </div>
+	  {{/ionSubheaderBar}}
+	  {{#ionContent}}
+		{{> Template.dynamic template=template}}	  	
+	  {{/ionContent}}
+	{{/ionView}}
+
+
+
+
+</template>

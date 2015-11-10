@@ -35,7 +35,11 @@ Template.geoBusca.helpers({
 	isLoading: function() {
 
 		return ShactSearch.getStatus().loading;
-	},	  
+	},	 
+	deveAparecer: function(){
+		console.log(Meteor.user().prc());
+		return !_.contains(Meteor.user().prc(), this._id);
+	} 
 });
 
 
