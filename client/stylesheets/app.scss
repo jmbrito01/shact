@@ -8,7 +8,14 @@
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
 
-
+.tabs-icon-only{
+    .tabs{
+        .tab-item{
+            line-height: 49px;        
+        }
+    }
+    
+}
 *{
 	font-family: 'Roboto', sans-serif;
 }

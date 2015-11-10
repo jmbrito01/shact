@@ -5,6 +5,7 @@ Meteor.publish(null, function() {
 		emails:1, 
 		contatos:1,
 		pendentes: 1,
-		recentes: 1
+		recentes: 1,
+		status: 1
 	}});
 });

@@ -1,6 +1,5 @@
 const MODO_SELFIE = 0;
 const MODO_GEO = 1;
-const MODO_TELEFONE = 2;
 
 Template.home.onRendered(function(){
 	Location.locate(function(pos){
@@ -16,9 +15,11 @@ Template.home.onRendered(function(){
 
 	Session.setDefault('modoBusca',MODO_SELFIE);
 	
+	console.log(Session.get('modoBusca'));
+
 	var swiper = new Swiper('.selecionar-modo',{
 		pagination: '.swiper-pagination',
-		initialSlide: Session.get('modoBusca'),
+		initialSlide: parseInt(Session.get('modoBusca')),
 		onSlideChangeEnd:function(swiper){
 			Session.set('modoBusca',swiper.activeIndex);
 		}

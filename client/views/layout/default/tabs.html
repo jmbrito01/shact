@@ -7,11 +7,11 @@
     {{/ionTabs}}
   {{else}}
     
-    {{#ionTabs style="ios" class="tabs-background-positive tabs-color-light"}}
-      {{> ionTab title="Contatos" path="contatos.index" iconOff="ios-list-outline" iconOn="ios-list"}}
-      {{> ionTab title="Shact!" path="home" iconOff="ios-world-outline" iconOn="ios-world"}}
+    {{#ionTabs style="ios" class="tabs-background-positive tabs-color-light tabs-icon-only"}}
+      {{> ionTab path="contatos.index" iconOff="ios-people-outline" iconOn="ios-people"}}
+      {{> ionTab path="home" iconOff="ios-navigate-outline" iconOn="ios-navigate"}}
       <!--{{> ionTab title="Pendentes" path="pendentes.index" iconOff="ios-personadd-outline" iconOn="ios-personadd"}}-->
-      {{> ionTab title="Notificações" path="notificacoes.index" iconOff="ios-chatbubble-outline" iconOn="ios-chatbubble"}}
+      {{> ionTab path="notificacoes.index" iconOff="ios-chatbubble-outline" iconOn="ios-chatbubble"}}
     {{/ionTabs}}
     
   {{/if}}
