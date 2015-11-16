@@ -3,7 +3,7 @@
     {{#ionTabs style="android" class="tabs-icon-only tabs-background-positive tabs-color-light"}}
       {{> ionTab path="contatos.index" iconOff="ios-list-outline" iconOn="ios-list"}}
       {{> ionTab path="home" iconOff="ios-world-outline" iconOn="ios-world"}}
-      {{> ionTab path="pendentes.index" iconOff="ios-personadd-outline" iconOn="ios-personadd"}}
+      {{> ionTab badgeNumber="1" path="notificacoes.index" iconOff="ios-personadd-outline" iconOn="ios-personadd"}}
     {{/ionTabs}}
   {{else}}
     
@@ -11,7 +11,7 @@
       {{> ionTab path="contatos.index" iconOff="ios-people-outline" iconOn="ios-people"}}
       {{> ionTab path="home" iconOff="ios-navigate-outline" iconOn="ios-navigate"}}
       <!--{{> ionTab title="Pendentes" path="pendentes.index" iconOff="ios-personadd-outline" iconOn="ios-personadd"}}-->
-      {{> ionTab path="notificacoes.index" iconOff="ios-chatbubble-outline" iconOn="ios-chatbubble"}}
+      {{> ionTab badgeNumber="1" path="notificacoes.index" iconOff="ios-chatbubble-outline" iconOn="ios-chatbubble"}}
     {{/ionTabs}}
     
   {{/if}}

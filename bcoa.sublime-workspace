@@ -1,0 +1,1278 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"coordSen",
+				"coordSenioridade"
+			],
+			[
+				"ERRO_NEN",
+				"ERRO_NENHUMA_TAG_SALVA"
+			],
+			[
+				"ERRO_",
+				"ERRO_NENHUMA_TAG"
+			],
+			[
+				"ERRO_NENHU",
+				"ERRO_NENHUMA_FOTO"
+			],
+			[
+				"classificaco",
+				"classificacao"
+			],
+			[
+				"reset",
+				"resetaInterpretador"
+			],
+			[
+				"users",
+				"usersAcoes"
+			],
+			[
+				"ramo",
+				"ramo"
+			],
+			[
+				"pointHighLigh",
+				"pointHighlightStroke"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"treinado",
+				"treinado"
+			],
+			[
+				"selfie",
+				"selfie"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 96.0,
+		"last_filter": "insall pac",
+		"selected_items":
+		[
+			[
+				"insall pac",
+				"Package Control: Install Package"
+			],
+			[
+				"reindent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"sublimelinter",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"PA",
+				"Package Control: Install Package"
+			],
+			[
+				"PACKAGE",
+				"Package Control: Install Package"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reidnent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reidn",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reident",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"refre",
+				"Project: Refresh Folders"
+			],
+			[
+				"refres",
+				"Project: Refresh Folders"
+			],
+			[
+				"ref",
+				"Project: Refresh Folders"
+			],
+			[
+				"refresh",
+				"Project: Refresh Folders"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"refresh fo",
+				"Project: Refresh Folders"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"reidne",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"REIDNENT",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reine",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"install pack",
+				"Package Control: Install Package"
+			],
+			[
+				"reinden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reidenn",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"tern",
+				"TernJS: Jump To Definition"
+			],
+			[
+				"user ",
+				"Preferences: Settings - User"
+			],
+			[
+				"isntall pac",
+				"Package Control: Install Package"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"set syntax scs",
+				"Set Syntax: SCSS"
+			],
+			[
+				"set syntax scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"REIDNE",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reide",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"set syntax js",
+				"Set Syntax: JSX"
+			],
+			[
+				"jsx",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"colorsu",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"handle",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"stylus",
+				"Set Syntax: Stylus"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"set syntax jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"install packa",
+				"Package Control: Install Package"
+			],
+			[
+				"colorsubli",
+				"Colorsublime: Install Theme"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/rafa93br/meteor/shact1.2/client/views/user/fotos_publicas/fotos_publicas_index.js",
+		"/home/rafa93br/meteor/shact1.2/client/views/notificacoes/notificacoes_index.js",
+		"/home/rafa93br/meteor/shact1.2/client/views/pendentes/pendentes.html",
+		"/home/rafa93br/meteor/shact1.2/client/views/notificacoes/notificacoes_index.html",
+		"/home/rafa93br/meteor/shact1.2/client/views/contatos/contatos.html",
+		"/home/rafa93br/meteor/shact1.2/client/views/home/home.html",
+		"/home/rafa93br/meteor/shact1.2/client/views/home/home.js",
+		"/home/rafa93br/meteor/shact1.2/client/views/user/perfis/perfis_index.html",
+		"/home/rafa93br/meteor/shact1.2/client/views/user/perfis/_perfis_view.html",
+		"/home/rafa93br/meteor/shact1.2/client/stylesheets/_app-variables.scss",
+		"/home/rafa93br/meteor/shact1.2/lib/models/Users.js",
+		"/home/rafa93br/meteor/shact1.2/client/stylesheets/app.scss",
+		"/home/rafa93br/meteor/shact1.2/.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/stylesheets/_variables.scss",
+		"/home/rafa93br/meteor/shact1.2/client/views/shared/cloudinary_image/cloudinary_image.html",
+		"/home/rafa93br/meteor/shact1.2/client/views/layout/default/default.html",
+		"/home/rafa93br/meteor/shact1.2/lib/routes/notificacoes_routes.js",
+		"/home/rafa93br/meteor/shact1.2/lib/routes/routes.js",
+		"/home/rafa93br/meteor/shact1.2/client/views/layout/default/tabs.html",
+		"/home/rafa93br/meteor/shact1.2/lib/methods/fotos_methods.js",
+		"/home/rafa93br/meteor/shact1.2/server/publications/user_publications.js",
+		"/home/rafa93br/meteor/shact1.2/.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/stylesheets/_button.scss",
+		"/home/rafa93br/meteor/shact1.2/.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/stylesheets/_button-bar.scss",
+		"/home/rafa93br/meteor/shact1.2/client/views/geo/geo_busca.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/helpers.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/cargos/cargos_view.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/cargos/cargos_backup.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/cargos/cargos_classificacoes.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/cargos/cargos_classificacoes.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/cargos/cargos_backup.html",
+		"/home/rafa93br/meteor/sigalivre/client/stylesheets/main.scss",
+		"/home/rafa93br/meteor/sigalivre/client/views/cargos/cargos_index.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/cargos/cargos_acoes.html",
+		"/home/rafa93br/meteor/sigalivre/lib/models/Cargos.js",
+		"/home/rafa93br/meteor/sigalivre/lib/models/Classificacoes.js",
+		"/home/rafa93br/meteor/sigalivre/lib/models/Senioridades.js",
+		"/home/rafa93br/meteor/sigalivre/lib/models/Users.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/cargos/cargos_view.js",
+		"/home/rafa93br/meteor/sigalivre-landing/client/compatibility/js/scrollWatch.js",
+		"/home/rafa93br/meteor/sigalivre-landing/client/index.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/cargos/backup_view.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/cargos/backup_view.html",
+		"/home/rafa93br/meteor/sigalivre/lib/models/Backups.js",
+		"/home/rafa93br/meteor/sigalivre/lib/config/mo_format.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/shared/modal/modal.html",
+		"/home/rafa93br/meteor/sigalivre/.meteor/packages",
+		"/home/rafa93br/meteor/sigalivre/client/views/diagrama/diagrama.js",
+		"/home/rafa93br/meteor/sigalivre/lib/models/Areas.js",
+		"/home/rafa93br/meteor/sigalivre/client/lib/help.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/diagrama/diagrama.scss",
+		"/home/rafa93br/meteor/sigalivre/client/views/arvore/_arvore_areas.js",
+		"/home/rafa93br/meteor/sigalivre/lib/help.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/cargos/cargos_add.html",
+		"/home/rafa93br/meteor/ehs1.2/lib/models/Consumidores.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/consumidores/consumidores_view.html",
+		"/home/rafa93br/meteor/kiosk/client/views/autenticar_consumidor/reconhecimento/reconhecimento.js",
+		"/home/rafa93br/meteor/kiosk/client/views/epis/retirar/epis_retirar.js",
+		"/home/rafa93br/meteor/kiosk/client/stylesheet/index.scss",
+		"/home/rafa93br/meteor/kiosk/client/views/shared/nav/nav.html",
+		"/home/rafa93br/meteor/kiosk/.meteor/packages",
+		"/home/rafa93br/meteor/kiosk/client/views/autenticar_consumidor/reconhecimento/reconhecimento.scss",
+		"/home/rafa93br/Downloads/index.html",
+		"/home/rafa93br/Themes/karma/Karma-HTML-Package/1. Karma-HTML-4.0/index.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/layouts/plain/plain.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/landing/landing.html",
+		"/home/rafa93br/Themes/karma/Karma-HTML-Package/1. Karma-HTML-4.0/template-full-width.html",
+		"/home/rafa93br/meteor/ehs1.2/lib/models/Epis.js",
+		"/home/rafa93br/meteor/ehs1.2/settings.json",
+		"/home/rafa93br/meteor/ehs1.2/client/views/epis/epis_dispensaveis_add.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/epis/epis_dispensaveis_add.html",
+		"/home/rafa93br/meteor/ehs1.2/lib/models/Maquinas.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/pedidos/pedidos_item.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/cargos/cargos_add.js",
+		"/home/rafa93br/meteor/ehs1.2/lib/routes/cargos_routes.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/cargos/cargos_add.html",
+		"/home/rafa93br/meteor/ehs1.2/client/views/maquinas/maquinas_view.html",
+		"/home/rafa93br/meteor/ehs1.2/client/views/maquinas/maquina_customizar.html",
+		"/home/rafa93br/meteor/ehs1.2/client/views/estoque/estoque_add.html",
+		"/home/rafa93br/meteor/ehs1.2/client/views/estoque/estoque_add.js",
+		"/home/rafa93br/meteor/ehs1.2/lib/routes/estoque_routes.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/epis/epis_add.html",
+		"/home/rafa93br/meteor/ehs1.2/client/views/consumidores/consumidores_add.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/users/users_index.html",
+		"/home/rafa93br/meteor/ehs1.2/client/views/shared/filtro/filtro.html",
+		"/home/rafa93br/meteor/ehs1.2/client/views/shared/filtro/filtro.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/users/users_index.js",
+		"/home/rafa93br/meteor/ehs1.2/client/lib/config/useraccounts.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/pedidos/pedidos_index.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/empresas/empresas_index.html",
+		"/home/rafa93br/meteor/ehs1.2/lib/methods/estoque_methods.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/users/users_edit.js",
+		"/home/rafa93br/meteor/ehs1.2/lib/routes/users_routes.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/produtos/produtos_index.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/users/users_add.js",
+		"/home/rafa93br/meteor/ehs1.2/lib/routes/produtos_routes.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/maquinas/maquinas_index.html",
+		"/home/rafa93br/meteor/ehs1.2/lib/models/Users.js",
+		"/home/rafa93br/meteor/ehs1.2/client/views/produtos/produtos_index.html",
+		"/home/rafa93br/meteor/ehs1.2/client/views/empresas/empresas_index.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/diagrama/diagrama.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/carreiras/carreiras_index.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/carreiras/carreiras_acoes.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/cargos/cargos_add.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/senioridades/senioridades_index.js",
+		"/home/rafa93br/meteor/sigalivre/lib/models/Carreiras.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/carreiras/carreiras_add.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/carreiras/carreiras_edit.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/shared/bordered_content/bordered_content.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/shared/ibox_tools/ibox_tools.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/senioridades/senioridades_add.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/senioridades/senioridades_edit.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/carreiras/carreiras_add.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/senioridades/senioridades_index.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/senioridades/senioridades_acoes.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/senioridades/senioridades_edit.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/cargos/cargos_edit.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/users/users_index.html",
+		"/home/rafa93br/meteor/sigalivre/client/stylesheets/globals/variables.import.less",
+		"/home/rafa93br/meteor/sigalivre/client/views/carreiras/carreiras_edit.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/senioridades/senioridades_add.html",
+		"/home/rafa93br/meteor/sigalivre/server/lib/useraccounts.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/users/users_add.js",
+		"/home/rafa93br/meteor/sigalivre/client/lib/config/useraccounts.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/users/users_view.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/users/users_view_profile.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/users/users_edit.js",
+		"/home/rafa93br/meteor/sigalivre/server/fixtures/dummyFixture.js",
+		"/home/rafa93br/meteor/sigalivre/client/views/users/users_reset_password.html",
+		"/home/rafa93br/meteor/sigalivre/client/views/users/users_login.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/home/rafa93br/meteor/sigalivre/client/stylesheets/globals",
+			"",
+			"/home/rafa93br/meteor/shact1.2/server",
+			"/home/rafa93br/meteor/shact1.2/lib",
+			"/home/rafa93br/meteor/bcoa/lib",
+			"/home/rafa93br/meteor/bcoa/client",
+			"/home/rafa93br/meteor/shact1.2/",
+			"/home/rafa93br/meteor/ehs1.2/client",
+			"/home/rafa93br/meteor/ehs1.2/lib",
+			"/home/rafa93br/meteor/ehs1.2/client",
+			"/home/rafa93br/meteor/shact1.2/client/stylesheets",
+			"",
+			"../client",
+			"./client",
+			"",
+			"/home/rafa93br/meteor/bcoa",
+			"/home/rafa93br/meteor/ehs1.2",
+			"/home/rafa93br/meteor/ehs1.2/client",
+			"/home/rafa93br/meteor/ehs1.2/lib",
+			"/home/rafa93br/meteor/ehs1.2/client",
+			"/home/rafa93br/meteor/ehs1.2/lib",
+			"/home/rafa93br/meteor/ehs1.2/client",
+			"/home/rafa93br/meteor/ehs1.2/lib",
+			"/home/rafa93br/meteor/ehs1.2/client",
+			"/home/rafa93br/meteor/ehs1.2/lib",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"14px",
+			"world",
+			"button-bar-",
+			"40",
+			"button-bar",
+			"radius",
+			"button-bar",
+			"radius",
+			"a",
+			"80",
+			"pendentes",
+			"isLoading",
+			"onSucces",
+			"unless",
+			"Add",
+			"senioridade",
+			"FlowRouter.get",
+			"FlowRouter.getQUery",
+			"galera",
+			"swiper-normal",
+			"backups",
+			"></",
+			"			\n",
+			"Modal",
+			"ui",
+			"atribuicoes",
+			"items",
+			"60px",
+			"level-up",
+			"border-b",
+			"areaId",
+			"min-width",
+			"subir-nivel",
+			"btn-voltar",
+			"arrow",
+			"caminho",
+			"td",
+			"*",
+			"#",
+			"scroll-diagram",
+			"width=\"20%\"",
+			" width=\"80%\"",
+			"h3",
+			"panel",
+			"template='bootstrap3-horizontal'",
+			"sessao",
+			"error",
+			"materialize",
+			"email",
+			"add",
+			"almoxerife",
+			"#",
+			"Session",
+			">\n",
+			".alert-danger",
+			"@red",
+			".alert-danger",
+			"#f2dede",
+			"loginscreen",
+			"template=\"bootstrap3-horizontal\"",
+			"Grupo",
+			"6",
+			"3",
+			"9",
+			"template=\"bootstrap3-horizontal\" ",
+			"label",
+			"\" template=\"bootstrap3-horizontal\" ",
+			" template=\"bootstrap3-horizontal\"",
+			"patterns",
+			"header-profile",
+			"console.log",
+			"renomear",
+			"navy",
+			"calendarFeed",
+			"Programacao",
+			"9",
+			"//.",
+			"coordenadores",
+			"carreiraCoordenador",
+			"classificaca",
+			"coordenadores",
+			"carreira(",
+			"carreira",
+			"sort",
+			"diagrama2",
+			"in",
+			"#premium",
+			"						<li class=\"subativo\">\n							<a class=\"muda\" href=\"minicursos.php\"><span>Minicursos</span></a>\n						</li>",
+			"Minicursos",
+			"51&ordf",
+			"50&ordf",
+			"50",
+			"\"",
+			"insertCargosForm",
+			"visitasDelete",
+			"    {\n      title:\"Nome\",\n      data:'nome',\n      width:\"60%\"\n    },  ",
+			"Inscricoes",
+			"cargos",
+			"Cargos",
+			"true",
+			"lg",
+			" template=\"bootstrap3-horizontal\" ",
+			"9",
+			"plate",
+			"class=\"col-sm-3\" input-col-class=\"col-sm-6\"",
+			"input-col-class=\"col-sm-6\"",
+			"afFormGroup",
+			"afQuickField",
+			"Visitas",
+			"cargos",
+			"Cargos",
+			"cargos",
+			"Cargos",
+			"						<li class=\"subativo\">\n							<a class=\"muda\" href=\"../inscricoes/minicursos.php\"><span>Minicursos</span></a>\n						</li>",
+			"<a class=\"muda\" href=\"inscricoes/minicursos.php\"><span>Minicursos</span></a>",
+			"   86: 						<li class=\"subativo\">\n   87: 							<a class=\"muda\" href=\"inscricoes/minicursos.php\"><span>Minicursos</span></a>\n   88: 						</li>",
+			"						<li class=\"subativo\">\n							<a class=\"muda\" href=\"minicursos.php\"><span>Minicursos</span></a>\n						</li>",
+			"						<li class=\"subativo\">\n							<a class=\"muda\" href=\"inscricoes/minicursos.php\"><span>Minicursos</span></a>\n						</li>",
+			"Minicursos",
+			"2014 Centro Moraes",
+			"2014",
+			"encerradas",
+			"Minicursos",
+			"script.js",
+			"abendi",
+			"->",
+			"master.png",
+			"Patrocinadores e apoio"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			" ",
+			"51&ordf",
+			"",
+			"2015 Centro Moraes",
+			"filtro",
+			"#"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 291.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "bcoa.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"app.scs",
+				"client/stylesheets/app.scss"
+			],
+			[
+				"fotsohtml",
+				"client/views/fotos/fotos_view.html"
+			],
+			[
+				"fotoshtml",
+				"client/views/fotos/fotos_view.html"
+			],
+			[
+				"fotosindex",
+				"client/views/user/fotos_publicas/fotos_publicas_index.js"
+			],
+			[
+				"foto",
+				"lib/models/Fotos.js"
+			],
+			[
+				"fotosmet",
+				"lib/methods/fotos_methods.js"
+			],
+			[
+				"fotsometh",
+				"lib/methods/fotos_methods.js"
+			],
+			[
+				"tab",
+				"client/views/layout/default/tabs.html"
+			],
+			[
+				"variab",
+				".meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/stylesheets/_variables.scss"
+			],
+			[
+				"tabs",
+				"client/views/layout/default/tabs.html"
+			],
+			[
+				"app.",
+				"client/stylesheets/app.scss"
+			],
+			[
+				"perfisview",
+				"client/views/user/perfis/_perfis_view.html"
+			],
+			[
+				"perifsinde",
+				"client/views/user/perfis/perfis_index.html"
+			],
+			[
+				"homejs",
+				"client/views/home/home.js"
+			],
+			[
+				"home",
+				"client/views/home/home.html"
+			],
+			[
+				"contatos",
+				"client/views/contatos/contatos.html"
+			],
+			[
+				"userpub",
+				"server/publications/user_publications.js"
+			],
+			[
+				"users",
+				"lib/models/Users.js"
+			],
+			[
+				"varia",
+				".meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/stylesheets/_variables.scss"
+			],
+			[
+				"cloudi",
+				"client/views/shared/cloudinary_image/cloudinary_image.html"
+			],
+			[
+				"buttonsbar",
+				".meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/stylesheets/_button-bar.scss"
+			],
+			[
+				"button",
+				".meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/stylesheets/_button.scss"
+			],
+			[
+				"variabl",
+				".meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/stylesheets/_variables.scss"
+			],
+			[
+				"contatoshtml",
+				"client/views/contatos/contatos.html"
+			],
+			[
+				"geobusachtml",
+				"client/views/geo/geo_busca.html"
+			],
+			[
+				"app.scss",
+				"client/stylesheets/app.scss"
+			],
+			[
+				"pende",
+				"client/views/pendentes/pendentes.html"
+			],
+			[
+				"default",
+				"client/views/layout/default/default.html"
+			],
+			[
+				"tabshtml",
+				"client/views/layout/default/tabs.html"
+			],
+			[
+				"pendenteshtml",
+				"client/views/pendentes/pendentes.html"
+			],
+			[
+				"contactsjs",
+				"app/lib/collections/contacts.js"
+			],
+			[
+				"app.ss",
+				"client/stylesheets/app.scss"
+			],
+			[
+				"helpers",
+				"client/views/helpers.js"
+			],
+			[
+				"geobuscahtml",
+				"client/views/geo/geo_busca.html"
+			],
+			[
+				"geobuscajs",
+				"client/views/geo/geo_busca.js"
+			],
+			[
+				"cargosclassificacoesjs",
+				"client/views/cargos/cargos_classificacoes.js"
+			],
+			[
+				"cargosindex",
+				"client/views/cargos/cargos_index.js"
+			],
+			[
+				"cargosbackup",
+				"client/views/cargos/cargos_backup.html"
+			],
+			[
+				"cargoscalssfi",
+				"client/views/cargos/cargos_classificacoes.js"
+			],
+			[
+				"cargosback",
+				"client/views/cargos/cargos_backup.js"
+			],
+			[
+				"cargosbackupjs",
+				"client/views/cargos/cargos_backup.js"
+			],
+			[
+				"main.scs",
+				"client/stylesheets/main.scss"
+			],
+			[
+				"cargosindexjs",
+				"client/views/cargos/cargos_index.js"
+			],
+			[
+				"cargosindejs",
+				"client/views/cargos/cargos_index.js"
+			],
+			[
+				"cargosacoesjs",
+				"client/views/cargos/cargos_classificacoes.js"
+			],
+			[
+				"cargosaco",
+				"client/views/cargos/cargos_acoes.html"
+			],
+			[
+				"cargosbacku",
+				"client/views/cargos/cargos_backup.html"
+			],
+			[
+				"classifi",
+				"lib/models/Classificacoes.js"
+			],
+			[
+				"sen",
+				"lib/models/Senioridades.js"
+			],
+			[
+				"cargos",
+				"lib/models/Cargos.js"
+			],
+			[
+				"cargosview",
+				"client/views/cargos/cargos_view.html"
+			],
+			[
+				"helper",
+				"client/views/helpers.js"
+			],
+			[
+				"cargosclass",
+				"client/views/cargos/cargos_classificacoes.html"
+			],
+			[
+				"inde",
+				"client/index.html"
+			],
+			[
+				"perisinde",
+				"client/views/user/perfis/perfis_index.html"
+			],
+			[
+				"userperf",
+				"client/views/user/perfis/perfis_index.js"
+			],
+			[
+				"cargosbacu",
+				"client/views/cargos/cargos_backup.html"
+			],
+			[
+				"classif",
+				"lib/models/Classificacoes.js"
+			],
+			[
+				"cargosbac",
+				"client/views/cargos/cargos_backup.html"
+			],
+			[
+				"cargosclassif",
+				"client/views/cargos/cargos_classificacoes.js"
+			],
+			[
+				"cargosca",
+				"client/views/cargos/cargos_classificacoes.html"
+			],
+			[
+				"cargosclassifi",
+				"client/views/cargos/cargos_classificacoes.html"
+			],
+			[
+				"carogsclassifjs",
+				"client/views/cargos/cargos_classificacoes.js"
+			],
+			[
+				"cargosviewjs",
+				"client/views/cargos/cargos_view.js"
+			],
+			[
+				"modal",
+				"client/views/shared/modal/modal.html"
+			],
+			[
+				"packag",
+				".meteor/packages"
+			],
+			[
+				"backu",
+				"lib/models/Backups.js"
+			],
+			[
+				"moform",
+				"lib/config/mo_format.js"
+			],
+			[
+				"carogsacku",
+				"client/views/cargos/cargos_backup.js"
+			],
+			[
+				"pack",
+				".meteor/packages"
+			],
+			[
+				"diagramajs",
+				"client/views/diagrama/diagrama.js"
+			],
+			[
+				"packge",
+				".meteor/packages"
+			],
+			[
+				"autoform",
+				"client/lib/config/autoform.js"
+			],
+			[
+				"areas",
+				"lib/models/Areas.js"
+			],
+			[
+				"clas",
+				"lib/models/Classificacoes.js"
+			],
+			[
+				"diagramascss",
+				"client/views/diagrama/diagrama.scss"
+			],
+			[
+				"help",
+				"client/lib/help.js"
+			],
+			[
+				"diagramascs",
+				"client/views/diagrama/diagrama.scss"
+			],
+			[
+				"areasjs",
+				"lib/models/Areas.js"
+			],
+			[
+				"arvorearea",
+				"client/views/arvore/_arvore_areas.js"
+			],
+			[
+				"diagraa",
+				"client/views/diagrama/diagrama.html"
+			],
+			[
+				"carogsadd",
+				"client/views/cargos/cargos_add.html"
+			],
+			[
+				"diagrama",
+				"client/views/diagrama/diagrama.html"
+			],
+			[
+				"main",
+				"client/stylesheets/main.scss"
+			],
+			[
+				"consviewjs",
+				"client/views/consumidores/consumidores_view.js"
+			],
+			[
+				"consumidoresview",
+				"client/views/consumidores/consumidores_view.html"
+			],
+			[
+				"consedit",
+				"client/views/consumidores/consumidores_edit.html"
+			],
+			[
+				"consaddhtml",
+				"client/views/consumidores/consumidores_add.html"
+			],
+			[
+				"consumidore",
+				"lib/models/Consumidores.js"
+			],
+			[
+				"reocnhecimentojs",
+				"client/views/autenticar_consumidor/reconhecimento/reconhecimento.js"
+			],
+			[
+				"episretirar",
+				"client/views/epis/retirar/epis_retirar.js"
+			],
+			[
+				"reconhecimentojs",
+				"client/views/autenticar_consumidor/reconhecimento/reconhecimento.js"
+			],
+			[
+				"consumidoresjs",
+				"client/views/autenticar_consumidor/consumidores/consumidores.js"
+			],
+			[
+				"nav",
+				"client/views/shared/nav/nav.html"
+			],
+			[
+				"packages",
+				".meteor/packages"
+			],
+			[
+				"reconhecimentoscs",
+				"client/views/autenticar_consumidor/reconhecimento/reconhecimento.scss"
+			],
+			[
+				"consumi",
+				"client/views/autenticar_consumidor/consumidores/consumidores.html"
+			],
+			[
+				"style.css",
+				"client/stylesheets/landing/style.css"
+			],
+			[
+				"plain",
+				"client/views/layouts/plain/plain.html"
+			],
+			[
+				"mainrou",
+				"lib/routes/main_routes.js"
+			],
+			[
+				"index.ht",
+				"client/views/index.html"
+			],
+			[
+				"usersroute",
+				"lib/routes/users_routes.js"
+			],
+			[
+				"cargosroutes",
+				"lib/routes/cargos_routes.js"
+			],
+			[
+				"cargosadd",
+				"client/views/cargos/cargos_add.html"
+			],
+			[
+				"usersadd",
+				"client/views/users/users_add.html"
+			],
+			[
+				"consu",
+				"lib/models/Consumidores.js"
+			],
+			[
+				"terminalpub",
+				"server/publications/terminal_publications.js"
+			],
+			[
+				"maquina",
+				"lib/models/Maquinas.js"
+			],
+			[
+				"maquinas",
+				"client/views/maquinas/maquinas_view.html"
+			],
+			[
+				"sett",
+				"settings.json"
+			],
+			[
+				"epis",
+				"lib/models/Epis.js"
+			],
+			[
+				"episispaddjs",
+				"client/views/epis/epis_dispensaveis_add.js"
+			],
+			[
+				"episdispen",
+				"client/views/epis/epis_dispensaveis_add.html"
+			],
+			[
+				"episdispensaveisadd",
+				"client/views/epis/epis_dispensaveis_add.html"
+			],
+			[
+				"maquinacust",
+				"client/views/maquinas/maquina_customizar.html"
+			],
+			[
+				"episadd",
+				"client/views/epis/epis_add.html"
+			],
+			[
+				"maquinasview",
+				"client/views/maquinas/maquinas_view.html"
+			],
+			[
+				"estoqueroutes",
+				"lib/routes/estoque_routes.js"
+			],
+			[
+				"estoqueaddjs",
+				"client/views/estoque/estoque_add.js"
+			],
+			[
+				"estoqueadd",
+				"client/views/estoque/estoque_add.html"
+			],
+			[
+				"pedidosindexjs",
+				"client/views/pedidos/pedidos_index.js"
+			],
+			[
+				"estoquemet",
+				"lib/methods/estoque_methods.js"
+			],
+			[
+				"pedidositemjs",
+				"client/views/pedidos/pedidos_item.js"
+			],
+			[
+				"usersedit",
+				"client/views/users/users_edit.js"
+			],
+			[
+				"userrout",
+				"lib/routes/users_routes.js"
+			],
+			[
+				"userroute",
+				"lib/routes/users_routes.js"
+			],
+			[
+				"useracc",
+				"client/lib/config/useraccounts.js"
+			],
+			[
+				"usersaddjs",
+				"client/views/users/users_add.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Desktop/Sublime Projects/bcoa.sublime-project"
+			],
+			[
+				"bcoa",
+				"~/meteor/shact1.2/bcoa.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 139.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

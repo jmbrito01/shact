@@ -3,10 +3,10 @@ var ultimaFoto = function (swiper){
     if (!fotoPublicaSelecionada){
         Session.set('fotoPublicaSelecionada', $(swiper.slides[swiper.activeIndex]).data('_id'));
     }else{
-        var lastId = swiper.slides.filter('[data-_id="' + fotoPublicaSelecionada + '"]').index()
+        var lastId = swiper.slides.filter('[data-_id="' + fotoPublicaSelecionada + '"]').index();
         swiper.slideTo(lastId);
     }    
-}
+};
 
 Template.fotosPublicas.helpers({
     options1:function(){
@@ -20,7 +20,7 @@ Template.fotosPublicas.helpers({
                 Session.set('fotoPublicaSelecionada', $(swiper.slides[swiper.activeIndex]).data('_id'));
             },
             onInit : ultimaFoto        
-        }
+        };
     },
     options2:function(){
         return {
@@ -31,13 +31,13 @@ Template.fotosPublicas.helpers({
             touchRatio: 0.2,
             slideToClickedSlide: false,        
             onInit: ultimaFoto
-        }
+        };
     },
     fotos:function(){
         var query = Router.current().params.query;
 
         var participantes = [Meteor.userId()];
-        if (query.com != null) participantes.push(query.com);
+        if (query.com !== null) participantes.push(query.com);
         return Fotos.find({tipo: TIPO_PUBLICO, 'participantes.userId':{$all: participantes}});
 
 
@@ -45,7 +45,7 @@ Template.fotosPublicas.helpers({
     fotoPublicaSelecionada:function(){
         return Fotos.findOne({_id: Session.get('fotoPublicaSelecionada')});
     }
-})
+});
 
 
 Template.fotosPublicas.onRendered(function(){
@@ -53,4 +53,4 @@ Template.fotosPublicas.onRendered(function(){
     fotosPublicasThumbs = this.$('#fotos-publicas-thumbs')[0].swiper;
     fotosPublicasItem.params.control = fotosPublicasThumbs;
     fotosPublicasThumbs.params.control = fotosPublicasItem;     
-})
+});
