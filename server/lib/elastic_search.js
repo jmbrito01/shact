@@ -161,8 +161,6 @@ ElasticSearch.prototype.usuariosProximos = function(localizacao, raio, excluir, 
 elasticSearch = new ElasticSearch('shact','shacters');
 
 SearchSource.defineSource('shacters', function(textoBusca, opcoes) {
-  Meteor._sleepForMs(1000);
-  
   if (!Meteor.user()){
     throw new Meteor.Error('Não está logado');
     return;

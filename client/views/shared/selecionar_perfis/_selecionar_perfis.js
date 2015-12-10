@@ -12,3 +12,7 @@ Template.selecionarPerfis.helpers({
         return Perfis.find({userId: Meteor.userId()});
     }
 })
+
+Template.selecionarPerfis.onDestroyed(function() {
+    ultimaAcao.set({});
+})

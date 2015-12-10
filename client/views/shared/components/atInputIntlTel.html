@@ -1,0 +1,25 @@
+<template name="atInputIntlTel">
+  <div class="at-input item item-input item-text-wrap {{#if showLabels}}item-stacked-label{{/if}} {{#if isValidating}}validating{{/if}} {{#if hasError}}has-error{{/if}} {{#if hasSuccess}}has-success{{/if}} {{#if feedback}}has-feedback{{/if}}">
+    {{#if showLabels}}
+      <label class="input-label" for="at-field-{{_id}}">
+        {{{displayName}}} {{#unless required}}{{optionalText}}{{/unless}}
+      </label>
+    {{/if}}
+    <input type="tel" id="at-field-{{_id}}" name="at-field-{{_id}}" autocapitalize="none" autocorrect="off">
+    {{#if hasIcon}}
+      <span class="{{iconClass}}"></span>
+    {{/if}}
+    {{#if hasError}}
+      <span>{{errorText}}</span>
+    {{/if}}
+  </div>
+</template>
+
+
+
+    <!--
+    <input type="text" id="at-field-sobrenome" name="at-field-sobrenome" placeholder="Last name" autocapitalize="none" autocorrect="off">
+    -->
+    
+    
+  

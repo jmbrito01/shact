@@ -1,0 +1,32 @@
+<template name="editarPerfil">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton}}
+  {{/contentFor}}
+
+
+  {{#contentFor "headerButtonRight"}}
+
+  {{/contentFor}}
+
+  
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Editar perfil</h1>
+  {{/contentFor}}
+
+  {{#contentFor "tabs"}}
+      
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      {{#autoForm collection="Meteor.users" id="updateUsersForm" type="update" doc=currentUser}}
+        {{>afQuickField name="profile.nome"}}
+        {{>afQuickField name="profile.sobrenome"}}
+        {{>afQuickField name="profile.nascimento"}}
+        {{>afQuickField name="profile.genero"}}
+        {{>afQuickField name="profile.celular"}}
+        <button type="submit" class="button button-positive button-block">Salvar</button>
+      {{/autoForm}} 
+    {{/ionContent}}
+  {{/ionView}}
+</template>

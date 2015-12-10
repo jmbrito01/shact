@@ -5,14 +5,14 @@
 
 
 	{{#contentFor "headerButtonRight"}}
-		<a class="button button-clear" id="editar-perfil">
+		<a class="button button-clear" href="{{pathFor 'user.edit'}}">
 	  		{{> ionIcon icon='edit'}}
 	 	</a>
 	{{/contentFor}}
 
 	
 	{{#contentFor "headerTitle"}}
-	  <h1 class="title">Perfil</h1>
+	  <h1 class="title">Meu Perfil</h1>
 	{{/contentFor}}
 
 	{{#contentFor "tabs"}}
@@ -21,65 +21,55 @@
 
 	{{#ionView}}
 	  {{#ionContent}}
-	  	{{>userHeader}}
+  		{{#with currentUser}}
+		  	{{>userHeader}}
+				
+		  	<div class="row">
+		  		<div class="col col-50">
+					<a class="button button-positive button-block button-outline" href="{{pathFor 'user.perfis'}}">
+						{{> ionIcon icon="ios-plus-empty"}} Perfis ({{countPerfis}})
+				    </a>	
+		  		</div>
+		  		<div class="col col-50">
+					<a class="button button-balanced button-block button-outline" href="{{pathFor 'user.fotos'}}">
+						{{> ionIcon icon="ios-camera-outline"}} Fotos ({{countFotosPrivadas}})
+				    </a>		
+		  		</div>
+		  	</div>				
 
-	  	<div class="row">
-	  		<div class="col col-50">
-				<a class="button button-positive button-block button-outline" href="{{pathFor 'user.perfis'}}">
-					{{> ionIcon icon="ios-plus-empty"}} Perfis ({{countPerfis}})
-			    </a>	
-	  		</div>
-	  		<div class="col col-50">
-				<a class="button button-balanced button-block button-outline" href="{{pathFor 'user.fotos'}}">
-					{{> ionIcon icon="ios-camera-outline"}} Fotos ({{countFotosPrivadas}})
-			    </a>		
-	  		</div>
-	  	</div>	  	
-
-
-	  	{{#if $.Session.get 'editarPerfil'}}
-			{{#autoForm collection="Meteor.users" id="updateUsersForm" type="update" doc=currentUser}}
-				{{>afQuickField name="profile.nome"}}
-				{{>afQuickField name="profile.sobrenome"}}
-				{{>afQuickField name="profile.nascimento"}}
-				{{>afQuickField name="profile.genero"}}
-				{{>afQuickField name="profile.celular"}}
-				<button type="submit" class="button button-positive button-block">Salvar</button>
-			{{/autoForm}}	
-	  	{{else}}
-			<div class="list">
-			  <a class="item" href="#">
-			    Nome Completo
-			    <span class="item-note">
-			      {{profile.nomeCompleto}}
-			    </span>
-			  </a>
-			  <a class="item" href="#">
-			    Nascimento
-			    <span class="item-note">
-			      {{profile.nascimento}}
-			    </span>
-			  </a>
-			  <a class="item" href="#">
-			    Gênero
-			    <span class="item-note">
-			      {{profile.genero}}
-			    </span>
-			  </a>
-			  <a class="item" href="#">
-			    Email
-			    <span class="item-note">
-			      {{email}}
-			    </span>
-			  </a> 			  
-			  <a class="item" href="#">
-			    Celular
-			    <span class="item-note">
-			      {{profile.celular}}
-			    </span>
-			  </a>    
-			</div>
-	  	{{/if}}
+				<div class="list">
+				  <a class="item" href="#">
+				    Nome Completo
+				    <span class="item-note">
+				      {{profile.nomeCompleto}}
+				    </span>
+				  </a>
+				  <a class="item" href="#">
+				    Nascimento
+				    <span class="item-note">
+				      {{moFormat profile.nascimento 'DD/MM/YYYY'}}
+				    </span>
+				  </a>
+				  <a class="item" href="#">
+				    Gênero
+				    <span class="item-note">
+				      {{formatarGenero profile.genero}}
+				    </span>
+				  </a>
+				  <a class="item" href="#">
+				    Email
+				    <span class="item-note">
+				      {{email}}
+				    </span>
+				  </a> 			  
+				  <a class="item" href="#">
+				    Celular
+				    <span class="item-note">
+				      {{profile.celular}}
+				    </span>
+				  </a>    
+				</div>
+	  	{{/with}}
 	  {{/ionContent}}
 	{{/ionView}}
 </template>

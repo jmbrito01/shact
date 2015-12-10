@@ -1,19 +1,14 @@
 <template name="conexoesView">
 	{{#contentFor "headerButtonLeft"}}
-		{{>ionNavBackButton}}
+		{{>ionNavBackButton text="Voltar"}}
 	{{/contentFor}}
 
 	{{#contentFor "headerButtonRight"}}
-		<a class="button button-clear" id="acoes-conexao">
+		<a class="button button-clear" id="compartilhar-mais">
 			{{> ionIcon icon='plus'}}
 		</a>
 	{{/contentFor}}
 
-	{{#contentFor "headerTitle"}}
-		<a class="button button-clear" id="configurar-radar">
-			{{> ionIcon icon='ios-settings-strong'}}
-		</a>
-	{{/contentFor}}
 
 	{{#contentFor "headerTitle"}}
 		<h1 class="title">Contato</h1>
@@ -27,12 +22,7 @@
 
 
 				<div class="row">
-					<div class="col col-50">
-						<button class="button button-positive button-block button-outline" id="compartilhar-mais">
-							{{> ionIcon icon="android-share-alt"}} Contato ({{countPerfis}})
-						</button>	
-					</div>
-					<div class="col col-50">
+					<div class="col">
 						<a class="button button-balanced button-block button-outline" 
 						href="{{pathFor 'fotos.publicas'}}?com={{_id}}">
 							{{> ionIcon icon="ios-camera-outline"}} Nossas Fotos

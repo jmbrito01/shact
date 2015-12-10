@@ -5,7 +5,7 @@ AccountsTemplates.addFields([
   {
       _id: "username",
       type: "text",
-      displayName: "username",
+      displayName: "Usuário",
       required: true,
       minLength: 5,
   },
@@ -13,56 +13,39 @@ AccountsTemplates.addFields([
       _id: 'email',
       type: 'email',
       required: true,
-      displayName: "email",
       re: /.+@(.+){2,}\.(.+){2,}/,
-      errStr: 'Invalid email',
   },
   {
       _id: 'username_and_email',
       type: 'text',
       required: true,
-      placeholder: "Enter username or email",
-      displayName: "Login",
+      displayName: "Username ou Email",
+      placeholder: "Username ou Email"
   },
   pwd
   ,  
   {
       _id: "nome",
       type: "text",
-      placeholder: "First name",
       required: true,
   },
   {
       _id: "sobrenome",
       type: "text",
-      placeholder: "Last name",
       required: true,
   },    
   {
       _id: "celular",
       type: "tel",
-      placeholder: "Cellphone"
+      template: "atInputIntlTel",
+      options: {
+        intlTelOptions: {
+          autoFormat: true,
+          defaultCountry: 'BR',
+          utilsScript: 'lib/libphonenumber/build/utils.js'
+        },
+      },
   },
-  {
-      _id: "nascimento",
-      type: "text",
-      placeholder: "Birthday"
-  },  
-  {
-      _id: "genero",
-      type: "select",
-      displayName: "Gender",
-      select: [
-          {
-              text: "Male",
-              value: "male",
-          },
-          {
-              text: "Female",
-              value: "female",
-          },
-      ],
-  }  
 ]);
 
 var onSubmitHook = function(error, state){
@@ -138,43 +121,22 @@ AccountsTemplates.configure({
     // Redirects
     homeRoutePath: '/',
     redirectTimeout: 4000,
-
-    // Texts
     texts: {
       title: {
-        changePwd: "Password Title",
-        enrollAccount: "Enroll Title",
-        forgotPwd: "Forgot Pwd Title",
-        resetPwd: "Reset Pwd Title",
-        signIn: "Sign In",
-        signUp: "Sign Up Title",
-        verifyEmail: "Verify Email Title",
-      },
-
-      button: {
-          signUp: "Done",
-          signIn: "Sign In"
-      },
-		errors: {
-		    accountsCreationDisabled: "Client side accounts creation is disabled!!!",
-		    cannotRemoveService: "Cannot remove the only active service!",
-		    captchaVerification: "Captcha verification failed!",
-		    loginForbidden: "error.accounts.Login forbidden",
-		    mustBeLoggedIn: "error.accounts.Must be logged in",
-		    pwdMismatch: "error.pwdsDontMatch",
-		    validationErrors: "Validation Errors",
-		    verifyEmailFirst: "Please verify your email first. Check the email and follow the link!",
-		},
-      socialSignUp: "Sign Up",
-      socialIcons: {
-          "meteor-developer": "fa fa-rocket"
-      },
-      title: {
-          forgotPwd: "Recover Your Password"
-      },
-    },
+        changePwd: '',
+        enrollAccount: '',
+        forgotPwd: '',
+        resetPwd: '',
+        signIn: '',
+        signUp: '',
+        verifyEmail: ''
+      }
+    }    
 });
 
 
 
 Template.myAtForm.replaces("atForm");
+
+
+T9n.setLanguage('pt')

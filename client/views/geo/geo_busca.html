@@ -1,6 +1,6 @@
 <template name="geoBusca">	
 	{{#contentFor "headerButtonLeft"}}
-	{{>ionNavBackButton}}
+		{{>ionNavBackButton text="Voltar"}}
 	{{/contentFor}}
 
 	{{#contentFor "headerTitle"}}
@@ -14,14 +14,25 @@
 
 
 
-		<div class="list list-inset">
+		<div class="list">
+
+			<!--
 			<label class="item item-input ">
 				<i class="icon ion-search placeholder-icon"></i>
-				<input id="texto-busca" type="text" placeholder="Search">
+				<input id="texto-busca" type="text" placeholder="Buscar p">
 				  <button class="button button-clear button-primary" id="refresh-busca">
 				    <i class="icon fa fa-refresh {{#if isLoading}}fa-spin{{/if}}"></i>
 				  </button>				
 			</label>
+			-->
+			<label class="item item-input">
+				<i class="icon ion-search placeholder-icon"></i>
+				<input id="texto-busca" type="text" placeholder="Procurar">
+			  <button class="button button-clear button-primary" id="refresh-busca">
+			    <i class="icon fa fa-refresh {{#if isLoading}}fa-spin{{/if}}"></i>
+			  </button>				
+			</label>				
+	
 			{{#if $.Session.get 'configurarRadar'}}
 			<div class="item range range-positive">
 				<!--{{> ionIcon icon="arrow-shrink"}}-->
