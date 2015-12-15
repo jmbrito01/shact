@@ -4,6 +4,7 @@ Meteor.publish(null, function() {
 		services:1,
 		emails:1, 
 		contatos:1,
+    primeiraFoto: 1,
 		pendentes: 1,
 		recentes: 1,
 		status: 1

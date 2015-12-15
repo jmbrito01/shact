@@ -27,7 +27,7 @@ Template.userPerfis.helpers({
             centeredSlides: true,
             slidesPerView: 'auto',
             touchRatio: 0.2,
-            slideToClickedSlide: false,        
+            slideToClickedSlide: true,        
             onInit:ultimoPerfil
         }
 	},
