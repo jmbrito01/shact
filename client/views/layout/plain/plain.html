@@ -1,5 +1,9 @@
 <template name="plainLayout">
-
-  {{> yield}}
-
+    {{#ionBody}}
+        {{#ionView}}
+            {{#ionContent}}
+                {{> yield}}
+            {{/ionContent}}
+        {{/ionView}}
+    {{/ionBody}}
 </template>
