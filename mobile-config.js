@@ -1,4 +1,6 @@
 App.accessRule('*');
+App.accessRule('http://*');
+App.accessRule('https://*');
 
 App.info({
   id: 'com.shact.app',
