@@ -6,8 +6,9 @@ Template.fotoPublicaDetails.events({
 	      title: 'Remover tag',
 	      template: 'Tem certeza?',
 	      onOk: function() {
+	      	var tag = Tags.findOne(tagId);
 	      	Meteor.call('desatribuirTag', tagId);
-	    	/*Tags.remove({_id: tagId});*/
+
 	      },
 	    });		
 	},

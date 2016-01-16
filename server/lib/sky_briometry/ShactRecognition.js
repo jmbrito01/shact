@@ -4,6 +4,12 @@ const ERRO_NENHUMA_TAG_SALVA = 302;
 const ERRO_NENHUMA_TAG_REMOVIDA = 303;
 const ERRO_TREINAMENTO = 304;
 
+var namespace = Meteor.settings.SkyBiometryNamespace;
+if(!namespace) {
+  throw new Error("SkyBiometryNamespace is required!");
+}
+
+
 ErroReconhecimento = function(code, msg){
 	this.code = code;
 	this.msg = msg;
@@ -20,7 +26,7 @@ ShactRecognition = function(){
 	}
 }
 
-ShactRecognition.prototype = new SkyBiometry(Meteor.settings.SkyBiometryAPIKey, Meteor.settings.SkyBiometryAPISecret,'shact');
+ShactRecognition.prototype = new SkyBiometry(Meteor.settings.SkyBiometryAPIKey, Meteor.settings.SkyBiometryAPISecret, namespace);
 
 
 ShactRecognition.prototype.detectarFaceSync = function(url){
