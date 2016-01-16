@@ -38,12 +38,14 @@
 			{{#each contatos}}
 			    <a class="item item-avatar" href={{pathFor 'conexoes.view' conexaoId=(getConexao _id)}}>
 			    	{{>userThumb publicId=avatarPublicId}}
-			    	<h2>{{profile.nomeCompleto}}</h2>
+			    	{{profile.nomeCompleto}}
+			    	<!--
 			    	{{#if status.online}}
 			    		<p> {{> ionIcon icon="record" class="online-status"}} Online </p>
 			    	{{else}}
 			    		<p> {{> ionIcon icon="record" class="offline-status"}} Offline </p>
 			    	{{/if}}
+			    	-->
 			    </a>
 			{{/each}}
 		</div>
