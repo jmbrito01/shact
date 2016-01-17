@@ -1,7 +1,10 @@
 var buildRegex = function(searchText) {
   if (!searchText) return new RegExp("");
+  /*
   var parts = searchText.trim().split(/[ \-\:]+/);
   return new RegExp("(^" + parts.join('.*(.* )* ') + ")", "i")
+  */
+  return new RegExp(searchText, "i");
 }
 
 Template.contatos.helpers({

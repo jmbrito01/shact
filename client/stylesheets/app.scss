@@ -8,6 +8,15 @@
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
 
+
+.big-empty-icon {
+    font-size:100px; 
+    color:#a3a3a3;
+}
+
+.big-icon {
+    font-size:20px;
+}
 .tabs-icon-only{
     .tabs{
         .tab-item{

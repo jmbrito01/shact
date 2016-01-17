@@ -35,6 +35,9 @@ Template.userFotos.helpers({
     fotos:function(){
         return Fotos.find({userId: Meteor.userId(), tipo:0},{imagem:1});
     },
+    fotosCount: function() {
+      return Fotos.find({userId: Meteor.userId(), tipo:0},{imagem:1}).count();  
+    },
     fotoSelecionada:function(){
         return Fotos.findOne({_id: Session.get('fotoSelecionada')});
     }

@@ -1,47 +1,50 @@
 <template name="userFotos">
-	{{#contentFor "headerButtonLeft"}}
-  		{{>ionNavBackButton}}
-	{{/contentFor}}
-
-	{{#contentFor "headerButtonRight"}}
-		<a class="button pull-right button-clear" href="{{pathFor 'fotos.publicas'}}">
+    {{#contentFor "headerButtonLeft"}}
+        {{>ionNavBackButton}}
+    {{/contentFor}}
+    {{#contentFor "headerButtonRight"}}
+        <a class="button pull-right button-clear" href="{{pathFor 'fotos.publicas'}}">
 	  		{{> ionIcon icon='ios-albums'}}
 	 	</a>
-	{{/contentFor}}
-
-
-	{{#contentFor "headerTitle"}}
-	  <h1 class="title">Fotos</h1>
-	{{/contentFor}}
-
-	{{#contentFor "tabs"}}
-	    
-	{{/contentFor}}
-
-	
-	{{#ionView}}
-	  {{#ionContent}}	  		
-		{{#swiper options=options1 id="user-fotos-item" class='swiper-normal'}}
-			{{#each fotos}}
-				{{#swiperSlide}}
-					{{> userFotosItem }}
-				{{/swiperSlide}}
-			{{/each}}
-		{{/swiper}}
-		{{#swiper options=options2 id="user-fotos-thumbs" class='swiper-thumbs thumb-opacity'}}
-			{{#each fotos}}
-				{{#swiperSlide}}
-					{{> userFotosThumb }}
-				{{/swiperSlide}}
-			{{/each}}
-		{{/swiper}}
-
-
-		{{> usersCadastrarFotos}}
-
-		{{#with fotoSelecionada}}
-			{{> userFotosDetails}}
-		{{/with}}
-	  {{/ionContent}}
-	{{/ionView}}
+    {{/contentFor}}
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Fotos</h1>
+    {{/contentFor}}
+    {{#contentFor "tabs"}}
+    {{/contentFor}}
+    {{#ionView}}
+        {{#ionContent}}
+            {{#if fotosCount}}
+                {{#swiper options=options1 id="user-fotos-item" class='swiper-normal' }}
+                    {{#each fotos}}
+                        {{#swiperSlide}}
+                            {{> userFotosItem }}
+                        {{/swiperSlide}}
+                    {{/each}}
+                {{/swiper}}
+                {{#swiper options=options2 id="user-fotos-thumbs" class='swiper-thumbs thumb-opacity' }}
+                    {{#each fotos}}
+                        {{#swiperSlide}}
+                            {{> userFotosThumb }}
+                        {{/swiperSlide}}
+                    {{/each}}
+                {{/swiper}}
+            {{else}}
+                <div class="row">
+                    <div class="col col-100" align="center">
+                        {{> ionIcon icon="happy-outline" class="big-empty-icon"}}
+                        <h2>Cadastre sua primeira foto!</h2>
+                    </div>
+                </div>
+            {{/if}}
+            <div class="row">
+                <div class="col col-100">
+                    {{> usersCadastrarFotos}}
+                </div>
+            </div>
+            {{#with fotoSelecionada}}
+                {{> userFotosDetails}}
+            {{/with}}
+        {{/ionContent}}
+    {{/ionView}}
 </template>
