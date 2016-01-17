@@ -35,7 +35,11 @@ Template.userPerfis.helpers({
         return Compartilhaveis.findOne({_id: Session.get('compartilhavelSelecionado')});
     },
     compartilhaveis:function(){
-        return Compartilhaveis.find();
+        return Compartilhaveis.find({},{
+            sort: {
+                prioridade: -1
+            }
+        });
     },
     semCor: function(){
         return !this.meuPerfil();
