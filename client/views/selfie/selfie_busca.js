@@ -30,6 +30,7 @@ function tirarFoto() {
               console.log(fotoId);
               Meteor.call('reconhecerFaces', res, function(err, res) {
                 if (!err && res) {
+                  Session.set('mostrarTags', true);
                   Router.go('fotos.view', {
                     fotoId: fotoId
                   });
