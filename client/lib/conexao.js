@@ -11,7 +11,7 @@ tentarConexao = function(userId, metodo){
 		if (conexao.status===0){
 			popup("Você já pediu para se conectar com esta pessoa");
 		}else if (conexao.status===1){
-			popup("Você já é amigo desta pessoa");
+			Router.go('conexoes.view', {conexaoId: conexao._id});
 		}else if (conexao.status===2){
 			popup("Sua conexão com esta pessoa foi rejeitada :(");
 		}else if (conexao===false){

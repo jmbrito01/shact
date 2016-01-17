@@ -5,8 +5,12 @@
 
 
 	{{#contentFor "headerButtonRight"}}
-		<a class="button button-clear" id="editar-perfil">
-	  		{{> ionIcon icon='edit'}}
+		<a class="button button-clear" id="toggle-tags">
+			{{#if mostrarTags}}
+	  		{{> ionIcon icon='ios-pricetag'}}
+			{{else}}
+				{{> ionIcon icon='ios-pricetag-outline'}}
+			{{/if}}
 	 	</a>
 	{{/contentFor}}
 
@@ -24,18 +28,20 @@
 	  	<div class="wrapper" >
 			<div class="imagem-com-tags">
 				<img src="{{imagem.url}}">
-				{{#each tags}}
-					<div class="tag" style="
-					border-color: {{borderColor}};
-					border-style: {{borderStyle}};
-					width:{{dimensoes.width}}%;
-					height:{{dimensoes.height}}%;
-					left:{{posicao.x}}%;
-					top:{{posicao.y}}%;
-					margin-left:-{{half dimensoes.width}}%;
-					margin-top:-{{half dimensoes.height}}%;">
-					</div>
-				{{/each}}
+				{{#if mostrarTags}}
+					{{#each tags}}
+						<div class="tag" style="
+						border-color: {{borderColor}};
+						border-style: {{borderStyle}};
+						width:{{dimensoes.width}}%;
+						height:{{dimensoes.height}}%;
+						left:{{posicao.x}}%;
+						top:{{posicao.y}}%;
+						margin-left:-{{half dimensoes.width}}%;
+						margin-top:-{{half dimensoes.height}}%;">
+						</div>
+					{{/each}}
+				{{/if}}
 			</div>
 		</div>
 		

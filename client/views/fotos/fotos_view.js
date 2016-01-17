@@ -13,6 +13,15 @@ Template.fotosView.helpers({
 	},
 	tagSelecionada: function(){
 		return Tags.findOne({_id: Session.get('tagSelecionada')});
+	},
+	mostrarTags: function() {
+		return Session.get('mostrarTags');
+	}
+})
+
+Template.ionNavBar.events({
+	'click #toggle-tags':function(){
+		Session.set('mostrarTags', !Session.get('mostrarTags'));
 	}
 })
 
