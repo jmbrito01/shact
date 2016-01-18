@@ -5,6 +5,18 @@
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
 
+.text-green{
+    color: green;
+}
+.text-yellow{
+    color: yellow;
+}
+.text-red{
+    color: red;
+}
+#user-fotos-item {
+    padding: 20px;
+}
 .round-image {
     img {
         border-radius: 50%;
@@ -206,19 +218,7 @@
     }
 }
 
-.user-portrait {
-    margin-top: 1em;
-    margin-right: 1em;
-    position: relative;
-    height: 150px;
-    width: 150px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0, 0, 0, .2);
-    -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0, 0, 0, .2);
-    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0, 0, 0, .2);
-}
+
 
 .geo-marker {
     color: #f1756b;
@@ -275,7 +275,6 @@ body {
 }
 
 .swiper-normal {
-    height: 225px;
     width: 100%;
     position: relative;
     .swiper-slide {
@@ -383,3 +382,37 @@ body {
         }
     }
 }
+
+
+//
+//  Images
+//
+
+.user-avatar {
+    border-radius:50%;
+    border: 2px solid #fff;
+}
+
+.user-portrait {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0, 0, 0, .2);
+}
+.rounded-user-thumb {
+    border-radius: 50%;
+}
+
+
+.podium {
+    h2{
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    h5 {
+        margin-bottom: 5px;
+    }
+}
+

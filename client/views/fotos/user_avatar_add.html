@@ -1,8 +1,8 @@
 <template name="userAvatarAdd">
-	<div class="user-avatar">
-		<p class="nome">{{profile.nome}}</p>							
-    <div class='round-image'>
-		  {{>userThumb publicId=avatarPublicId width=80 height=80}}
-    </div>
-	</div>
+  <div class="podium">
+    <span class='adicionar-user'>
+      {{> imgUserAvatar publicId=avatarPublicId}}
+    </span>
+    <h2 class="animated fadeIn">{{profile.nomeCompleto}}</h2>
+  </div>
 </template>

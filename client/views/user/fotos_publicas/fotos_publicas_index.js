@@ -68,4 +68,6 @@ Template.fotosPublicas.onRendered(function() {
   fotosPublicasThumbs = this.$('#fotos-publicas-thumbs')[0].swiper;
   fotosPublicasItem.params.control = fotosPublicasThumbs;
   fotosPublicasThumbs.params.control = fotosPublicasItem;
+
+  this.$('#fotos-publicas-item').height($(window).width() * 3 / 4);
 });

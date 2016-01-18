@@ -1,4 +1,5 @@
 <template name="podium">
+    <!--
 	<div class="row">
 		{{#each candidatos}}
 			<div class="col col-33" align="center">
@@ -14,10 +15,81 @@
 					<p>{{certeza}} %</p>
 					<button class="button button-positive button-block button-outline" id="marcar">Marcar</button>
 					
-					<!--<progress value="{{certeza}}" max="100" style="color:green"></progress> {{certeza}} %-->
+				
 				</div>
 			</div>
 		{{/each}}		
 	</div>
-</template>
+	-->
+    <!--
+    <div class="list">
+        {{#each candidatos}}
 
+            <a class="item item-avatar animated fadeIn user-add" href="#">
+            	{{#with user}}
+								{{>imgRoundedUserThumb publicId=avatarPublicId}}
+
+								<h2 class="animated fadeIn">{{profile.nomeCompleto}}</h2>
+							{{/with}}
+							<p>
+
+				    <span class="item-note">
+							<div class="progress-bar" style="width:82px">
+							  <div style="width:{{certeza}}%"></div>
+							</div>										
+				    </span>
+							<span class='{{colored certeza}}'>{{certeza}} %</span>
+
+							</p>
+						</a>
+        {{/each}}
+    </div>
+    -->
+    <div class="podium">
+        <div class="row">
+            <div class="col col-100" align="center">
+                {{#with candidatos.[0]}}
+                    {{#with user}}
+                        <span class='marcar-user'>
+							      {{> imgUserAvatar publicId=avatarPublicId}}
+							      </span>
+                        <h2 class="animated fadeIn">{{profile.nomeCompleto}}</h2>
+                    {{/with}}
+                    <div class="progress-bar" style="width:82px">
+                        <div style="width:{{certeza}}%"></div>
+                    </div>
+                {{/with}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-50" align="center">
+                {{#with candidatos.[1]}}
+                    {{#with user}}
+                        <span class='marcar-user'>
+                        {{>imgUserPodium publicId=avatarPublicId}}
+                        </span>
+                        <h5 class="animated fadeIn">{{profile.nomeCompleto}}</h5>
+                    {{/with}}
+                    <div class="progress-bar" style="width:82px">
+                        <div style="width:{{certeza}}%"></div>
+                    </div>
+                {{/with}}
+            </div>
+            <div class="col col-50" align="center">
+                {{#with candidatos.[3]}}
+                    {{#with user}}
+                        <span class='marcar-user'>
+                        {{>imgUserPodium publicId=avatarPublicId}}
+                        </span>
+                        <h5 class="animated fadeIn">{{profile.nomeCompleto}}</h5>
+                    {{/with}}
+                    <div class="progress-bar" style="width:82px">
+                        <div style="width:{{certeza}}%"></div>
+                    </div>
+                {{/with}}
+            </div>
+        </div>
+    </div>
+</template>
+<template name="candidato">
+</template>

@@ -9,7 +9,15 @@ Template.cloudinaryImg.events({
 Template.cloudinaryImg.helpers({
 	loadingImg:function(){
 		return Template.instance().loadingImg.get();
-	}
+	},
+  options: function() {
+    return {
+      width : 100,
+      height: 100,
+      crop: 'thumb',
+      gravity: 'faces'
+    }
+  }
 })
 
 Template.cloudinaryImg.onCreated(function(){
@@ -19,8 +27,13 @@ Template.cloudinaryImg.onCreated(function(){
 })
 
 Template.cloudinaryImg.onRendered(function() {
+  console.log(this.data);
   if (this.data.onLoad && typeof this.data.onLoad === 'function') {
     $('.cloudinary-image').load(this.data.onLoad)  ;
   }
   
+})
+
+Template.imgFotoCover.onCreated(function() {
+  console.log(this.data);
 })

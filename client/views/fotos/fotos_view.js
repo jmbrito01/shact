@@ -9,7 +9,7 @@ Template.fotosView.helpers({
 		return (this.userId)?"solid":"dashed";
 	},
 	borderColor: function(){
-		return (this.userId && this.userId == Meteor.userId()) ? "#84bd00": "#d3d3d3";
+		return (this.userId && this.userId == Meteor.userId()) ? '#d3d3d3': "#d3d3d3";
 	},
 	tagSelecionada: function(){
 		return Tags.findOne({_id: Session.get('tagSelecionada')});
@@ -17,41 +17,20 @@ Template.fotosView.helpers({
 	mostrarTags: function() {
 		return Session.get('mostrarTags');
 	},
-	onLoadImage: function() {
+  width: function() {
+    return $(window).width();
+  },
+  height: function() {
+    return parseInt($(window).width() * 3 / 4);
+  },	
+	onLoad: function() {
 		var instance = Template.instance();
 		return function() {
 			instance.loadedImage.set(true);
-			
-			var wWidth = $(window).width();
-			var wHeight = 300;
 
-			var iWidth = this.width;
-			var iHeight = this.height;
-
-			var fWidth;
-			var fHeight;
-			
-			var imgAR = iWidth / iHeight;
-
-			if (imgAR > 1) {  //imagem é larga
-				if (iWidth > wWidth) {
-					fWidth = wWidth;
-					fHeight = fWidth / imgAR;
-				}
-			} else {       //imagem é alta, regulo pelo height
-				if (iHeight > wHeight) {
-					fHeight = wHeight;
-					fWidth = fHeight * imgAR;
-				}
-			}
-
-			
-			var imagem = $(this);
 			var tagsContainer = $('.imagem-com-tags');
-			imagem.height(fHeight);
-			imagem.width(fWidth);
-			tagsContainer.height(fHeight)	;
-			tagsContainer.width(fWidth);
+			tagsContainer.width(this.width);
+			tagsContainer.height(this.height);
 		}
 	},
 	loadedImage: function() {
@@ -72,9 +51,6 @@ Template.fotosView.onCreated(function() {
 Template.fotosView.onRendered(function(){
 	Session.set('candidatos','');
 	Session.set('tagSelecionada','');
-
-
-
 })
 Template.fotosView.events({
 	'click .tag':function(){

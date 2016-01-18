@@ -10,6 +10,13 @@ const STATUS_SUCESSO = 4;
 
 var status = new ReactiveVar(STATUS_IDLE);
 
+function handleError(err) {
+  sAlert.error(err);
+  Meteor.setTimeout(() => {
+    Router.go('home');
+  })
+}
+
 
 function tirarFoto() {
   MeteoricCamera.getPicture({
@@ -21,15 +28,24 @@ function tirarFoto() {
       //Camera Ok
       Session.set('fotoAtual', data);
       status.set(STATUS_UPLOADING);
+      IonLoading.show({
+        backdrop:true,
+        customTemplate: Blaze.toHTML(Template.ionLoadingUpload)
+      });
       Cloudinary._upload_file(data, {}, function(error, res) {
         if (res && !error) {
           status.set(STATUS_RECONHECIMENTO);
+          IonLoading.hide();
+          IonLoading.show({
+            backdrop: true,
+            customTemplate: Blaze.toHTML(Template.ionLoadingReconhecendo)
+          })
           Meteor.call('cadastrarFoto', res.public_id, res.secure_url, TIPO_PUBLICO, function(error, res) {
             if (res && !error) {
               var fotoId = res;
-              console.log(fotoId);
               Meteor.call('reconhecerFaces', res, function(err, res) {
                 if (!err && res) {
+                  IonLoading.hide();
                   Session.set('mostrarTags', true);
                   Router.go('fotos.view', {
                     fotoId: fotoId
@@ -38,27 +54,37 @@ function tirarFoto() {
                   if (Meteor.user().primeiraFoto) {
                     Meteor.users.update({_id: Meteor.userId()}, {$set: {primeiraFoto: false}});
                   }
+                }else {
+                  handleError("Erro reconhecendo faces");
                 }
               });
             } else {
-              return sAlert.error(error.error);
+              handleError("Erro cadastrando foto");
             }
           })
         } else {
-          return sAlert.error("Erro fazendo upload.");
+          handleError("Erro fazendo upload");
         }
       });
     } else {
-      if (error != 'cancel') return sAlert.error("Erro pegando foto da camera.");
+      if (error.error !== 'cancel'){
+        handleError("Erro obtendo foto");
+      } else {
+        Router.go('home');
+      }
     }
   });
 }
 
+
 Template.selfieBusca.onRendered(function() {
+  /*
   if (!Meteor.user().primeiraFoto) {
     tirarFoto();
   }
+  */
   Session.setDefault('fotoAtual', '');
+  tirarFoto();
 });
 
 Template.selfieBusca.onRendered(function() {

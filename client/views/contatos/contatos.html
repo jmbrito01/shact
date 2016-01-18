@@ -37,7 +37,7 @@
 			</label>		
 			{{#each contatos}}
 			    <a class="item item-avatar" href={{pathFor 'conexoes.view' conexaoId=(getConexao _id)}}>
-			    	{{>userThumb publicId=avatarPublicId}}
+			    	{{> imgRoundedUserThumb publicId=avatarPublicId}}
 			    	{{profile.nomeCompleto}}
 			    	<!--
 			    	{{#if status.online}}

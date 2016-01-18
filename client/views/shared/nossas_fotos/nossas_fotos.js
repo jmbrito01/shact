@@ -1,3 +1,4 @@
+/*
 Template.nossasFotos.onRendered(function(){
     var swpNossasFotos = new Swiper('.nossas-fotos', {
         slidesPerColumn: 1,
@@ -42,3 +43,4 @@ Template.nossasFotos.onRendered(function(){
 Template.nossasFotos.onDestroyed(function(){
     this.nossasFotosObserver.stop();
 })
+*/

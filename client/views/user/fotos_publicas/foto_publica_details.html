@@ -5,7 +5,7 @@
 	  </div>		
 	  {{#with fotografo}}
 		<a class="item item-avatar user-add item-icon-right" href="#">
-			{{>userThumb publicId=avatarPublicId width=40 height=40}}
+			{{> imgRoundedUserThumb publicId=avatarPublicId}}
 			<h2>{{profile.nomeCompleto}}</h2>
 			{{> ionIcon icon='camera'}}
 			
@@ -21,7 +21,7 @@
 		{{#with user}}
 			{{#if $eq currentUser._id _id}}
 				<a class="item item-avatar item-button-right" href="#">
-					{{>userThumb publicId=avatarPublicId}}
+					{{> imgRoundedUserThumb publicId=avatarPublicId}}
 					<h2>{{{profile.nomeCompleto}}}</h2>
 					{{#with ..}}
 					    <button class="button button-assertive remover-tag" data-tagid={{../_id}}>

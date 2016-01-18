@@ -25,7 +25,7 @@
 		<div class="list">
 			{{#each pendentes}}
 			    <a class="item item-avatar" href="#" data-ion-modal="conexoesAceitar" data-id="{{getConexao _id}}">
-			    	{{>userThumb publicId=avatarPublicId}}
+			    	{{> imgRoundedUserThumb publicId=avatarPublicId}}
 			    	<h2>{{profile.nomeCompleto}}</h2>
 			    	<p>Conectou-se com você!</p>
 			    </a>
@@ -34,16 +34,3 @@
 	  {{/ionContent}}
 	{{/ionView}}
 </template>			 
-
-
-<template name="pendentesBackup">
-	<div class="list">
-		{{#each pendentes}}
-		    <a class="item item-avatar" href="#" data-ion-modal="conexoesAceitar" data-id="{{getConexao _id}}">
-		    	{{>userThumb publicId=avatarPublicId}}
-		    	<h2>{{profile.nomeCompleto}}</h2>
-		    	<p>Conectou-se com você!</p>
-		    </a>
-		{{/each}}			
-	</div>
-</template>

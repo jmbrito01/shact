@@ -1,16 +1,16 @@
 <template name="cloudinaryImg">
 	{{#if publicId}}
 		{{#if loadingImg}}
-			<div style="width:{{sWidth}}px; height:{{sHeight}}px; line-height:{{sHeight}}px;" class="loading-block">
+			<div style="width:{{width}}px; height:{{height}}px; line-height:{{height}}px;" class="loading-block">
 				<i class="fa fa-spinner fa-spin"></i>
 			</div>
 		{{/if}}
 		
-		
 		<img src="{{c.url publicId width=width height=height crop=crop gravity=gravity}}" 
 			class="cloudinary-image {{class}}" 
 			style="{{#if loadingImg}}visibility:hidden; display:none;{{/if}}" 
-			onerror="this.style.display='none';">
+			onerror="this.style.display='none';"
+			id="{{id}}">
 		
 	
 	{{else}}
@@ -21,54 +21,87 @@
 </template>
 
 
-<template name="fotoThumb">
-	{{> cloudinaryImg publicId=publicId 
-		notFoundImage="/images/unknown.png" 
+
+
+<template name="imgUserPortrait">
+	{{> cloudinaryImg
+		publicId=publicId
+		width=140
+		height=140
 		crop='thumb'
-		gravity='faces'
+		gravity='face'
+		class='user-portrait'
+		notFoundImage='/images/unknown.png'
+	}}
+</template>
+
+<template name="imgUserAvatar">
+	{{> cloudinaryImg
+		publicId=publicId
+		width=120
+		height=120
+		crop='thumb'
+		gravity='face'
+		class='user-avatar'
+		notFoundImage='/images/unknown.png'
+	}}
+</template>
+
+<template name="imgUserThumb">
+	{{> cloudinaryImg
+		publicId=publicId
 		width=80
 		height=80
-		class="user-thumb"}}
+		crop='thumb'
+		gravity='face'
+		notFoundImage='/images/unknown.png'
+	}}
 </template>
 
-<template name="userThumb">
-	{{> cloudinaryImg publicId=publicId 
-		notFoundImage="/images/unknown.png" 
-		crop="thumb" 
-		gravity="face"
+<template name="imgFotoCover">
+	{{> cloudinaryImg
+		publicId=publicId
+		onLoad=onLoad
 		width=width
 		height=height
-		class="user-thumb"}}
+		crop='limit'
+		notFoundImage='/images/not_found.png'
+		id=id
+		
+	}}
 </template>
 
-<template name="userAvatar">
-	<div class="avatar avatar-large avatar-circle">
-		{{> cloudinaryImg 
-		publicId=publicId 
-		notFoundImage="/images/unknown.png"  
-		crop="thumb" 
-		gravity="face" 
-		width="120" 
-		height="120" 
-		class="avatar-image"}}
-	</div>
+<template name="imgFotoThumb">
+	{{> cloudinaryImg
+		publicId=publicId
+		width=80
+		height=80
+		crop='thumb'
+		gravity='faces'
+		notFoundImage='/images/not_found.png'
+	}}
 </template>
 
-
-<template name="userPortrait">
-	{{> cloudinaryImg 
-		publicId=publicId 
-		notFoundImage="/images/unknown.png" 
-		crop="thumb" 
-		gravity="face" 
-		width="150" 
-		height="150" 
-		class="user-portrait"}}
+<template name="imgRoundedUserThumb">
+	{{> cloudinaryImg
+		publicId=publicId
+		width=40
+		height=40
+		crop='thumb'
+		gravity='face'
+		notFoundImage='/images/unknown.png'
+		class='rounded-user-thumb'
+	}}
 </template>
 
-<template name="fotoCover">
-	{{> cloudinaryImg publicId=publicId 
-		notFoundImage="/images/not_found.png" 
-		class="foto-cover"
-		sHeight='225'}}
+<template name="imgUserPodium">
+	{{> cloudinaryImg
+		publicId=publicId
+		width=80
+		height=80
+		crop='thumb'
+		gravity='face'
+		notFoundImage='/images/unknown.png'
+		class='rounded-user-thumb'
+	}}
 </template>

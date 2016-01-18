@@ -27,7 +27,15 @@
 	  {{#ionContent}}
 	  	<div align="center">
 			<div class="imagem-com-tags">
-				{{> cloudinaryImg publicId=imagem.publicId width='' height='' gravity='' crop='' onLoad=onLoadImage sHeight='300' class='tagged-image'}}
+				<!--{{> imgFotoCover publicId=imagem.publicId id="foto-cover" onLoad=onLoad}}-->
+				{{> cloudinaryImg
+					publicId=imagem.publicId
+					onLoad=onLoad
+					width=width
+					height=height
+					crop='limit'
+					id=id
+				}}				
 				{{#if $and mostrarTags loadedImage}}
 					{{#each tags}}
 						<div class="tag" style="
