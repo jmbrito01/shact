@@ -51,18 +51,20 @@
 			</div>
 		</div>
 		
-		{{#with tagSelecionada}}
-			{{#with user}}
-				<div class="row">
-					<div class="col" align="center">
-						{{> userAvatarAdd}}
+		{{#if mostrarTags}}
+			{{#with tagSelecionada}}
+				{{#with user}}
+					<div class="row">
+						<div class="col" align="center">
+							{{> userAvatarAdd}}
+						</div>
 					</div>
-				</div>
-			{{else}}
-				{{> podium candidatos=candidatos}}
-			{{/with}}		
-		{{/with}}
-
+				{{else}}
+					{{> podium candidatos=candidatos}}
+				{{/with}}		
+			{{/with}}
+		{{/if}}
+		
 	  {{/ionContent}}
 	{{/ionView}}
 </template>

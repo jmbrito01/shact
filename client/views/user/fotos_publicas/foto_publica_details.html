@@ -19,7 +19,7 @@
 			</div>
 		{{/if}}			
 		{{#with user}}
-			{{#if $eq currentUser._id _id}}
+			{{#if $or ($eq currentUser._id _id) ($eq ../porId currentUser._id)}}
 				<a class="item item-avatar item-button-right" href="#">
 					{{> imgRoundedUserThumb publicId=avatarPublicId}}
 					<h2>{{{profile.nomeCompleto}}}</h2>
@@ -31,7 +31,7 @@
 				</a>
 			{{else}}
 				<a class="item item-avatar user-add" href="#">
-					{{>userThumb publicId=avatarPublicId}}
+					{{> imgRoundedUserThumb publicId=avatarPublicId}}
 					<h2 class="animated fadeIn">{{{profile.nomeCompleto}}}</h2>
 				</a>
 			{{/if}}
