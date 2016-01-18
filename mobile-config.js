@@ -11,8 +11,10 @@ App.info({
   website: 'http://example.com'
 });
 
-App.setPreference('StatusBarOverlaysWebView', true);
-App.setPreference('StatusBarStyle', 'default');
+App.setPreference('StatusBarOverlaysWebView', 'true');
+App.setPreference('StatusBarStyle', 'lightcontent');
+App.setPreference('StatusBarBackgroundColor', '#1C1948');
+
 
 
 App.icons({
