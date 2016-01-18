@@ -28,6 +28,9 @@ Template.fotosView.helpers({
 			var iWidth = this.width;
 			var iHeight = this.height;
 
+			var fWidth;
+			var fHeight;
+			
 			var imgAR = iWidth / iHeight;
 
 			if (imgAR > 1) {  //imagem é larga
