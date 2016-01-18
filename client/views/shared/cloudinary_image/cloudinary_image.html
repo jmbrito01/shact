@@ -21,6 +21,16 @@
 </template>
 
 
+<template name="fotoThumb">
+	{{> cloudinaryImg publicId=publicId 
+		notFoundImage="/images/unknown.png" 
+		crop='thumb'
+		gravity='faces'
+		width=80
+		height=80
+		class="user-thumb"}}
+</template>
+
 <template name="userThumb">
 	{{> cloudinaryImg publicId=publicId 
 		notFoundImage="/images/unknown.png" 
