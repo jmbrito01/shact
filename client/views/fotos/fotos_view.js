@@ -21,6 +21,34 @@ Template.fotosView.helpers({
 		var instance = Template.instance();
 		return function() {
 			instance.loadedImage.set(true);
+			
+			var wWidth = $(window).width();
+			var wHeight = 300;
+
+			var iWidth = this.width;
+			var iHeight = this.height;
+
+			var imgAR = iWidth / iHeight;
+
+			if (imgAR > 1) {  //imagem é larga
+				if (iWidth > wWidth) {
+					fWidth = wWidth;
+					fHeight = fWidth / imgAR;
+				}
+			} else {       //imagem é alta, regulo pelo height
+				if (iHeight > wHeight) {
+					fHeight = wHeight;
+					fWidth = fHeight * imgAR;
+				}
+			}
+
+			
+			var imagem = $(this);
+			var tagsContainer = $('.imagem-com-tags');
+			imagem.height(fHeight);
+			imagem.width(fWidth);
+			tagsContainer.height(fHeight)	;
+			tagsContainer.width(fWidth);
 		}
 	},
 	loadedImage: function() {
@@ -41,6 +69,8 @@ Template.fotosView.onCreated(function() {
 Template.fotosView.onRendered(function(){
 	Session.set('candidatos','');
 	Session.set('tagSelecionada','');
+
+
 
 })
 Template.fotosView.events({

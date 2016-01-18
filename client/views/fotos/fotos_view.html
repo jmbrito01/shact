@@ -25,9 +25,9 @@
 
 	{{#ionView}}
 	  {{#ionContent}}
-	  	<div class="wrapper" >
+	  	<div align="center">
 			<div class="imagem-com-tags">
-				{{> cloudinaryImg publicId=imagem.publicId width='' height='' gravity='' crop='' onLoad=onLoadImage sHeight='300'}}
+				{{> cloudinaryImg publicId=imagem.publicId width='' height='' gravity='' crop='' onLoad=onLoadImage sHeight='300' class='tagged-image'}}
 				{{#if $and mostrarTags loadedImage}}
 					{{#each tags}}
 						<div class="tag" style="
@@ -36,9 +36,7 @@
 						width:{{dimensoes.width}}%;
 						height:{{dimensoes.height}}%;
 						left:{{posicao.x}}%;
-						top:{{posicao.y}}%;
-						margin-left:-{{half dimensoes.width}}%;
-						margin-top:-{{half dimensoes.height}}%;">
+						top:{{posicao.y}}%;">
 						</div>
 					{{/each}}
 				{{/if}}

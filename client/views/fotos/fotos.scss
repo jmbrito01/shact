@@ -1,20 +1,18 @@
-.wrapper{
-	text-align:center;
-}
+
 .imagem-com-tags{
 	position:relative;
 	display: inline-block;
-	height:300px;
+
 
 	img{
 		position:relative;
-		width:auto;
-		max-height:300px;
 	}
+
 	.tag{
 		position:absolute;
 		border: 3px solid rgba(255,255,255,0.5);
 		background-color:transparent;
 		-webkit-transition: border 1s;
+		transform: translate(-50%,-50%);
 	}		
 }
