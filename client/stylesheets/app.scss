@@ -1,61 +1,205 @@
-
-
 // Import your custom variables
 @import 'app-variables';
 @import 'app-mixins';
-
 // Then import ionic after. Ionic will use your variables instead of it's own.
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
 
-
-.big-empty-icon {
-    font-size:100px; 
-    color:#a3a3a3;
+.round-image {
+    img {
+        border-radius: 50%;
+    }
+}
+.button-social {
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    i {
+        float: left;
+    }
+    &:hover {
+        color: white;
+        font-weight: bold;
+    }
 }
 
-.big-icon {
-    font-size:20px;
+.button-facebook {
+    background-color: #3b5998;
+    &:hover {
+        background-color: #3b5998;
+    }
 }
-.tabs-icon-only{
-    .tabs{
-        .tab-item{
-            line-height: 49px;        
-        }
+
+.button-twitter {
+    background-color: #55acee;
+    &:hover {
+        background-color: #55acee;
+    }
+}
+
+
+.login-rodape {
+    margin-top: 40px;
+    .esqueceu-senha {
+        float: left
+    }
+
+    .nova-conta {
+        float:right;
+        text-decoration: underline;
+    }
+}
+
+.login-container {
+    padding: 20px 80px 20px 80px;
+    h1 {
+        color: white;
+        margin-bottom: 50px;
+        margin-top: 20px;
     }
     
-}
-*{
-	font-family: 'Roboto', sans-serif;
-}
-
-.foto-cover{
-    height:100%;
-    width:auto;
-}
-.bar-header{
-    border-bottom:0px !important;
-}
-
-.tabs{
-    border-top:0px !important;
-}
-
-.online-status{
-    color:green;
-}
-.offline-status{
-    color:red;
-}
-.bar-notificacoes{
-    width:75%;
-    margin:auto;
-    color: $positive;
-    .button{
-        color:$positive
+    .login-holder {
+        margin-top: 20px;
+        text-align:center;
+        width:100%;
+        margin-bottom: 70px;
+        .login-image {
+            max-width: 386px;
+            width: 100%;
+            height: auto;
+        }
     }
-    .button.ativo{
-        color:white;
+    .login-form-container {
+
+        .card.at-error {
+            margin: 0px 0px 20px 0px;
+            .item {
+                background-color: rgba(255, 0, 0, 0.3);
+                color: white;
+            }
+        }
+        .at-sep {
+            color: #ddd;
+            background-color: transparent;
+            border: 0px;
+        }       
+
+        .padding {
+            padding: 20px 0px 0px 0px;
+        }         
+    }
+}
+
+.item-avatar{
+    .loading-block{
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        max-width: 40px;
+        max-height: 40px;        
+    }
+}
+
+.button-round{
+    border-radius: 10px;
+}
+.user-button-bar {
+    .button {
+        margin-bottom: 0px
+    }
+}
+.at-pwd-form {
+    .at-btn {
+        border: 0px;
+        border-radius: 5px;
+        background-color: $calm;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .at-input {
+        border: 1px solid $calm;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        margin-bottom: 20px;
+        background-color: white;
+        input {
+            color: black;
+        }
+        span {
+            padding-right: 10px;
+            &.ion-close-round {
+                color: red;         
+            }
+            &.ion-checkmark-round {
+                color: green;
+            }
+        }
+    }
+}
+
+
+.view-login {
+    background-color: $positive;
+    color: white;
+    font-size: 18px;
+    padding-top: 20px;
+
+    a {
+        color: white;
+        font-weight: bold;
+    }
+}
+
+.big-empty-icon {
+    font-size: 100px;
+    color: #a3a3a3;
+}
+
+.tabs-icon-only {
+    .tabs {
+        .tab-item {
+            line-height: 49px;
+        }
+    }
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.foto-cover {
+    height: 100%;
+    width: auto;
+}
+
+.bar-header {
+    border-bottom: 0px !important;
+}
+
+.tabs {
+    border-top: 0px !important;
+}
+
+.online-status {
+    color: green;
+}
+
+.offline-status {
+    color: red;
+}
+
+.bar-notificacoes {
+    width: 75%;
+    margin: auto;
+    color: $positive;
+    .button {
+        color: $positive
+    }
+    .button.ativo {
+        color: white;
     }
 }
 
@@ -63,162 +207,176 @@
     margin-top: 1em;
     margin-right: 1em;
     position: relative;
-    height:150px;
-    width:150px;   
-
+    height: 150px;
+    width: 150px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
-    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0, 0, 0, .2);
 }
 
-.geo-marker{
+.geo-marker {
     color: #f1756b;
 }
 
-.icone-canto{
-    position:absolute;
-    left:5px;
-    top:5px;
-    z-index:999px;
+.icone-canto {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    z-index: 999px;
 }
 
-.no-border{
-    border-bottom:0px;
+.no-border {
+    border-bottom: 0px;
 }
 
-body{
-    overflow:hidden;
+body {
+    overflow: hidden;
 }
+
+
 /*                          */
+
+
 /*      SWIPER              */
+
+
 /*                          */
-.wrapper{
-    height:300px;
+
+.wrapper {
+    height: 300px;
 }
-.galeria{
-    position:fixed;
-    overflow:hidden;
+
+.galeria {
+    position: fixed;
+    overflow: hidden;
     width: 100%;
     height: 300px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.thumb-opacity{
-    .swiper-slide{  
-        img{
+.thumb-opacity {
+    .swiper-slide {
+        img {
             opacity: 0.4;
         }
-    }        
-    .swiper-slide-active{
-        img{
-            opacity: 1;    
+    }
+    .swiper-slide-active {
+        img {
+            opacity: 1;
         }
-        
-    }        
+    }
 }
 
-.swiper-normal{
-    height:225px;
+.swiper-normal {
+    height: 225px;
     width: 100%;
-    position:relative;
-
-    .swiper-slide{
-        text-align:center;
+    position: relative;
+    .swiper-slide {
+        text-align: center;
         background: #fff;
-        width:100%;
+        width: 100%;
         @include vertical-center;
-    }       
+    }
 }
 
 .swiper-thumbs {
-    height:80px;
-    width:100%;
-    box-sizing: border-box; 
-    position:relative;
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
     .swiper-slide {
         text-align: center;
         @include vertical-center;
         background: #fff;
-        width:80px;
+        width: 80px;
         height: 100%;
-        margin:0;  
-    }        
+        margin: 0;
+    }
 }
 
 
-
 /*                          */
+
+
 /*      SOCIAL ICON         */
+
+
 /*                          */
-.social-icon{
-    width:80px;;
-    height:80px;
-    font-size:35px;
-    line-height:80px;
-    text-align:center;
-    vertical-align:middle;
-    color:white;
+
+.social-icon {
+    width: 80px;
+    ;
+    height: 80px;
+    font-size: 35px;
+    line-height: 80px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
     -webkit-transition: background-color 1s;
 }
 
-.social-icon-big{
-    width:200px;
-    height:200px;
-    border-radius:10px;
-    font-size:150px;
-    line-height:200px;
-    text-align:center;
+.social-icon-big {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    font-size: 150px;
+    line-height: 200px;
+    text-align: center;
     -webkit-transition: background-color 1s;
-    color:white
-}
-.preto-e-branco{
-    background-color:#d3d3d3 !important;
-    color:#202020 !important;
+    color: white
 }
 
-.intl-tel-input{
+.preto-e-branco {
+    background-color: #d3d3d3 !important;
+    color: #202020 !important;
+}
+
+.intl-tel-input {
     width: 100%;
 }
 
+.loading-block {
+    color:black;
+}
+
 /*                          */
+
+
 /*      PROFILE HEADER      */
+
+
 /*                          */
+
 .profile-header {
-  // background: #27272B url("http://blog.theclymb.com/wp-content/uploads/2013/01/cover1.jpg") center center no-repeat;
-  // background-size: cover;
-  text-align: center;
-  padding: 24px 24px 0px 24px;
-
-
-  .avatar {
-    margin: 0 auto;
-  }
-
-  h3 {
-    color: rgba(0,0,0,0.87);
-    margin-top:10px;
-    margin-bottom: 0px;
-  }
-
-  p{
-    color: #fff;
-    margin-top:0px;
-    margin-bottom: 0px;
-  }
-
-  a {
-    display: inline-block;
-    height: 32px;
-    line-height: 32px;
-    color: #fff;
-    text-decoration: none;
-
-    img {
-      vertical-align: middle;
+    // background: #27272B url("http://blog.theclymb.com/wp-content/uploads/2013/01/cover1.jpg") center center no-repeat;
+    // background-size: cover;
+    text-align: center;
+    padding: 24px 24px 0px 24px;
+    .avatar {
+        margin: 0 auto;
     }
-  }
+    h3 {
+        color: rgba(0, 0, 0, 0.87);
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    p {
+        color: #fff;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    a {
+        display: inline-block;
+        height: 32px;
+        line-height: 32px;
+        color: #fff;
+        text-decoration: none;
+        img {
+            vertical-align: middle;
+        }
+    }
 }

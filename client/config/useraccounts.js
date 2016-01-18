@@ -2,29 +2,7 @@
 var pwd = AccountsTemplates.removeField('password');
 AccountsTemplates.removeField('email');
 AccountsTemplates.addFields([
-  {
-      _id: "username",
-      type: "text",
-      displayName: "Usuário",
-      required: true,
-      minLength: 5,
-  },
-  {
-      _id: 'email',
-      type: 'email',
-      required: true,
-      re: /.+@(.+){2,}\.(.+){2,}/,
-  },
-  {
-      _id: 'username_and_email',
-      type: 'text',
-      required: true,
-      displayName: "Username ou Email",
-      placeholder: "Username ou Email"
-  },
-  pwd
-  ,  
-  {
+{
       _id: "nome",
       type: "text",
       required: true,
@@ -33,11 +11,39 @@ AccountsTemplates.addFields([
       _id: "sobrenome",
       type: "text",
       required: true,
-  },    
+  },      
+  {
+      _id: 'email',
+      type: 'email',
+      required: true,
+      re: /.+@(.+){2,}\.(.+){2,}/,
+  },  
+  {
+      _id: "username",
+      type: "text",
+      displayName: "Usuário",
+      required: true,
+  },
+  {
+      _id: 'username_and_email',
+      type: 'text',
+      required: true,
+      displayName: "Username ou Email",
+      placeholder: "Username ou Email"
+  },
+  {
+    _id: 'password',
+    type: 'password',
+    required: true,
+    minLength: 6,
+    displayName: 'Senha',
+    errStr: 'Mínimo de 6 caracteres',
+  },  
   {
       _id: "celular",
       type: "tel",
       template: "atInputIntlTel",
+      required: true,
       options: {
         intlTelOptions: {
           autoFormat: true,
@@ -98,14 +104,16 @@ AccountsTemplates.configure({
     overrideLoginErrors: false,
 
     // Appearance
-    showForgotPasswordLink: true,
+    showForgotPasswordLink: false,
     showLabels: false,
     showPlaceholders: true,
     showResendVerificationEmailLink: false,
+    hideSignUpLink: true,
+    hideSignInLink: true,
 
     // Client-side Validation
-    continuousValidation: false,
-    negativeFeedback: false,
+    continuousValidation: true,
+    negativeFeedback: true,
     negativeValidation: true,
     positiveValidation: true,
     positiveFeedback: true,
@@ -114,14 +122,17 @@ AccountsTemplates.configure({
     preSignUpHook: preSignUpHook,
     onSubmitHook: onSubmitHook,
     // Privacy Policy and Terms of Use
-    privacyUrl: 'privacy',
-    termsUrl: 'terms-of-use',
 
     onLogoutHook: onLogoutHook,
     // Redirects
     homeRoutePath: '/',
     redirectTimeout: 4000,
     texts: {
+      inputIcons: {
+        isValidating: '',
+        hasError: 'ion-close-round',
+        hasSuccess: 'ion-checkmark-round',
+      },
       title: {
         changePwd: '',
         enrollAccount: '',
@@ -137,6 +148,6 @@ AccountsTemplates.configure({
 
 
 Template.myAtForm.replaces("atForm");
-
+Template.myAtTextInput.replaces("atTextInput");
 
 T9n.setLanguage('pt')

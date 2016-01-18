@@ -2,59 +2,74 @@
     {{#contentFor "headerButtonLeft"}}
         {{>ionNavBackButton path="home" text="Voltar"}}
     {{/contentFor}}
+
     {{#contentFor "headerButtonRight"}}
         <a class="button button-clear" href="{{pathFor 'user.edit'}}">
             {{> ionIcon icon='edit'}}
         </a>
     {{/contentFor}}
+
     {{#contentFor "headerTitle"}}
         <h1 class="title">Meu Perfil</h1>
     {{/contentFor}}
-    {{#contentFor "tabs"}}
-    {{/contentFor}}
+
     {{#ionView}}
         {{#ionContent}}
             {{#with currentUser}}
                 {{>userHeader}}
-                        <div class="button-bar">
-                            <a class="button button-energized button-block button-outline" href="{{pathFor 'user.perfis'}}">
-                                    {{> ionIcon icon="android-share-alt" class="big-icon"}} <!-- Perfis ({{countPerfis}}) -->
-                          </a>
-                            <a class="button button-energized button-block button-outline" href="{{pathFor 'user.fotos'}}">
-                                    {{> ionIcon icon="camera" class="big-icon"}} <!--Fotos ({{countFotosPrivadas}})-->
-                            </a>
-                        </div>
+                <!--
+                <div class="button-bar user-button-bar">
+                    <a class="button button-positive button-block button-outline" href="{{pathFor 'user.perfis'}}">
+                        {{> ionIcon icon="android-share-alt" class="big-icon"}}
+                    </a>
+                    <a class="button button-positive button-block button-outline" href="{{pathFor 'user.fotos'}}">
+                        {{> ionIcon icon="camera" class="big-icon"}}
+                    </a>
+                </div>
+                -->
+                <div class="row">
+                    <div class="col col-50">
+                        <a class="button button-calm button-block button-round" href="{{pathFor 'user.perfis'}}">
+                            {{> ionIcon icon="android-share-alt" class="big-icon"}} Perfis
+                        </a>
+                    </div>
+                    <div class="col col-50">
+                        <a class="button button-calm button-block button-round" href="{{pathFor 'user.fotos'}}">
+                            {{> ionIcon icon="camera" class="big-icon"}} Fotos
+                        </a>
+                    </div>
+                </div>
                 <div class="list">
                     <a class="item" href="#">
-                                        Nome Completo
-                                        <span class="item-note">
-                                          {{profile.nomeCompleto}}
-                                        </span>
-                                      </a>
+                        Nome Completo
+                        <span class="item-note">
+                            {{profile.nomeCompleto}}
+                        </span>
+                    </a>
                     <a class="item" href="#">
-                    Nascimento
-                    <span class="item-note">
-                      {{nascimento}}
-                    </span>
-                  </a>
+                        Nascimento
+                        <span class="item-note">
+                          {{nascimento}}
+                        </span>
+                    </a>
                     <a class="item" href="#">
-                    Gênero
-                    <span class="item-note">
-                      {{formatarGenero profile.genero}}
-                    </span>
-                  </a>
+                        Gênero
+                        <span class="item-note">
+                          {{formatarGenero profile.genero}}
+                        </span>
+                    </a>
                     <a class="item" href="#">
-                    Email
-                    <span class="item-note">
-                      {{email}}
-                    </span>
-                  </a>
+                        Email
+                        <span class="item-note">
+                          {{email}}
+                        </span>
+                    </a>
                     <a class="item" href="#">
-                    Celular
-                    <span class="item-note">
-                      {{profile.celular}}
-                    </span>
-                  </a>
+                        Celular
+                        <span class="item-note">
+                          {{profile.celular}}
+                        </span>
+                    </a>
                 </div>
             {{/with}}
         {{/ionContent}}

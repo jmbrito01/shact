@@ -1,6 +1,8 @@
 <template name="userAvatarAdd">
 	<div class="user-avatar">
 		<p class="nome">{{profile.nome}}</p>							
-		{{>userThumb publicId=avatarPublicId}}
+    <div class='round-image'>
+		  {{>userThumb publicId=avatarPublicId}}
+    </div>
 	</div>
 </template>

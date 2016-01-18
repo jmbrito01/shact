@@ -27,8 +27,8 @@
 	  {{#ionContent}}
 	  	<div class="wrapper" >
 			<div class="imagem-com-tags">
-				<img src="{{imagem.url}}">
-				{{#if mostrarTags}}
+				{{> cloudinaryImg publicId=imagem.publicId width='' height='' gravity='' crop='' onLoad=onLoadImage sHeight='300'}}
+				{{#if $and mostrarTags loadedImage}}
 					{{#each tags}}
 						<div class="tag" style="
 						border-color: {{borderColor}};

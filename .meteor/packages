@@ -57,9 +57,6 @@ meteorhacks:aggregate
 meteorhacks:search-source
 ejson
 check
-ixdi:material-design-iconic-font
-matdutour:popup-confirm
-ovcharik:alertifyjs
 accounts-ui
 accounts-facebook
 accounts-twitter
@@ -71,7 +68,6 @@ xinranxiao:accounts-spotify
 danopia:accounts-lastfm
 accounts-github
 rnorth:accounts-yammer
-accounts-meetup
 lepozepo:cloudinary
 random
 natestrauser:animate-css

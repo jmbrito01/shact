@@ -1,3 +1,30 @@
 <template name="signIn">
-{{>atForm}}
+<div align='center' class='login-container'>
+  <div class='login-holder'>
+    <img src="/images/shact2.png" class="login-image">
+  </div>
+  <div class='login-form-container'>
+      {{>atForm}}
+      {{> atSep}}
+      <button class='button button-social button-block button-facebook'>
+        {{> ionIcon icon="social-facebook"}}
+        Login com Facebook
+        </button>
+
+        <button class='button button-social button-block button-twitter'>
+          {{> ionIcon icon="social-twitter"}}
+          Login com Twitter
+        </button>
+
+        <div class="login-rodape">
+          <div class="esqueceu-senha">
+            Esqueceu sua senha?
+          </div>
+          <div class="nova-conta">
+            <a href='{{pathFor 'signUp'}}'>Crie uma conta!</a>
+          </div>
+        </div>
+  </div>
+</div>
+
 </template>

@@ -1,3 +1,11 @@
 <template name="signUp">
-{{>atForm}}
+<div align='center' class='login-container'>
+  <h1> Nova conta </h1>
+  <div class='login-form-container'>
+      {{>atForm}}
+      <div class="login-rodape">
+        Se já tem uma conta, <a href='{{pathFor 'signIn'}}'>clique aqui</a>
+      </div>
+  </div>
+</div>
 </template>

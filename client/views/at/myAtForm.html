@@ -33,3 +33,18 @@
     </div>
   {{/unless}}
 </template>
+
+
+<template name="myAtTextInput">
+  <div class="at-input item item-input item-text-wrap {{#if showLabels}}item-stacked-label{{/if}} {{#if isValidating}}validating{{/if}} {{#if hasError}}has-error{{/if}} {{#if hasSuccess}}has-success{{/if}} {{#if feedback}}has-feedback{{/if}}">
+    {{#if showLabels}}
+      <label class="input-label" for="at-field-{{_id}}">
+        {{{displayName}}} {{#unless required}}<span class="icon ion-alert"></span>{{/unless}}
+      </label>
+    {{/if}}
+    <input type="{{type}}" id="at-field-{{_id}}" name="at-field-{{_id}}" placeholder="{{placeholder}}" autocapitalize="none" autocorrect="off">
+    {{#if hasIcon}}
+      <span class="{{iconClass}}"></span>
+    {{/if}}
+  </div>
+</template>

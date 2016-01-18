@@ -16,6 +16,15 @@ Template.fotosView.helpers({
 	},
 	mostrarTags: function() {
 		return Session.get('mostrarTags');
+	},
+	onLoadImage: function() {
+		var instance = Template.instance();
+		return function() {
+			instance.loadedImage.set(true);
+		}
+	},
+	loadedImage: function() {
+		return Template.instance().loadedImage.get();
 	}
 })
 
@@ -25,6 +34,10 @@ Template.ionNavBar.events({
 	}
 })
 
+Template.fotosView.onCreated(function() {
+	this.loadedImage = new ReactiveVar();
+	this.loadedImage.set(false);
+});
 Template.fotosView.onRendered(function(){
 	Session.set('candidatos','');
 	Session.set('tagSelecionada','');
