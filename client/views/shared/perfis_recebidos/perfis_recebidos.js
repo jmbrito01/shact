@@ -13,6 +13,15 @@ Template.perfisRecebidos.helpers({
     }
 })
 
+Template.perfisRecebidos.events({
+    'click .shell-app': function() {
+        console.log(this);
+        var compartilhavel = this.compartilhavel();
+
+        shellApp(compartilhavel.service, this.valor);
+    }
+})
+
 
 /*
 Template.perfisRecebidos.onRendered(function(){

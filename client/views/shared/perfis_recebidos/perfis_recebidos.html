@@ -1,14 +1,13 @@
 <template name="perfisRecebidos">
-	{{#swiper options=options1 id="perfis-recebidos" class='swiper-thumbs'}}
-		{{#each perfis}}
-			{{#swiperSlide}}
-				{{#with compartilhavel}}
-					<div class="animated fadeIn">
-					{{> compartilhavelIcone icone=icone cor=cor}}
-					</div>
-				{{/with}}
-			{{/swiperSlide}}
-		{{/each}}
-	{{/swiper}}
+    {{#swiper options=options1 id="perfis-recebidos" class='swiper-thumbs' }}
+        {{#each perfis}}
+            {{#swiperSlide}}
+                <div class="animated fadeIn shell-app">
+                    {{#with compartilhavel}}
+                        {{> compartilhavelIcone icone=icone cor=cor}}
+                    {{/with}}
+                </div>
+            {{/swiperSlide}}
+        {{/each}}
+    {{/swiper}}
 </template>
-
