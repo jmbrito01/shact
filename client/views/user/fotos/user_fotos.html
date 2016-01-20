@@ -4,8 +4,8 @@
     {{/contentFor}}
     {{#contentFor "headerButtonRight"}}
         <a class="button pull-right button-clear" href="{{pathFor 'fotos.publicas'}}">
-	  		{{> ionIcon icon='ios-albums'}}
-	 	</a>
+            {{> ionIcon icon='ios-albums'}}
+        </a>
     {{/contentFor}}
     {{#contentFor "headerTitle"}}
         <h1 class="title">Fotos</h1>
@@ -15,20 +15,7 @@
     {{#ionView}}
         {{#ionContent}}
             {{#if fotosCount}}
-                {{#swiper options=options1 id="user-fotos-item" class='swiper-normal' }}
-                    {{#each fotos}}
-                        {{#swiperSlide}}
-                            {{> userFotosItem }}
-                        {{/swiperSlide}}
-                    {{/each}}
-                {{/swiper}}
-                {{#swiper options=options2 id="user-fotos-thumbs" class='swiper-thumbs thumb-opacity' }}
-                    {{#each fotos}}
-                        {{#swiperSlide}}
-                            {{> userFotosThumb }}
-                        {{/swiperSlide}}
-                    {{/each}}
-                {{/swiper}}
+                {{> swiperUserFotos}}
             {{else}}
                 <div class="row">
                     <div class="col col-100" align="center">
@@ -47,4 +34,20 @@
             {{/with}}
         {{/ionContent}}
     {{/ionView}}
+</template>
+<template name="swiperUserFotos">
+    {{#swiper options=options1 id="user-fotos-item" class='swiper-normal' }}
+        {{#each fotos}}
+            {{#swiperSlide}}
+                {{> userFotosItem }}
+            {{/swiperSlide}}
+        {{/each}}
+    {{/swiper}}
+    {{#swiper options=options2 id="user-fotos-thumbs" class='swiper-thumbs thumb-opacity' }}
+        {{#each fotos}}
+            {{#swiperSlide}}
+                {{> userFotosThumb }}
+            {{/swiperSlide}}
+        {{/each}}
+    {{/swiper}}
 </template>

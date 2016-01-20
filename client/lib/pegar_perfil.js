@@ -1,7 +1,18 @@
+
+document.addEventListener('deviceready', function(){
+	console.log(' device ready ');
+	document.addEventListener("resume", function() {
+		console.log(' resume ');
+		sAlert.success("onResume");
+		$('.content').height('100%');
+	}, false);
+
+})
+
 loginCom = function(service,callback){
 	switch(service){
 		case 'twitter':
-			Meteor.loginWithTwitter();
+			Meteor.loginWithTwitter(callback);
 		break;
 		case 'google':
 			Meteor.loginWithGoogle(function(){
@@ -9,29 +20,26 @@ loginCom = function(service,callback){
 			});
 		break;
 		case 'facebook':
-			Meteor.loginWithFacebook();
+			Meteor.loginWithFacebook(callback);
 		break;
 		case 'linkedin':
-			Meteor.loginWithLinkedin();
+			Meteor.loginWithLinkedin(callback);
 		break;
 		case 'instagram':
-			Meteor.loginWithInstagram();
+			Meteor.loginWithInstagram(callback);
 		break;
 		case 'yammer':
-			Meteor.loginWithYammer();
+			Meteor.loginWithYammer(callback);
 		break;
 		case 'spotify':
-			Meteor.loginWithSpotify();
+			Meteor.loginWithSpotify(callback);
 		break;			
 		case 'lastfm':
-			Meteor.loginWithLastfm();
+			Meteor.loginWithLastfm(callback);
 		break;			
 		case 'github':
-			Meteor.loginWithGithub();
-		break;
-		case 'meetup':
-			Meteor.loginWithMeetup();
-		break;		
+			Meteor.loginWithGithub(callback);
+		break;	
 		case 'whatsapp':
 			//var cellphone = Meteor.user().profile.cellphone;
 			//Meteor.call('insertNetworkProfile',networkId, cellphone,false);

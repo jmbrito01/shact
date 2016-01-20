@@ -51,4 +51,20 @@ Template.userPerfis.onRendered(function(){
 	cadastrarPerfisThumbs = $('#cadastrar-perfis-thumbs')[0].swiper;
     cadastrarPerfisItem.params.control = cadastrarPerfisThumbs;
     cadastrarPerfisThumbs.params.control = cadastrarPerfisItem;	
+
+
+    var content = $(".content");
+    var iHeight = content.height();
+    console.log(iHeight);
+    
+    
+    /*
+    Meteor.setInterval(function() {
+        if (content.height() !== iHeight){
+            console.log("changed height");
+            content.height(iHeight);
+        }
+        
+    }, 1000);
+    */
 })

@@ -18,18 +18,12 @@
 		{{#with meuPerfil}}
 		<a class="item item-icon-left" href="#">
 			{{> ionIcon icon='pricetag'}}
-			Perfil cadastrado
-			<span class="item-note">
-				{{valor}}
-			</span>
+			{{valor}}
 		</a>
 		{{else}}    
 			<a class="item item-icon-left" href="#">
 				{{> ionIcon icon='close-round'}}
 				Nenhum perfil cadastrado
-				<span class="item-note">
-					Cadastre agora!
-				</span>
 			</a>
 		{{/with}}
 	</div>

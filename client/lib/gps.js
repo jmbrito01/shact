@@ -40,7 +40,7 @@ Meteor.startup(function(){
 });
 
 var geo_options = {
-  enableHighAccuracy: true, 
+  enableHighAccuracy: false, 
 };
 
 Location.setGetPositionOptions(geo_options);

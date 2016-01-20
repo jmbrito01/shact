@@ -27,7 +27,6 @@ Template.cloudinaryImg.onCreated(function(){
 })
 
 Template.cloudinaryImg.onRendered(function() {
-  console.log(this.data);
   if (this.data.onLoad && typeof this.data.onLoad === 'function') {
     $('.cloudinary-image').load(this.data.onLoad)  ;
   }

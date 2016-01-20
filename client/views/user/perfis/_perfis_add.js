@@ -18,7 +18,8 @@ Template.perfisAdd.events({
 
 		if (this.metodo=='oauth'){
 			loginCom(self.service,function(){
-				console.log("success");
+				console.log (' oauth callback');
+				$(".content").height('100%');
 			});				
 		}else{
 		    IonPopup.prompt({

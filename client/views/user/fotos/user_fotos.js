@@ -8,7 +8,7 @@ function ultimaFoto(swiper){
     }    
 }
 
-Template.userFotos.helpers({
+Template.swiperUserFotos.helpers({
     options1:function(){
         return {
             observer:true,
@@ -31,10 +31,15 @@ Template.userFotos.helpers({
             slideToClickedSlide: false,        
             onInit: ultimaFoto
         }
-    },
+    },   
     fotos:function(){
         return Fotos.find({userId: Meteor.userId(), tipo:0},{imagem:1});
-    },
+    },    
+})
+
+Template.userFotos.helpers({
+    
+
     fotosCount: function() {
       return Fotos.find({userId: Meteor.userId(), tipo:0},{imagem:1}).count();  
     },
@@ -44,7 +49,7 @@ Template.userFotos.helpers({
 })
 
 
-Template.userFotos.onRendered(function(){
+Template.swiperUserFotos.onRendered(function(){
     userFotosItem = $('#user-fotos-item')[0].swiper;
     userFotosThumbs = $('#user-fotos-thumbs')[0].swiper;
     userFotosItem.params.control = userFotosThumbs;
