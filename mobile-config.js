@@ -1,11 +1,12 @@
 App.accessRule('*');
 App.accessRule('http://*');
 App.accessRule('https://*');
-
+App.accessRule('linkedin://*');
+App.accessRule('skype:*');
 App.info({
   id: 'com.shact.app',
-  name: 'shact',
-  description: 'Conecte-se',
+  name: 'Shact',
+  description: 'Conecte-se com o mundo através de uma foto',
   author: 'Rafael R. Correia',
   email: 'rafael.correia.poli@gmail.com',
   website: 'http://example.com'

@@ -14,8 +14,26 @@
     }
 
     switch (service) {
+      case 'pinterest':
+        alertProfile();
+      break;
+      case 'tumblr':
+        alertProfile();
+      break;
+      case 'yammer':
+        alertProfile();
+      break;
+      case 'github':
+        alertProfile();
+      break;
+      case 'spotify':
+        alertProfile();
+      break;
       case 'cel':
         return windowOpen('tel:' + profile);
+      break;
+      case 'mail':
+        return windowOpen('mailto:' + profile);
       break;
       case 'facebook':
         return windowOpen('fb://profile/' + profile);
@@ -24,7 +42,7 @@
         return windowOpen('twitter://user?screen_name=' + profile);
         break;
       case 'linkedin':
-        return windowOpen('linkedin://profile/' + profile);
+        return windowOpen('linkedin://profile?id=' + profile);
         break;
       case 'google':
         return windowOpen('http://plus.google.com/u/0/' + profile + '/posts');
@@ -33,10 +51,11 @@
         return windowOpen('instagram://user?username=' + profile);
         break;
       case 'lastfm':
-        alertProfile()
+        alertProfile();
         break;
       case 'youtube':
-        return windowOpen('https://www.youtube.com/user/' + profile);
+        alertProfile();
+        return windowOpen('http://www.youtube.com/user/' + profile);
         break;
       case 'snapchat':
         alertProfile()

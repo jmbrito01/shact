@@ -2,8 +2,6 @@
 document.addEventListener('deviceready', function(){
 	console.log(' device ready ');
 	document.addEventListener("resume", function() {
-		console.log(' resume ');
-		sAlert.success("onResume");
 		$('.content').height('100%');
 	}, false);
 
